@@ -1,5 +1,8 @@
 import {computedFrom, bindable} from 'aurelia-framework';
-import {ButtonType,ButtonChecked,ButtonEnabled} from './office-button-enums';
+import {ButtonType,ButtonChecked,ButtonEnabled} from '../office-button-enums';
+//import { IButtonProps } from '../Button.types';
+import { getStyles } from './DefaultButton.styles';
+
 
 //@customElement('office-button')
 export class OfficeButton {
@@ -16,6 +19,13 @@ export class OfficeButton {
     {
         var disabledCss = this.enabledState == ButtonEnabled.disabled ? 'is-disabled' : '';
         var checkedCss = this.checkedState == ButtonChecked.checked ? 'is-checked' : '';
+
+        var primary = false;
+        var theme = null;
+        var styles = undefined;
+        var mystyles = getStyles(theme!, styles, primary);
+        console.log(mystyles);
+
         return "ms-Button ms-Button--"  + ButtonType[this.type]  + "  " + disabledCss + " " + checkedCss;
     }
 

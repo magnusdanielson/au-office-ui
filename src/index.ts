@@ -1,9 +1,10 @@
 export * from './test-plugin';
 export * from './test-plugin-configuration';
 export * from './resources/index';
-export * from './resources/elements/OfficeButton/office-button';
-export * from './resources/elements/OfficeButton/buttonTypeViewEngineHooks';
-export * from './resources/elements/OfficeButton/office-button-enums';
+// export * from './resources/elements/OfficeButton/DefaultButton/office-button';
+// export * from './resources/elements/OfficeButton/buttonTypeViewEngineHooks';
+// export * from './resources/elements/OfficeButton/office-button-enums';
+export * from './interfaces';
 
 import {FrameworkConfiguration} from 'aurelia-framework';
 export function configure(aurelia: FrameworkConfiguration) {
