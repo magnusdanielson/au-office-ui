@@ -1,10 +1,10 @@
-System.register(["./test-plugin", "./test-plugin-configuration", "./resources/index"], function (exports_1, context_1) {
+System.register(["./test-plugin", "./test-plugin-configuration", "./resources/index", "./resources/elements/OfficeButton/DefaultButton/office-button", "./resources/elements/OfficeButton/buttonTypeViewEngineHooks", "./resources/elements/OfficeButton/office-button-enums", "@uifabric/styling"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     function configure(aurelia) {
         aurelia.globalResources([
-            './resources/elements/OfficeButton/office-button',
-            './resources/elements/OfficeButton/buttonTypeViewEngineHooks'
+            'resources/elements/OfficeButton/DefaultButton/office-button',
+            'resources/elements/OfficeButton/buttonTypeViewEngineHooks'
         ]);
     }
     exports_1("configure", configure);
@@ -28,6 +28,18 @@ System.register(["./test-plugin", "./test-plugin-configuration", "./resources/in
             },
             function (index_1_1) {
                 exportStar_1(index_1_1);
+            },
+            function (office_button_1_1) {
+                exportStar_1(office_button_1_1);
+            },
+            function (buttonTypeViewEngineHooks_1_1) {
+                exportStar_1(buttonTypeViewEngineHooks_1_1);
+            },
+            function (office_button_enums_1_1) {
+                exportStar_1(office_button_enums_1_1);
+            },
+            function (styling_1_1) {
+                exportStar_1(styling_1_1);
             }
         ],
         execute: function () {
