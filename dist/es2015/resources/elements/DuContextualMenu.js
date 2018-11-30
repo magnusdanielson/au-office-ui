@@ -15,35 +15,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { customElement, inject, noView } from 'aurelia-framework';
-import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
-import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
+import { ContextualMenu } from 'office-ui-fabric-react/lib/ContextualMenu';
+import { renderReact, addProperties, ReactWrapper, defaultActionEvent } from '../wrapper/ReactWrapper';
 var reactprops = {};
-reactprops.href = {};
-reactprops.primary = {};
-reactprops.uniqueId = {};
-reactprops.disabled = {};
-reactprops.checked = {};
+reactprops.arrowDirection = {};
+reactprops.beakWidth = {};
+reactprops.bounds = {};
+reactprops.calloutProps = {};
 reactprops.className = {};
-reactprops.text = {};
-reactprops.iconProps = {};
-reactprops.menuProps = {};
-reactprops.split = {};
-reactprops.onClick = function () { };
-reactprops.secondaryText = {};
-var DuDefaultButton = /** @class */ (function (_super) {
-    __extends(DuDefaultButton, _super);
-    function DuDefaultButton(element) {
+reactprops.coverTarget = {};
+reactprops.gapSpace = {};
+reactprops.hidden = {};
+reactprops.isBeakVisible = {};
+reactprops.isSubMenu = {};
+reactprops.items = {};
+reactprops.onDismiss = defaultActionEvent;
+reactprops.onItemClick = defaultActionEvent;
+reactprops.onMenuDismissed = defaultActionEvent;
+reactprops.onMenuOpened = defaultActionEvent;
+var DuContextualMenu = /** @class */ (function (_super) {
+    __extends(DuContextualMenu, _super);
+    function DuContextualMenu(element) {
         return _super.call(this, element) || this;
     }
-    DuDefaultButton.prototype.render = function () {
-        renderReact.bind(this)(DefaultButton, reactprops);
+    DuContextualMenu.prototype.render = function () {
+        renderReact.bind(this)(ContextualMenu, reactprops);
     };
-    DuDefaultButton = __decorate([
+    DuContextualMenu = __decorate([
         noView(),
         inject(Element),
-        customElement('du-default-button')
-    ], DuDefaultButton);
-    return DuDefaultButton;
+        customElement('du-contextual-menu')
+    ], DuContextualMenu);
+    return DuContextualMenu;
 }(ReactWrapper));
-export { DuDefaultButton };
-addProperties(DuDefaultButton, reactprops);
+export { DuContextualMenu };
+addProperties(DuContextualMenu, reactprops);

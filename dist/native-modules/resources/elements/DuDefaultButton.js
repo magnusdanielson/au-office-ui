@@ -26,6 +26,7 @@ reactprops.checked = {};
 reactprops.className = {};
 reactprops.text = {};
 reactprops.iconProps = {};
+reactprops.menuProps = {};
 reactprops.split = {};
 reactprops.onClick = function () { };
 reactprops.secondaryText = {};

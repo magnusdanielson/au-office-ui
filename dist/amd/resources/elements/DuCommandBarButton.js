@@ -30,21 +30,21 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/B
     reactprops.split = {};
     reactprops.onClick = function () { };
     reactprops.secondaryText = {};
-    var DuDefaultButton = /** @class */ (function (_super) {
-        __extends(DuDefaultButton, _super);
-        function DuDefaultButton(element) {
+    var DuCommandBarButton = /** @class */ (function (_super) {
+        __extends(DuCommandBarButton, _super);
+        function DuCommandBarButton(element) {
             return _super.call(this, element) || this;
         }
-        DuDefaultButton.prototype.render = function () {
-            ReactWrapper_1.renderReact.bind(this)(Button_1.DefaultButton, reactprops);
+        DuCommandBarButton.prototype.render = function () {
+            ReactWrapper_1.renderReact.bind(this)(Button_1.CompoundButton, reactprops);
         };
-        DuDefaultButton = __decorate([
+        DuCommandBarButton = __decorate([
             aurelia_framework_1.noView(),
             aurelia_framework_1.inject(Element),
-            aurelia_framework_1.customElement('du-default-button')
-        ], DuDefaultButton);
-        return DuDefaultButton;
+            aurelia_framework_1.customElement('du-command-bar-button')
+        ], DuCommandBarButton);
+        return DuCommandBarButton;
     }(ReactWrapper_1.ReactWrapper));
-    exports.DuDefaultButton = DuDefaultButton;
-    ReactWrapper_1.addProperties(DuDefaultButton, reactprops);
+    exports.DuCommandBarButton = DuCommandBarButton;
+    ReactWrapper_1.addProperties(DuCommandBarButton, reactprops);
 });

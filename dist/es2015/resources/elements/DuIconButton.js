@@ -15,7 +15,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { customElement, inject, noView } from 'aurelia-framework';
-import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
+import { IconButton } from 'office-ui-fabric-react/lib/Button';
 import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
 var reactprops = {};
 reactprops.href = {};
@@ -30,20 +30,20 @@ reactprops.menuProps = {};
 reactprops.split = {};
 reactprops.onClick = function () { };
 reactprops.secondaryText = {};
-var DuDefaultButton = /** @class */ (function (_super) {
-    __extends(DuDefaultButton, _super);
-    function DuDefaultButton(element) {
+var DuIconButton = /** @class */ (function (_super) {
+    __extends(DuIconButton, _super);
+    function DuIconButton(element) {
         return _super.call(this, element) || this;
     }
-    DuDefaultButton.prototype.render = function () {
-        renderReact.bind(this)(DefaultButton, reactprops);
+    DuIconButton.prototype.render = function () {
+        renderReact.bind(this)(IconButton, reactprops);
     };
-    DuDefaultButton = __decorate([
+    DuIconButton = __decorate([
         noView(),
         inject(Element),
-        customElement('du-default-button')
-    ], DuDefaultButton);
-    return DuDefaultButton;
+        customElement('du-icon-button')
+    ], DuIconButton);
+    return DuIconButton;
 }(ReactWrapper));
-export { DuDefaultButton };
-addProperties(DuDefaultButton, reactprops);
+export { DuIconButton };
+addProperties(DuIconButton, reactprops);

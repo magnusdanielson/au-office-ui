@@ -17,35 +17,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
-var Button_1 = require("office-ui-fabric-react/lib/Button");
+var ProgressIndicator_1 = require("office-ui-fabric-react/lib/ProgressIndicator");
 var ReactWrapper_1 = require("../wrapper/ReactWrapper");
 var reactprops = {};
-reactprops.href = {};
-reactprops.primary = {};
-reactprops.uniqueId = {};
-reactprops.disabled = {};
-reactprops.checked = {};
 reactprops.className = {};
-reactprops.text = {};
-reactprops.iconProps = {};
-reactprops.menuProps = {};
-reactprops.split = {};
-reactprops.onClick = function () { };
-reactprops.secondaryText = {};
-var DuDefaultButton = /** @class */ (function (_super) {
-    __extends(DuDefaultButton, _super);
-    function DuDefaultButton(element) {
+reactprops.barHeight = {};
+reactprops.description = {};
+reactprops.label = function () { };
+reactprops.onRenderProgress = ReactWrapper_1.defaultOnChangeEvent;
+reactprops.percentComplete = {};
+reactprops.progressHidden = {};
+var DuProgressIndicator = /** @class */ (function (_super) {
+    __extends(DuProgressIndicator, _super);
+    function DuProgressIndicator(element) {
         return _super.call(this, element) || this;
     }
-    DuDefaultButton.prototype.render = function () {
-        ReactWrapper_1.renderReact.bind(this)(Button_1.DefaultButton, reactprops);
+    DuProgressIndicator.prototype.render = function () {
+        ReactWrapper_1.renderReact.bind(this)(ProgressIndicator_1.ProgressIndicator, reactprops);
     };
-    DuDefaultButton = __decorate([
+    DuProgressIndicator = __decorate([
         aurelia_framework_1.noView(),
         aurelia_framework_1.inject(Element),
-        aurelia_framework_1.customElement('du-default-button')
-    ], DuDefaultButton);
-    return DuDefaultButton;
+        aurelia_framework_1.customElement('du-progress-indicator')
+    ], DuProgressIndicator);
+    return DuProgressIndicator;
 }(ReactWrapper_1.ReactWrapper));
-exports.DuDefaultButton = DuDefaultButton;
-ReactWrapper_1.addProperties(DuDefaultButton, reactprops);
+exports.DuProgressIndicator = DuProgressIndicator;
+ReactWrapper_1.addProperties(DuProgressIndicator, reactprops);

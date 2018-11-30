@@ -30,21 +30,21 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/B
     reactprops.split = {};
     reactprops.onClick = function () { };
     reactprops.secondaryText = {};
-    var DuDefaultButton = /** @class */ (function (_super) {
-        __extends(DuDefaultButton, _super);
-        function DuDefaultButton(element) {
+    var DuIconButton = /** @class */ (function (_super) {
+        __extends(DuIconButton, _super);
+        function DuIconButton(element) {
             return _super.call(this, element) || this;
         }
-        DuDefaultButton.prototype.render = function () {
-            ReactWrapper_1.renderReact.bind(this)(Button_1.DefaultButton, reactprops);
+        DuIconButton.prototype.render = function () {
+            ReactWrapper_1.renderReact.bind(this)(Button_1.IconButton, reactprops);
         };
-        DuDefaultButton = __decorate([
+        DuIconButton = __decorate([
             aurelia_framework_1.noView(),
             aurelia_framework_1.inject(Element),
-            aurelia_framework_1.customElement('du-default-button')
-        ], DuDefaultButton);
-        return DuDefaultButton;
+            aurelia_framework_1.customElement('du-icon-button')
+        ], DuIconButton);
+        return DuIconButton;
     }(ReactWrapper_1.ReactWrapper));
-    exports.DuDefaultButton = DuDefaultButton;
-    ReactWrapper_1.addProperties(DuDefaultButton, reactprops);
+    exports.DuIconButton = DuIconButton;
+    ReactWrapper_1.addProperties(DuIconButton, reactprops);
 });

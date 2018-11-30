@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Button", "../w
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Button_1, ReactWrapper_1, reactprops, DuDefaultButton;
+    var aurelia_framework_1, Button_1, ReactWrapper_1, reactprops, DuCommandBarButton;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -44,23 +44,23 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Button", "../w
             reactprops.split = {};
             reactprops.onClick = function () { };
             reactprops.secondaryText = {};
-            DuDefaultButton = /** @class */ (function (_super) {
-                __extends(DuDefaultButton, _super);
-                function DuDefaultButton(element) {
+            DuCommandBarButton = /** @class */ (function (_super) {
+                __extends(DuCommandBarButton, _super);
+                function DuCommandBarButton(element) {
                     return _super.call(this, element) || this;
                 }
-                DuDefaultButton.prototype.render = function () {
-                    ReactWrapper_1.renderReact.bind(this)(Button_1.DefaultButton, reactprops);
+                DuCommandBarButton.prototype.render = function () {
+                    ReactWrapper_1.renderReact.bind(this)(Button_1.CompoundButton, reactprops);
                 };
-                DuDefaultButton = __decorate([
+                DuCommandBarButton = __decorate([
                     aurelia_framework_1.noView(),
                     aurelia_framework_1.inject(Element),
-                    aurelia_framework_1.customElement('du-default-button')
-                ], DuDefaultButton);
-                return DuDefaultButton;
+                    aurelia_framework_1.customElement('du-command-bar-button')
+                ], DuCommandBarButton);
+                return DuCommandBarButton;
             }(ReactWrapper_1.ReactWrapper));
-            exports_1("DuDefaultButton", DuDefaultButton);
-            ReactWrapper_1.addProperties(DuDefaultButton, reactprops);
+            exports_1("DuCommandBarButton", DuCommandBarButton);
+            ReactWrapper_1.addProperties(DuCommandBarButton, reactprops);
         }
     };
 });

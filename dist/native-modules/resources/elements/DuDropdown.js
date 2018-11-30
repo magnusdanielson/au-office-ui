@@ -15,35 +15,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { customElement, inject, noView } from 'aurelia-framework';
-import { DefaultButton } from 'office-ui-fabric-react/lib/Button';
-import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
+import { Dropdown } from 'office-ui-fabric-react/lib/Dropdown';
+import { renderReact, addProperties, ReactWrapper, defaultActionEvent } from '../wrapper/ReactWrapper';
 var reactprops = {};
-reactprops.href = {};
-reactprops.primary = {};
-reactprops.uniqueId = {};
-reactprops.disabled = {};
-reactprops.checked = {};
-reactprops.className = {};
-reactprops.text = {};
-reactprops.iconProps = {};
-reactprops.menuProps = {};
-reactprops.split = {};
-reactprops.onClick = function () { };
-reactprops.secondaryText = {};
-var DuDefaultButton = /** @class */ (function (_super) {
-    __extends(DuDefaultButton, _super);
-    function DuDefaultButton(element) {
+reactprops.placeholder = {};
+reactprops.options = defaultActionEvent;
+reactprops.onChange = defaultActionEvent;
+reactprops.onDismiss = defaultActionEvent;
+reactprops.dropdownWidth = {};
+reactprops.responsiveMode = {};
+reactprops.multiSelect = {};
+reactprops.defaultSelectedKeys = {};
+reactprops.selectedKeys = {};
+reactprops.multiSelectDelimiter = {};
+reactprops.keytipProps = {};
+var DuDropdown = /** @class */ (function (_super) {
+    __extends(DuDropdown, _super);
+    function DuDropdown(element) {
         return _super.call(this, element) || this;
     }
-    DuDefaultButton.prototype.render = function () {
-        renderReact.bind(this)(DefaultButton, reactprops);
+    DuDropdown.prototype.render = function () {
+        renderReact.bind(this)(Dropdown, reactprops);
     };
-    DuDefaultButton = __decorate([
+    DuDropdown = __decorate([
         noView(),
         inject(Element),
-        customElement('du-default-button')
-    ], DuDefaultButton);
-    return DuDefaultButton;
+        customElement('du-dropdown')
+    ], DuDropdown);
+    return DuDropdown;
 }(ReactWrapper));
-export { DuDefaultButton };
-addProperties(DuDefaultButton, reactprops);
+export { DuDropdown };
+addProperties(DuDropdown, reactprops);

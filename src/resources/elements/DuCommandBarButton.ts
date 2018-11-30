@@ -1,5 +1,5 @@
 import { customElement, inject, noView } from 'aurelia-framework';
-import { DefaultButton, IButtonProps  } from 'office-ui-fabric-react/lib/Button';
+import { CompoundButton, IButtonProps  } from 'office-ui-fabric-react/lib/Button';
 import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
 
 let reactprops: IButtonProps = <IButtonProps>{};
@@ -18,16 +18,16 @@ reactprops.secondaryText = <any>{};
 
 @noView()
 @inject(Element)
-@customElement('du-default-button')
-export class DuDefaultButton extends ReactWrapper {
+@customElement('du-command-bar-button')
+export class DuCommandBarButton extends ReactWrapper {
 
   constructor(element) {
     super(element);
   }
 
   public render() {
-    renderReact.bind(this)(DefaultButton, reactprops);
+    renderReact.bind(this)(CompoundButton, reactprops);
   }
 }
 
-addProperties(DuDefaultButton, reactprops);
+addProperties(DuCommandBarButton, reactprops);

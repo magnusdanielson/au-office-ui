@@ -17,35 +17,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
-var Button_1 = require("office-ui-fabric-react/lib/Button");
+var Dropdown_1 = require("office-ui-fabric-react/lib/Dropdown");
 var ReactWrapper_1 = require("../wrapper/ReactWrapper");
 var reactprops = {};
-reactprops.href = {};
-reactprops.primary = {};
-reactprops.uniqueId = {};
-reactprops.disabled = {};
-reactprops.checked = {};
-reactprops.className = {};
-reactprops.text = {};
-reactprops.iconProps = {};
-reactprops.menuProps = {};
-reactprops.split = {};
-reactprops.onClick = function () { };
-reactprops.secondaryText = {};
-var DuDefaultButton = /** @class */ (function (_super) {
-    __extends(DuDefaultButton, _super);
-    function DuDefaultButton(element) {
+reactprops.placeholder = {};
+reactprops.options = ReactWrapper_1.defaultActionEvent;
+reactprops.onChange = ReactWrapper_1.defaultActionEvent;
+reactprops.onDismiss = ReactWrapper_1.defaultActionEvent;
+reactprops.dropdownWidth = {};
+reactprops.responsiveMode = {};
+reactprops.multiSelect = {};
+reactprops.defaultSelectedKeys = {};
+reactprops.selectedKeys = {};
+reactprops.multiSelectDelimiter = {};
+reactprops.keytipProps = {};
+var DuDropdown = /** @class */ (function (_super) {
+    __extends(DuDropdown, _super);
+    function DuDropdown(element) {
         return _super.call(this, element) || this;
     }
-    DuDefaultButton.prototype.render = function () {
-        ReactWrapper_1.renderReact.bind(this)(Button_1.DefaultButton, reactprops);
+    DuDropdown.prototype.render = function () {
+        ReactWrapper_1.renderReact.bind(this)(Dropdown_1.Dropdown, reactprops);
     };
-    DuDefaultButton = __decorate([
+    DuDropdown = __decorate([
         aurelia_framework_1.noView(),
         aurelia_framework_1.inject(Element),
-        aurelia_framework_1.customElement('du-default-button')
-    ], DuDefaultButton);
-    return DuDefaultButton;
+        aurelia_framework_1.customElement('du-dropdown')
+    ], DuDropdown);
+    return DuDropdown;
 }(ReactWrapper_1.ReactWrapper));
-exports.DuDefaultButton = DuDefaultButton;
-ReactWrapper_1.addProperties(DuDefaultButton, reactprops);
+exports.DuDropdown = DuDropdown;
+ReactWrapper_1.addProperties(DuDropdown, reactprops);
