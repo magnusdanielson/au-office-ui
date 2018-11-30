@@ -1,12 +1,9 @@
-define(["require", "exports", "./test-plugin-configuration"], function (require, exports, test_plugin_configuration_1) {
-    "use strict";
-    Object.defineProperty(exports, "__esModule", { value: true });
-    function configure(frameworkConfig, callback) {
-        var config = new test_plugin_configuration_1.MyTestPluginConfiguration();
-        if (callback instanceof Function) {
-            callback(config);
-        }
-        config.apply(frameworkConfig.container);
-    }
-    exports.configure = configure;
-});
+// import { FrameworkConfiguration } from 'aurelia-framework';
+// import { MyTestPluginConfiguration } from './test-plugin-configuration';
+// export function configure(frameworkConfig: FrameworkConfiguration, callback?: (config: MyTestPluginConfiguration) => void): void {
+//   const config = new MyTestPluginConfiguration();
+//   if (callback instanceof Function) {
+//     callback(config);
+//   }
+//   config.apply(frameworkConfig.container);
+// }

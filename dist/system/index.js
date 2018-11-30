@@ -1,10 +1,14 @@
-System.register(["./test-plugin", "./test-plugin-configuration", "./resources/index", "./resources/elements/OfficeButton/DefaultButton/office-button", "./resources/elements/OfficeButton/buttonTypeViewEngineHooks", "./resources/elements/OfficeButton/office-button-enums", "@uifabric/styling"], function (exports_1, context_1) {
+System.register(["./resources/index", "aurelia-pal"], function (exports_1, context_1) {
     "use strict";
+    var aurelia_pal_1;
     var __moduleName = context_1 && context_1.id;
     function configure(aurelia) {
         aurelia.globalResources([
-            'resources/elements/OfficeButton/DefaultButton/office-button',
-            'resources/elements/OfficeButton/buttonTypeViewEngineHooks'
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuColorPicker'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuDatePicker'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuDefaultButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuMessageBar'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuToggle'),
         ]);
     }
     exports_1("configure", configure);
@@ -20,26 +24,11 @@ System.register(["./test-plugin", "./test-plugin-configuration", "./resources/in
     }
     return {
         setters: [
-            function (test_plugin_1_1) {
-                exportStar_1(test_plugin_1_1);
-            },
-            function (test_plugin_configuration_1_1) {
-                exportStar_1(test_plugin_configuration_1_1);
-            },
             function (index_1_1) {
                 exportStar_1(index_1_1);
             },
-            function (office_button_1_1) {
-                exportStar_1(office_button_1_1);
-            },
-            function (buttonTypeViewEngineHooks_1_1) {
-                exportStar_1(buttonTypeViewEngineHooks_1_1);
-            },
-            function (office_button_enums_1_1) {
-                exportStar_1(office_button_enums_1_1);
-            },
-            function (styling_1_1) {
-                exportStar_1(styling_1_1);
+            function (aurelia_pal_1_1) {
+                aurelia_pal_1 = aurelia_pal_1_1;
             }
         ],
         execute: function () {
