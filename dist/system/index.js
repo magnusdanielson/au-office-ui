@@ -4,11 +4,26 @@ System.register(["./resources/index", "aurelia-pal"], function (exports_1, conte
     var __moduleName = context_1 && context_1.id;
     function configure(aurelia) {
         aurelia.globalResources([
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuActionButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuBreadcrumb'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCheckbox'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuChoiceGroup'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuColorPicker'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuComboBox'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCommandBarButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCompoundButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuContextualMenu'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuDatePicker'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuDefaultButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuDropdown'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuIconButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuLabel'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuMessageBar'),
-            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuToggle'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuProgressIndicator'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSlider'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSpinButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuTextField'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuToggle')
         ]);
     }
     exports_1("configure", configure);
