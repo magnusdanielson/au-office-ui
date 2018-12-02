@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/Button", "../wrapper/ReactWrapper"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/Nav", "../wrapper/ReactWrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,15 +16,15 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Button", "../w
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Button_1, ReactWrapper_1, reactprops, DuCommandBarButton;
+    var aurelia_framework_1, Nav_1, ReactWrapper_1, reactprops, DuNav;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
             function (aurelia_framework_1_1) {
                 aurelia_framework_1 = aurelia_framework_1_1;
             },
-            function (Button_1_1) {
-                Button_1 = Button_1_1;
+            function (Nav_1_1) {
+                Nav_1 = Nav_1_1;
             },
             function (ReactWrapper_1_1) {
                 ReactWrapper_1 = ReactWrapper_1_1;
@@ -32,35 +32,29 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Button", "../w
         ],
         execute: function () {
             reactprops = {};
-            reactprops.href = {};
-            reactprops.primary = {};
-            reactprops.uniqueId = {};
-            reactprops.disabled = {};
-            reactprops.checked = {};
-            reactprops.className = {};
-            reactprops.text = {};
-            reactprops.iconProps = {};
-            reactprops.menuProps = {};
-            reactprops.split = {};
-            reactprops.onClick = function () { };
-            reactprops.secondaryText = {};
-            DuCommandBarButton = /** @class */ (function (_super) {
-                __extends(DuCommandBarButton, _super);
-                function DuCommandBarButton(element) {
+            reactprops.groups = {};
+            reactprops.initialSelectedKey = {};
+            reactprops.isOnTop = {};
+            reactprops.onLinkClick = function () { };
+            reactprops.onLinkExpandClick = function () { };
+            reactprops.selectedKey = {};
+            DuNav = /** @class */ (function (_super) {
+                __extends(DuNav, _super);
+                function DuNav(element) {
                     return _super.call(this, element) || this;
                 }
-                DuCommandBarButton.prototype.render = function () {
-                    ReactWrapper_1.renderReact.bind(this)(Button_1.CommandBarButton, reactprops);
+                DuNav.prototype.render = function () {
+                    ReactWrapper_1.renderReact.bind(this)(Nav_1.Nav, reactprops);
                 };
-                DuCommandBarButton = __decorate([
+                DuNav = __decorate([
                     aurelia_framework_1.noView(),
                     aurelia_framework_1.inject(Element),
-                    aurelia_framework_1.customElement('du-command-bar-button')
-                ], DuCommandBarButton);
-                return DuCommandBarButton;
+                    aurelia_framework_1.customElement('du-nav')
+                ], DuNav);
+                return DuNav;
             }(ReactWrapper_1.ReactWrapper));
-            exports_1("DuCommandBarButton", DuCommandBarButton);
-            ReactWrapper_1.addProperties(DuCommandBarButton, reactprops);
+            exports_1("DuNav", DuNav);
+            ReactWrapper_1.addProperties(DuNav, reactprops);
         }
     };
 });

@@ -1,5 +1,5 @@
 import { customElement, inject, noView } from 'aurelia-framework';
-import { CompoundButton, IButtonProps  } from 'office-ui-fabric-react/lib/Button';
+import { CommandBarButton, IButtonProps  } from 'office-ui-fabric-react/lib/Button';
 import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
 
 let reactprops: IButtonProps = <IButtonProps>{};
@@ -26,7 +26,7 @@ export class DuCommandBarButton extends ReactWrapper {
   }
 
   public render() {
-    renderReact.bind(this)(CompoundButton, reactprops);
+    renderReact.bind(this)(CommandBarButton, reactprops);
   }
 }
 

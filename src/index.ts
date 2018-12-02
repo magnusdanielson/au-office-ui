@@ -26,6 +26,7 @@ export function configure(aurelia: FrameworkConfiguration) {
         PLATFORM.moduleName('./resources/elements/DuSlider'),
         PLATFORM.moduleName('./resources/elements/DuSpinButton'),
         PLATFORM.moduleName('./resources/elements/DuTextField'),
-        PLATFORM.moduleName('./resources/elements/DuToggle')
+        PLATFORM.moduleName('./resources/elements/DuToggle'),
+        PLATFORM.moduleName('./resources/elements/DuNav')
     ]);
 }

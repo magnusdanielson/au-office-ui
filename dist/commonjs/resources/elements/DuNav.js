@@ -17,35 +17,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
-var Button_1 = require("office-ui-fabric-react/lib/Button");
+var Nav_1 = require("office-ui-fabric-react/lib/Nav");
 var ReactWrapper_1 = require("../wrapper/ReactWrapper");
 var reactprops = {};
-reactprops.href = {};
-reactprops.primary = {};
-reactprops.uniqueId = {};
-reactprops.disabled = {};
-reactprops.checked = {};
-reactprops.className = {};
-reactprops.text = {};
-reactprops.iconProps = {};
-reactprops.menuProps = {};
-reactprops.split = {};
-reactprops.onClick = function () { };
-reactprops.secondaryText = {};
-var DuCommandBarButton = /** @class */ (function (_super) {
-    __extends(DuCommandBarButton, _super);
-    function DuCommandBarButton(element) {
+reactprops.groups = {};
+reactprops.initialSelectedKey = {};
+reactprops.isOnTop = {};
+reactprops.onLinkClick = function () { };
+reactprops.onLinkExpandClick = function () { };
+reactprops.selectedKey = {};
+var DuNav = /** @class */ (function (_super) {
+    __extends(DuNav, _super);
+    function DuNav(element) {
         return _super.call(this, element) || this;
     }
-    DuCommandBarButton.prototype.render = function () {
-        ReactWrapper_1.renderReact.bind(this)(Button_1.CommandBarButton, reactprops);
+    DuNav.prototype.render = function () {
+        ReactWrapper_1.renderReact.bind(this)(Nav_1.Nav, reactprops);
     };
-    DuCommandBarButton = __decorate([
+    DuNav = __decorate([
         aurelia_framework_1.noView(),
         aurelia_framework_1.inject(Element),
-        aurelia_framework_1.customElement('du-command-bar-button')
-    ], DuCommandBarButton);
-    return DuCommandBarButton;
+        aurelia_framework_1.customElement('du-nav')
+    ], DuNav);
+    return DuNav;
 }(ReactWrapper_1.ReactWrapper));
-exports.DuCommandBarButton = DuCommandBarButton;
-ReactWrapper_1.addProperties(DuCommandBarButton, reactprops);
+exports.DuNav = DuNav;
+ReactWrapper_1.addProperties(DuNav, reactprops);

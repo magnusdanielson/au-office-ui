@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { bindable, bindingMode } from 'aurelia-framework';
-import { LogManager } from 'aurelia-framework';
+import { LogManager, bindable, bindingMode } from 'aurelia-framework';
 import { Logger } from 'aurelia-logging';
 
 
@@ -79,7 +78,7 @@ export function defaultOnChangeEvent(){}
 export function addProperties(aureliaClass: any, reactprops: any) {
     var reactpropNames = Object.getOwnPropertyNames(reactprops);
     
-    for (let i = 0; i < reactpropNames.length - 1; i++) {
+    for (let i = 0; i < reactpropNames.length; i++) {
       let renderPropName = reactpropNames[i];
       bindable({
         name: renderPropName,
@@ -103,7 +102,7 @@ export function addProperties(aureliaClass: any, reactprops: any) {
     var reactpropNames = Object.getOwnPropertyNames(reactprops);
   
     var a = {};
-    for (let i = 0; i < reactpropNames.length - 1; i++) {
+    for (let i = 0; i < reactpropNames.length; i++) {
       let renderPropName = reactpropNames[i];
       if (typeof reactprops[renderPropName] === 'function')
         {

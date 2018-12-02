@@ -15,7 +15,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { customElement, inject, noView } from 'aurelia-framework';
-import { CompoundButton } from 'office-ui-fabric-react/lib/Button';
+import { CommandBarButton } from 'office-ui-fabric-react/lib/Button';
 import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
 var reactprops = {};
 reactprops.href = {};
@@ -36,7 +36,7 @@ var DuCommandBarButton = /** @class */ (function (_super) {
         return _super.call(this, element) || this;
     }
     DuCommandBarButton.prototype.render = function () {
-        renderReact.bind(this)(CompoundButton, reactprops);
+        renderReact.bind(this)(CommandBarButton, reactprops);
     };
     DuCommandBarButton = __decorate([
         noView(),

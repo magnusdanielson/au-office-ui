@@ -15,35 +15,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 import { customElement, inject, noView } from 'aurelia-framework';
-import { CommandBarButton } from 'office-ui-fabric-react/lib/Button';
+import { Nav } from 'office-ui-fabric-react/lib/Nav';
 import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
 var reactprops = {};
-reactprops.href = {};
-reactprops.primary = {};
-reactprops.uniqueId = {};
-reactprops.disabled = {};
-reactprops.checked = {};
-reactprops.className = {};
-reactprops.text = {};
-reactprops.iconProps = {};
-reactprops.menuProps = {};
-reactprops.split = {};
-reactprops.onClick = function () { };
-reactprops.secondaryText = {};
-var DuCommandBarButton = /** @class */ (function (_super) {
-    __extends(DuCommandBarButton, _super);
-    function DuCommandBarButton(element) {
+reactprops.groups = {};
+reactprops.initialSelectedKey = {};
+reactprops.isOnTop = {};
+reactprops.onLinkClick = function () { };
+reactprops.onLinkExpandClick = function () { };
+reactprops.selectedKey = {};
+var DuNav = /** @class */ (function (_super) {
+    __extends(DuNav, _super);
+    function DuNav(element) {
         return _super.call(this, element) || this;
     }
-    DuCommandBarButton.prototype.render = function () {
-        renderReact.bind(this)(CommandBarButton, reactprops);
+    DuNav.prototype.render = function () {
+        renderReact.bind(this)(Nav, reactprops);
     };
-    DuCommandBarButton = __decorate([
+    DuNav = __decorate([
         noView(),
         inject(Element),
-        customElement('du-command-bar-button')
-    ], DuCommandBarButton);
-    return DuCommandBarButton;
+        customElement('du-nav')
+    ], DuNav);
+    return DuNav;
 }(ReactWrapper));
-export { DuCommandBarButton };
-addProperties(DuCommandBarButton, reactprops);
+export { DuNav };
+addProperties(DuNav, reactprops);

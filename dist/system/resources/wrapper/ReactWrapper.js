@@ -1,6 +1,6 @@
 System.register(["react", "react-dom", "aurelia-framework"], function (exports_1, context_1) {
     "use strict";
-    var React, ReactDom, aurelia_framework_1, aurelia_framework_2, ReactWrapper;
+    var React, ReactDom, aurelia_framework_1, ReactWrapper;
     var __moduleName = context_1 && context_1.id;
     function onChangeEvent(propertyName, newValue) {
         this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
@@ -23,7 +23,7 @@ System.register(["react", "react-dom", "aurelia-framework"], function (exports_1
     exports_1("defaultOnChangeEvent", defaultOnChangeEvent);
     function addProperties(aureliaClass, reactprops) {
         var reactpropNames = Object.getOwnPropertyNames(reactprops);
-        for (var i = 0; i < reactpropNames.length - 1; i++) {
+        for (var i = 0; i < reactpropNames.length; i++) {
             var renderPropName = reactpropNames[i];
             aurelia_framework_1.bindable({
                 name: renderPropName,
@@ -80,7 +80,7 @@ System.register(["react", "react-dom", "aurelia-framework"], function (exports_1
             }
         };
         var this_1 = this;
-        for (var i = 0; i < reactpropNames.length - 1; i++) {
+        for (var i = 0; i < reactpropNames.length; i++) {
             _loop_1(i);
         }
         var reactElement = React.createElement(reactClass, a);
@@ -97,7 +97,6 @@ System.register(["react", "react-dom", "aurelia-framework"], function (exports_1
             },
             function (aurelia_framework_1_1) {
                 aurelia_framework_1 = aurelia_framework_1_1;
-                aurelia_framework_2 = aurelia_framework_1_1;
             }
         ],
         execute: function () {
@@ -105,7 +104,7 @@ System.register(["react", "react-dom", "aurelia-framework"], function (exports_1
                 function ReactWrapper(element) {
                     this.reactComponent = {};
                     this.element = element;
-                    this.log = aurelia_framework_2.LogManager.getLogger('reacthost');
+                    this.log = aurelia_framework_1.LogManager.getLogger('reacthost');
                 }
                 ReactWrapper.prototype.defaultOnChangeEvent = function (propertyName, newValue) {
                     this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);

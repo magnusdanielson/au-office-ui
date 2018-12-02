@@ -1,7 +1,6 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { bindable, bindingMode } from 'aurelia-framework';
-import { LogManager } from 'aurelia-framework';
+import { LogManager, bindable, bindingMode } from 'aurelia-framework';
 var ReactWrapper = /** @class */ (function () {
     function ReactWrapper(element) {
         this.reactComponent = {};
@@ -50,7 +49,7 @@ export function defaultActionEvent() { }
 export function defaultOnChangeEvent() { }
 export function addProperties(aureliaClass, reactprops) {
     var reactpropNames = Object.getOwnPropertyNames(reactprops);
-    for (var i = 0; i < reactpropNames.length - 1; i++) {
+    for (var i = 0; i < reactpropNames.length; i++) {
         var renderPropName = reactpropNames[i];
         bindable({
             name: renderPropName,
@@ -106,7 +105,7 @@ export function renderReact(reactClass, reactprops) {
         }
     };
     var this_1 = this;
-    for (var i = 0; i < reactpropNames.length - 1; i++) {
+    for (var i = 0; i < reactpropNames.length; i++) {
         _loop_1(i);
     }
     var reactElement = React.createElement(reactClass, a);

@@ -28,7 +28,8 @@ function configure(aurelia) {
         aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSlider'),
         aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSpinButton'),
         aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuTextField'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuToggle')
+        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuToggle'),
+        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuNav')
     ]);
 }
 exports.configure = configure;

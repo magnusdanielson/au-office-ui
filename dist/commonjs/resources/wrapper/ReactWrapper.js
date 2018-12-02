@@ -3,12 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var ReactDom = require("react-dom");
 var aurelia_framework_1 = require("aurelia-framework");
-var aurelia_framework_2 = require("aurelia-framework");
 var ReactWrapper = /** @class */ (function () {
     function ReactWrapper(element) {
         this.reactComponent = {};
         this.element = element;
-        this.log = aurelia_framework_2.LogManager.getLogger('reacthost');
+        this.log = aurelia_framework_1.LogManager.getLogger('reacthost');
     }
     ReactWrapper.prototype.defaultOnChangeEvent = function (propertyName, newValue) {
         this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
@@ -56,7 +55,7 @@ function defaultOnChangeEvent() { }
 exports.defaultOnChangeEvent = defaultOnChangeEvent;
 function addProperties(aureliaClass, reactprops) {
     var reactpropNames = Object.getOwnPropertyNames(reactprops);
-    for (var i = 0; i < reactpropNames.length - 1; i++) {
+    for (var i = 0; i < reactpropNames.length; i++) {
         var renderPropName = reactpropNames[i];
         aurelia_framework_1.bindable({
             name: renderPropName,
@@ -113,7 +112,7 @@ function renderReact(reactClass, reactprops) {
         }
     };
     var this_1 = this;
-    for (var i = 0; i < reactpropNames.length - 1; i++) {
+    for (var i = 0; i < reactpropNames.length; i++) {
         _loop_1(i);
     }
     var reactElement = React.createElement(reactClass, a);

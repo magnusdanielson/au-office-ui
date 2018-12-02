@@ -14,37 +14,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Button", "../wrapper/ReactWrapper"], function (require, exports, aurelia_framework_1, Button_1, ReactWrapper_1) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Nav", "../wrapper/ReactWrapper"], function (require, exports, aurelia_framework_1, Nav_1, ReactWrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
-    reactprops.href = {};
-    reactprops.primary = {};
-    reactprops.uniqueId = {};
-    reactprops.disabled = {};
-    reactprops.checked = {};
-    reactprops.className = {};
-    reactprops.text = {};
-    reactprops.iconProps = {};
-    reactprops.menuProps = {};
-    reactprops.split = {};
-    reactprops.onClick = function () { };
-    reactprops.secondaryText = {};
-    var DuCommandBarButton = /** @class */ (function (_super) {
-        __extends(DuCommandBarButton, _super);
-        function DuCommandBarButton(element) {
+    reactprops.groups = {};
+    reactprops.initialSelectedKey = {};
+    reactprops.isOnTop = {};
+    reactprops.onLinkClick = function () { };
+    reactprops.onLinkExpandClick = function () { };
+    reactprops.selectedKey = {};
+    var DuNav = /** @class */ (function (_super) {
+        __extends(DuNav, _super);
+        function DuNav(element) {
             return _super.call(this, element) || this;
         }
-        DuCommandBarButton.prototype.render = function () {
-            ReactWrapper_1.renderReact.bind(this)(Button_1.CommandBarButton, reactprops);
+        DuNav.prototype.render = function () {
+            ReactWrapper_1.renderReact.bind(this)(Nav_1.Nav, reactprops);
         };
-        DuCommandBarButton = __decorate([
+        DuNav = __decorate([
             aurelia_framework_1.noView(),
             aurelia_framework_1.inject(Element),
-            aurelia_framework_1.customElement('du-command-bar-button')
-        ], DuCommandBarButton);
-        return DuCommandBarButton;
+            aurelia_framework_1.customElement('du-nav')
+        ], DuNav);
+        return DuNav;
     }(ReactWrapper_1.ReactWrapper));
-    exports.DuCommandBarButton = DuCommandBarButton;
-    ReactWrapper_1.addProperties(DuCommandBarButton, reactprops);
+    exports.DuNav = DuNav;
+    ReactWrapper_1.addProperties(DuNav, reactprops);
 });

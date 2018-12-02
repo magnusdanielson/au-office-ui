@@ -1,11 +1,11 @@
-define(["require", "exports", "react", "react-dom", "aurelia-framework", "aurelia-framework"], function (require, exports, React, ReactDom, aurelia_framework_1, aurelia_framework_2) {
+define(["require", "exports", "react", "react-dom", "aurelia-framework"], function (require, exports, React, ReactDom, aurelia_framework_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var ReactWrapper = /** @class */ (function () {
         function ReactWrapper(element) {
             this.reactComponent = {};
             this.element = element;
-            this.log = aurelia_framework_2.LogManager.getLogger('reacthost');
+            this.log = aurelia_framework_1.LogManager.getLogger('reacthost');
         }
         ReactWrapper.prototype.defaultOnChangeEvent = function (propertyName, newValue) {
             this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
@@ -53,7 +53,7 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework", "aureli
     exports.defaultOnChangeEvent = defaultOnChangeEvent;
     function addProperties(aureliaClass, reactprops) {
         var reactpropNames = Object.getOwnPropertyNames(reactprops);
-        for (var i = 0; i < reactpropNames.length - 1; i++) {
+        for (var i = 0; i < reactpropNames.length; i++) {
             var renderPropName = reactpropNames[i];
             aurelia_framework_1.bindable({
                 name: renderPropName,
@@ -110,7 +110,7 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework", "aureli
             }
         };
         var this_1 = this;
-        for (var i = 0; i < reactpropNames.length - 1; i++) {
+        for (var i = 0; i < reactpropNames.length; i++) {
             _loop_1(i);
         }
         var reactElement = React.createElement(reactClass, a);
