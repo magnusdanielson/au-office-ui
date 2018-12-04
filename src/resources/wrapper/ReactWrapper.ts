@@ -109,7 +109,7 @@ export function addProperties(aureliaClass: any, reactprops: any) {
           this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
         if (renderPropName.startsWith('on')) {
           this.log.debug('on property ' + renderPropName);
-          a[renderPropName] = newValue => {
+          a[renderPropName] = (...newValue: any[]) => {
             this.log.debug('event called on ' + renderPropName);
             if (typeof this[renderPropName] !== 'function')
             {

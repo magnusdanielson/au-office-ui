@@ -7,7 +7,7 @@ reactprops.disabled = <any>{};
 reactprops.checked = <any>{};
 reactprops.className = <any>{};
 reactprops.label = <any>{};
-reactprops.onChange = () => {};
+reactprops.onChange = (that: any, checked: boolean) => { that['checked'] = checked; };
 reactprops.boxSide = <any>{};
 reactprops.onClick = () => {};
 
