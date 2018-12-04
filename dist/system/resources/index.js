@@ -1,4 +1,4 @@
-System.register(["./base-service", "./special-service", "./standard-service", "./elements/OfficeButton/DefaultButton/office-button", "./elements/OfficeButton/buttonTypeViewEngineHooks", "./elements/OfficeButton/office-button-enums"], function (exports_1, context_1) {
+System.register(["./elements/DuColorPicker", "./elements/DuDatePicker", "./elements/DuDefaultButton", "./elements/DuMessageBar", "./elements/DuToggle", "./wrapper/ReactWrapper"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     function exportStar_1(m) {
@@ -10,23 +10,23 @@ System.register(["./base-service", "./special-service", "./standard-service", ".
     }
     return {
         setters: [
-            function (base_service_1_1) {
-                exportStar_1(base_service_1_1);
+            function (DuColorPicker_1_1) {
+                exportStar_1(DuColorPicker_1_1);
             },
-            function (special_service_1_1) {
-                exportStar_1(special_service_1_1);
+            function (DuDatePicker_1_1) {
+                exportStar_1(DuDatePicker_1_1);
             },
-            function (standard_service_1_1) {
-                exportStar_1(standard_service_1_1);
+            function (DuDefaultButton_1_1) {
+                exportStar_1(DuDefaultButton_1_1);
             },
-            function (office_button_1_1) {
-                exportStar_1(office_button_1_1);
+            function (DuMessageBar_1_1) {
+                exportStar_1(DuMessageBar_1_1);
             },
-            function (buttonTypeViewEngineHooks_1_1) {
-                exportStar_1(buttonTypeViewEngineHooks_1_1);
+            function (DuToggle_1_1) {
+                exportStar_1(DuToggle_1_1);
             },
-            function (office_button_enums_1_1) {
-                exportStar_1(office_button_enums_1_1);
+            function (ReactWrapper_1_1) {
+                exportStar_1(ReactWrapper_1_1);
             }
         ],
         execute: function () {

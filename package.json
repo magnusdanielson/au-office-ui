@@ -1,10 +1,14 @@
 {
   "name": "@dunite/au-office-ui",
-  "version": "1.0.0",
-  "description": "TypeScript based plugin structure for Aurelia plugins.",
+  "version": "1.1.4",
+  "description": "Microsoft Office-UI-Fabric wrapper for Aurelia",
   "keywords": [
-    "skeleton",
-    "plugin",
+    "office",
+    "office-ui",
+    "typescript",
+    "spfx",
+    "sharepoint",
+    "dunite",
     "aurelia"
   ],
   "main": "dist/commonjs/index.js",
@@ -68,13 +72,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vheissu/aurelia-typescript-plugin.git"
+    "url": "git+https://github.com/magnusdanielson/au-office-ui.git"
   },
-  "author": "Dwayne Charrington <dwaynecharrington@gmail.com>",
+  "author": "Magnus Danielson <dmagnus@dunite.se>",
   "license": "MIT",
-  "homepage": "https://github.com/Vheissu/aurelia-typescript-plugin#readme",
+  "homepage": "https://github.com/magnusdanielson/au-office-ui/blob/master/README.md",
   "bugs": {
-    "url": "https://github.com/Vheissu/aurelia-typescript-plugin/issues"
+    "url": "https://github.com/magnusdanielson/au-office-ui/issues"
   },
   "jspm": {
     "registry": "npm",
@@ -86,33 +90,17 @@
     }
   },
   "dependencies": {
-    "@microsoft/load-themed-styles": "^1.7.69",
-    "@uifabric/merge-styles": "^6.5.0",
-    "@uifabric/styling": "^6.9.0",
-    "aurelia-binding": "^1.5.0",
-    "aurelia-dependency-injection": "^1.3.2",
-    "aurelia-event-aggregator": "^1.0.1",
-    "aurelia-framework": "^1.1.5",
-    "aurelia-loader": "^1.0.0",
-    "aurelia-logging": "^1.3.1",
-    "aurelia-metadata": "^1.0.3",
-    "aurelia-pal": "^1.4.0",
-    "aurelia-path": "^1.1.1",
-    "aurelia-task-queue": "^1.2.1",
-    "aurelia-templating": "^1.6.0",
-    "aurelia-templating-binding": "^1.4.0",
-    "bluebird": "^3.4.1",
-    "react": "^16.4.1"
+    "aurelia-bootstrapper": "^2.3.0",
+    "aurelia-portal-attribute": "^1.3.0",
+    "bluebird": "^3.5.0",
+    "office-ui-fabric-react": "^5.124.0",
+    "react": "16.3.2",
+    "react-dom": "16.3.2"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.5",
-    "@types/node": "^8.0.50",
-    "@types/react": "^16.4.6",
-    "aurelia-bootstrapper": "^2.1.1",
-    "aurelia-loader-nodejs": "^1.0.1",
-    "aurelia-pal-browser": "^1.3.0",
-    "aurelia-pal-nodejs": "^1.0.0-beta.2.0.0",
-    "aurelia-polyfills": "^1.2.2",
+    "@types/bluebird": "^3.5.20",
+    "@types/react": "16.4.14",
+    "@types/react-dom": "16.0.5",
     "aurelia-testing": "^1.0.0-beta.4.0.0",
     "concurrently": "^3.5.0",
     "cross-env": "^5.1.1",

@@ -1,21 +1,35 @@
-define(["require", "exports", "./test-plugin", "./test-plugin-configuration", "./resources/index", "./resources/elements/OfficeButton/DefaultButton/office-button", "./resources/elements/OfficeButton/buttonTypeViewEngineHooks", "./resources/elements/OfficeButton/office-button-enums", "@uifabric/styling"], function (require, exports, test_plugin_1, test_plugin_configuration_1, index_1, office_button_1, buttonTypeViewEngineHooks_1, office_button_enums_1, styling_1) {
+define(["require", "exports", "./resources/index", "aurelia-pal"], function (require, exports, index_1, aurelia_pal_1) {
     "use strict";
     function __export(m) {
         for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
     }
     Object.defineProperty(exports, "__esModule", { value: true });
-    __export(test_plugin_1);
-    __export(test_plugin_configuration_1);
+    //export * from './test-plugin';
+    //export * from './test-plugin-configuration';
     __export(index_1);
-    __export(office_button_1);
-    __export(buttonTypeViewEngineHooks_1);
-    __export(office_button_enums_1);
-    //export * from './interfaces';
-    __export(styling_1);
     function configure(aurelia) {
         aurelia.globalResources([
-            'resources/elements/OfficeButton/DefaultButton/office-button',
-            'resources/elements/OfficeButton/buttonTypeViewEngineHooks'
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuActionButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuBreadcrumb'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCheckbox'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuChoiceGroup'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuColorPicker'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuComboBox'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCommandBarButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCompoundButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuContextualMenu'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuDatePicker'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuDefaultButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuDropdown'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuIconButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuLabel'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuMessageBar'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuProgressIndicator'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSlider'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSpinButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuTextField'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuToggle'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuNav')
         ]);
     }
     exports.configure = configure;

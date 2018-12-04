@@ -1,19 +1,16 @@
-import { MyAbstractBaseService } from './resources/base-service';
-import { MyStandardService } from './resources/standard-service';
-var MyTestPluginConfiguration = /** @class */ (function () {
-    function MyTestPluginConfiguration() {
-        this.serviceType = MyStandardService;
-    }
-    MyTestPluginConfiguration.prototype.customService = function (type) {
-        this.serviceType = type;
-    };
-    /**
-     * Applies the configuration.
-     */
-    MyTestPluginConfiguration.prototype.apply = function (container) {
-        var service = container.get(this.serviceType);
-        container.registerInstance(MyAbstractBaseService, service);
-    };
-    return MyTestPluginConfiguration;
-}());
-export { MyTestPluginConfiguration };
+// import { Container } from 'aurelia-dependency-injection';
+// import { MyAbstractBaseService } from './resources/base-service';
+// import { MyStandardService } from './resources/standard-service';
+// export class MyTestPluginConfiguration {
+//   private serviceType: { new (...args: any[]): MyAbstractBaseService } = MyStandardService;
+//   public customService(type: { new (...args: any[]): MyAbstractBaseService }) {
+//     this.serviceType = type;
+//   }
+//   /**
+//    * Applies the configuration.
+//    */
+//   public apply(container: Container) {
+//     const service = container.get(this.serviceType);
+//     container.registerInstance(MyAbstractBaseService, service);
+//   }
+// }
