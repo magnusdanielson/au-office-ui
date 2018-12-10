@@ -49,6 +49,10 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/MessageBar", "
                     ReactWrapper_1.renderReact.bind(this)(MessageBar_1.MessageBar, reactprops);
                 };
                 DuMessageBar = __decorate([
+                    aurelia_framework_1.processContent(function (compiler, resources, node, instruction) {
+                        console.log('MessageBar wrapper');
+                        return ReactWrapper_1.elementWrapper(node, '.ms-MessageBar-innerText');
+                    }),
                     aurelia_framework_1.noView(),
                     aurelia_framework_1.inject(Element),
                     aurelia_framework_1.customElement('du-message-bar')

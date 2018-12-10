@@ -26,7 +26,7 @@ reactprops.blueLabel = {};
 reactprops.color = {};
 reactprops.greenLabel = {};
 reactprops.hexLabel = {};
-reactprops.onColorChanged = ReactWrapper_1.defaultOnChangeEvent;
+reactprops.onColorChanged = function () { };
 reactprops.redLabel = {};
 var DuColorPicker = /** @class */ (function (_super) {
     __extends(DuColorPicker, _super);

@@ -9,7 +9,7 @@ reactprops.offText = <any>{};
 reactprops.checked = <any>{};
 reactprops.defaultChecked = <any>{};
 reactprops.disabled  = <any>{};
-reactprops.onChanged = (that: any, checked: boolean) => { that['checked'] = checked; };
+reactprops.onChanged = (_this: any, checked: boolean) => { _this['checked'] = checked; };
 reactprops.className = <any>{};
 
 @noView()

@@ -38,7 +38,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Toggle", "../w
             reactprops.checked = {};
             reactprops.defaultChecked = {};
             reactprops.disabled = {};
-            reactprops.onChanged = function (that, checked) { that['checked'] = checked; };
+            reactprops.onChanged = function (_this, checked) { _this['checked'] = checked; };
             reactprops.className = {};
             DuToggle = /** @class */ (function (_super) {
                 __extends(DuToggle, _super);

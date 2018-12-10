@@ -8,7 +8,7 @@ reactprops.options = <any>{};
 reactprops.className = <any>{};
 reactprops.label = <any>{};
 reactprops.options = <any>{};
-reactprops.onChange = () => {};
+reactprops.onChanged = () => {};
 reactprops.defaultSelectedKey = <any>{};
 reactprops.selectedKey = <any>{};
 reactprops.onMenuOpen = () => {};
@@ -21,6 +21,8 @@ reactprops.scrollSelectedToTop = <any>{};
 reactprops.dropdownWidth = <any>{};
 reactprops.useComboBoxAsMenuWidth = <any>{};
 reactprops.multiSelect = <any>{};
+reactprops.onFocus = () => {};
+reactprops.onBlur = () => {};
 
 
 

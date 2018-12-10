@@ -23,7 +23,8 @@ reactprops.multiline = {};
 reactprops.className = {};
 reactprops.label = {};
 reactprops.resizable = {};
-reactprops.onChange = function () { };
+//@ts-ignore
+reactprops.onChanged = function (_this, newValue) { _this['value'] = newValue; };
 reactprops.autoAdjustHeight = {};
 reactprops.underlined = {};
 reactprops.onNotifyValidationResult = function () { };
@@ -43,6 +44,11 @@ reactprops.inputClassName = {};
 reactprops.mask = {};
 reactprops.maskChar = {};
 reactprops.maskFormat = {};
+reactprops.required = {};
+reactprops.placeholder = {};
+reactprops.rows = {};
+reactprops.iconProps = {};
+reactprops.autoAdjustHeight = {};
 var DuTextField = /** @class */ (function (_super) {
     __extends(DuTextField, _super);
     function DuTextField(element) {
@@ -50,6 +56,17 @@ var DuTextField = /** @class */ (function (_super) {
     }
     DuTextField.prototype.render = function () {
         renderReact.bind(this)(TextField, reactprops);
+    };
+    DuTextField.prototype.attached = function () {
+        // Fixing issue with autoAdjustHeight
+        //@ts-ignore
+        if (this.autoAdjustHeight == true) {
+            var elements = this.element.getElementsByTagName('textarea');
+            if (elements.length > 0) {
+                var element = elements.item(0);
+                element.setAttribute('style', '');
+            }
+        }
     };
     DuTextField = __decorate([
         noView(),

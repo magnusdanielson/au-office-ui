@@ -1,6 +1,6 @@
 {
   "name": "@dunite/au-office-ui",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Microsoft Office-UI-Fabric wrapper for Aurelia",
   "keywords": [
     "office",
@@ -76,7 +76,7 @@
   },
   "author": "Magnus Danielson <dmagnus@dunite.se>",
   "license": "MIT",
-  "homepage": "https://github.com/magnusdanielson/au-office-ui/blob/master/README.md",
+  "homepage": "https://au-office-ui.azurewebsites.net",
   "bugs": {
     "url": "https://github.com/magnusdanielson/au-office-ui/issues"
   },

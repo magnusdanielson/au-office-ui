@@ -31,12 +31,16 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Checkbox", "..
             }
         ],
         execute: function () {
+            // IMPORTANT
+            // any function defined here will be called with _this as first parameter
+            // following paramters are from the event
+            // _this refers to the DuCheckbox class with all properties added
             reactprops = {};
             reactprops.disabled = {};
             reactprops.checked = {};
             reactprops.className = {};
             reactprops.label = {};
-            reactprops.onChange = function () { };
+            reactprops.onChange = function (_this, checked) { _this['checked'] = checked; };
             reactprops.boxSide = {};
             reactprops.onClick = function () { };
             DuCheckbox = /** @class */ (function (_super) {

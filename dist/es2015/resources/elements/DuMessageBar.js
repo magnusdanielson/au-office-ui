@@ -14,9 +14,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { customElement, inject, noView } from 'aurelia-framework';
+import { processContent, customElement, inject, noView } from 'aurelia-framework';
 import { MessageBar } from 'office-ui-fabric-react/lib/MessageBar';
-import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
+import { renderReact, addProperties, ReactWrapper, elementWrapper } from '../wrapper/ReactWrapper';
 var reactprops = {};
 reactprops.className = {};
 reactprops.isMultiline = {};
@@ -26,6 +26,7 @@ reactprops.dismissButtonAriaLabel = {};
 reactprops.truncated = {};
 reactprops.overflowButtonAriaLabel = {};
 reactprops.actions = {};
+//@ts-ignore
 var DuMessageBar = /** @class */ (function (_super) {
     __extends(DuMessageBar, _super);
     function DuMessageBar(element) {
@@ -35,6 +36,10 @@ var DuMessageBar = /** @class */ (function (_super) {
         renderReact.bind(this)(MessageBar, reactprops);
     };
     DuMessageBar = __decorate([
+        processContent(function (compiler, resources, node, instruction) {
+            console.log('MessageBar wrapper');
+            return elementWrapper(node, '.ms-MessageBar-innerText');
+        }),
         noView(),
         inject(Element),
         customElement('du-message-bar')

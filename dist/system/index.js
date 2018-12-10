@@ -10,6 +10,7 @@ System.register(["./resources/index", "aurelia-pal"], function (exports_1, conte
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuChoiceGroup'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuColorPicker'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuComboBox'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCommandBar'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCommandBarButton'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCompoundButton'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuContextualMenu'),
@@ -19,12 +20,14 @@ System.register(["./resources/index", "aurelia-pal"], function (exports_1, conte
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuIconButton'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuLabel'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuMessageBar'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuNav'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuPivot'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuProgressIndicator'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSearch'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSlider'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSpinButton'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuTextField'),
-            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuToggle'),
-            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuNav')
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuToggle')
         ]);
     }
     exports_1("configure", configure);

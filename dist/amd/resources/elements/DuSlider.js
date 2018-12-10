@@ -22,6 +22,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/S
     reactprops.className = {};
     reactprops.label = {};
     reactprops.value = {};
+    reactprops.defaultValue = {};
     reactprops.min = {};
     reactprops.max = {};
     reactprops.showValue = {};

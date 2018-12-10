@@ -36,6 +36,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Slider", "../w
             reactprops.className = {};
             reactprops.label = {};
             reactprops.value = {};
+            reactprops.defaultValue = {};
             reactprops.min = {};
             reactprops.max = {};
             reactprops.showValue = {};

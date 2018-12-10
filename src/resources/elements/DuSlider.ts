@@ -7,6 +7,7 @@ reactprops.disabled = <any>{};
 reactprops.className = <any>{};
 reactprops.label = <any>{};
 reactprops.value = <any>{};
+reactprops.defaultValue = <any>{};
 reactprops.min = <any>{};
 reactprops.max = <any>{};
 reactprops.showValue = <any>{};

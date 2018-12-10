@@ -17,12 +17,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Checkbox", "../wrapper/ReactWrapper"], function (require, exports, aurelia_framework_1, Checkbox_1, ReactWrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    // IMPORTANT
+    // any function defined here will be called with _this as first parameter
+    // following paramters are from the event
+    // _this refers to the DuCheckbox class with all properties added
     var reactprops = {};
     reactprops.disabled = {};
     reactprops.checked = {};
     reactprops.className = {};
     reactprops.label = {};
-    reactprops.onChange = function () { };
+    reactprops.onChange = function (_this, checked) { _this['checked'] = checked; };
     reactprops.boxSide = {};
     reactprops.onClick = function () { };
     var DuCheckbox = /** @class */ (function (_super) {

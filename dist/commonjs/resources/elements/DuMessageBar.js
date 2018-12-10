@@ -28,6 +28,7 @@ reactprops.dismissButtonAriaLabel = {};
 reactprops.truncated = {};
 reactprops.overflowButtonAriaLabel = {};
 reactprops.actions = {};
+//@ts-ignore
 var DuMessageBar = /** @class */ (function (_super) {
     __extends(DuMessageBar, _super);
     function DuMessageBar(element) {
@@ -37,6 +38,10 @@ var DuMessageBar = /** @class */ (function (_super) {
         ReactWrapper_1.renderReact.bind(this)(MessageBar_1.MessageBar, reactprops);
     };
     DuMessageBar = __decorate([
+        aurelia_framework_1.processContent(function (compiler, resources, node, instruction) {
+            console.log('MessageBar wrapper');
+            return ReactWrapper_1.elementWrapper(node, '.ms-MessageBar-innerText');
+        }),
         aurelia_framework_1.noView(),
         aurelia_framework_1.inject(Element),
         aurelia_framework_1.customElement('du-message-bar')

@@ -24,7 +24,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/C
     reactprops.color = {};
     reactprops.greenLabel = {};
     reactprops.hexLabel = {};
-    reactprops.onColorChanged = ReactWrapper_1.defaultOnChangeEvent;
+    reactprops.onColorChanged = function () { };
     reactprops.redLabel = {};
     var DuColorPicker = /** @class */ (function (_super) {
         __extends(DuColorPicker, _super);

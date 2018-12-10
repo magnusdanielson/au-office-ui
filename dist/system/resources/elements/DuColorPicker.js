@@ -38,7 +38,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ColorPicker", 
             reactprops.color = {};
             reactprops.greenLabel = {};
             reactprops.hexLabel = {};
-            reactprops.onColorChanged = ReactWrapper_1.defaultOnChangeEvent;
+            reactprops.onColorChanged = function () { };
             reactprops.redLabel = {};
             DuColorPicker = /** @class */ (function (_super) {
                 __extends(DuColorPicker, _super);

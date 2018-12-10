@@ -91,14 +91,27 @@ export function addProperties(aureliaClass: any, reactprops: any) {
   
   
   export function renderReact(reactClass: any, reactprops: any) {
+    // this is bound to Aurelia class
     this.container = this.element.querySelector('.au-react-root');
   
     if (this.container == null) {
-      this.container = document.createElement('div');
+      this.container = document.createElement('span');
       this.container.setAttribute('class', 'au-react-root');
+      // <span id="${id}" portal="target ${id} ms-Label"><slot></slot></span>
+      
+      //let id = Date.now();
+      //this.container.setAttribute('id', id);
+      //this.container.setAttribute('portal', `target #${id} ms-Label`);
+      //let slot = document.createElement('slot');
+      //this.container.appendChild(slot);
       this.element.appendChild(this.container);
+
+      //const content = this.element.querySelector('au-content');
+      //content.setAttribute('portal', `target #${id} ms-Label`);
     }
   
+    
+
     var reactpropNames = Object.getOwnPropertyNames(reactprops);
   
     var a = {};
@@ -125,13 +138,13 @@ export function addProperties(aureliaClass: any, reactprops: any) {
               else
               {
                 this.log.debug('run func from reactprops');
-                reactprops[renderPropName](this, newValue);
+                return reactprops[renderPropName](this, newValue);
               }
             }
             else
             {
                 this.log.debug('bound function, go aurelia');
-                this[renderPropName].bind(this.parent)(newValue);
+                return this[renderPropName]( newValue);
             }
           };
         }
@@ -143,8 +156,55 @@ export function addProperties(aureliaClass: any, reactprops: any) {
       }
       }
     
-    const reactElement = (<any>React).createElement(reactClass, a);
-  
+    // const reactElement = React.createElement(reactClass, a
+    //   , React.createElement('span', {type: 'innerHTML', value: 'And here is a child'}));
+    
+    const reactElement = React.createElement(reactClass, a);
+    this.reactComponent = reactElement;
     ReactDom.render(reactElement, this.container);
   }
   
+  export function elementWrapper(node: Element, target: string)
+  {
+    let id = 'du' + Math.round( Math.random() * 10000000000000000);
+    node.setAttribute('class', (node.getAttribute('class') == null ? '' :  node.getAttribute('class')) + ' ' + id);
+    
+    let portalAttribute =  'target: .' + id + ' ' + target;
+    if (node.childElementCount == 0)
+  {
+    let rootspan = document.createElement('span');
+    rootspan.setAttribute('portal', portalAttribute);
+    //@ts-ignore
+    rootspan.innerText = node.innerText;
+    //@ts-ignore
+    node.innerText  = '';
+    node.appendChild(rootspan);
+    return true;
+  }
+  if (node.childElementCount == 1)
+  {
+    if (node.firstElementChild)
+    {
+      node.firstElementChild.setAttribute('portal', portalAttribute)
+    }
+  }
+
+  if (node.childElementCount > 1)
+  {
+    let rootspan = document.createElement('span');
+    rootspan.setAttribute('portal', portalAttribute);
+    if (node.parentNode)
+    {
+
+      let nodeCount = node.childElementCount;
+      for ( let i = nodeCount - 1 ; i >= 0 ; i--)
+      {
+        //console.log(node.children[i]);
+        rootspan.insertBefore(node.children[i], rootspan.firstChild);
+        //node.removeChild(node.children[i]);
+      }
+      node.parentNode.appendChild(rootspan);
+  }
+  }
+  return true;
+  }

@@ -23,7 +23,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/C
     reactprops.className = {};
     reactprops.label = {};
     reactprops.options = {};
-    reactprops.onChange = function () { };
+    reactprops.onChanged = function () { };
     reactprops.defaultSelectedKey = {};
     reactprops.selectedKey = {};
     reactprops.onMenuOpen = function () { };
@@ -36,6 +36,8 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/C
     reactprops.dropdownWidth = {};
     reactprops.useComboBoxAsMenuWidth = {};
     reactprops.multiSelect = {};
+    reactprops.onFocus = function () { };
+    reactprops.onBlur = function () { };
     var DuComboBox = /** @class */ (function (_super) {
         __extends(DuComboBox, _super);
         function DuComboBox(element) {

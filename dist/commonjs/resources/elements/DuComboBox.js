@@ -25,7 +25,7 @@ reactprops.options = {};
 reactprops.className = {};
 reactprops.label = {};
 reactprops.options = {};
-reactprops.onChange = function () { };
+reactprops.onChanged = function () { };
 reactprops.defaultSelectedKey = {};
 reactprops.selectedKey = {};
 reactprops.onMenuOpen = function () { };
@@ -38,6 +38,8 @@ reactprops.scrollSelectedToTop = {};
 reactprops.dropdownWidth = {};
 reactprops.useComboBoxAsMenuWidth = {};
 reactprops.multiSelect = {};
+reactprops.onFocus = function () { };
+reactprops.onBlur = function () { };
 var DuComboBox = /** @class */ (function (_super) {
     __extends(DuComboBox, _super);
     function DuComboBox(element) {

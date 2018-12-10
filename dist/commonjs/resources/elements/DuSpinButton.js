@@ -25,12 +25,27 @@ reactprops.className = {};
 reactprops.label = {};
 reactprops.value = {};
 reactprops.min = {};
+reactprops.defaultValue = {};
 reactprops.max = {};
 reactprops.title = {};
 reactprops.step = {};
+reactprops.iconProps = {};
+reactprops.labelPosition = {};
 reactprops.onValidate = function () { };
-reactprops.onIncrement = function () { };
-reactprops.onDecrement = function () { };
+//@ts-ignore
+reactprops.onIncrement = function (_this, value) {
+    var _value = parseFloat(_this['value']);
+    if (_value + _this['step'] <= _this['max']) {
+        _this['value'] = (_value + _this['step']).toFixed(typeof _this['precision'] == 'undefined' ? 0 : _this['precision']);
+    }
+};
+//@ts-ignore
+reactprops.onDecrement = function (_this, value) {
+    var _value = parseFloat(_this['value']);
+    if (_value - _this['step'] >= _this['min']) {
+        _this['value'] = (_value - _this['step']).toFixed(typeof _this['precision'] == 'undefined' ? 0 : _this['precision']);
+    }
+};
 reactprops.precision = {};
 var DuSpinButton = /** @class */ (function (_super) {
     __extends(DuSpinButton, _super);

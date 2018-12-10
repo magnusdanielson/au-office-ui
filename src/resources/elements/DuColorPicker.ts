@@ -1,6 +1,6 @@
 import { customElement, inject, noView } from 'aurelia-framework';
 import { ColorPicker, IColorPickerProps } from 'office-ui-fabric-react/lib/ColorPicker';
-import { renderReact, addProperties, ReactWrapper, defaultOnChangeEvent } from '../wrapper/ReactWrapper';
+import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
 
 let reactprops: IColorPickerProps = <IColorPickerProps>{};
 reactprops.alphaLabel = <any>{};
@@ -9,7 +9,7 @@ reactprops.blueLabel = <any>{};
 reactprops.color = <any>{};
 reactprops.greenLabel = <any>{};
 reactprops.hexLabel = <any>{};
-reactprops.onColorChanged = <any>defaultOnChangeEvent;
+reactprops.onColorChanged = () => {};
 reactprops.redLabel = <any>{};
 
 @noView()

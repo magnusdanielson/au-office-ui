@@ -17,12 +17,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { customElement, inject, noView } from 'aurelia-framework';
 import { Checkbox } from 'office-ui-fabric-react/lib/Checkbox';
 import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
+// IMPORTANT
+// any function defined here will be called with _this as first parameter
+// following paramters are from the event
+// _this refers to the DuCheckbox class with all properties added
 var reactprops = {};
 reactprops.disabled = {};
 reactprops.checked = {};
 reactprops.className = {};
 reactprops.label = {};
-reactprops.onChange = function () { };
+reactprops.onChange = function (_this, checked) { _this['checked'] = checked; };
 reactprops.boxSide = {};
 reactprops.onClick = function () { };
 var DuCheckbox = /** @class */ (function (_super) {

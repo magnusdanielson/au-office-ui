@@ -8,12 +8,32 @@ reactprops.className = <any>{};
 reactprops.label = <any>{};
 reactprops.value = <any>{};
 reactprops.min = <any>{};
+reactprops.defaultValue  = <any>{};
 reactprops.max = <any>{};
 reactprops.title = <any>{};
 reactprops.step = <any>{};
+reactprops.iconProps  = <any>{};
+reactprops.labelPosition  = <any>{};
 reactprops.onValidate = () => {};
-reactprops.onIncrement = () => {};
-reactprops.onDecrement = () => {};
+//@ts-ignore
+reactprops.onIncrement = (_this: any, value: string) => 
+{
+  let _value = parseFloat(_this['value']);
+
+  if (_value + _this['step'] <= _this['max'] ) 
+  {
+  _this['value'] = (_value  +  _this['step']).toFixed( typeof _this['precision'] == 'undefined' ? 0 : _this['precision']);
+}
+};
+//@ts-ignore
+reactprops.onDecrement = (_this: any, value: string) =>
+{
+  let _value = parseFloat(_this['value']);
+  if (_value - _this['step'] >= _this['min'] ) 
+  {
+  _this['value'] =  (_value - _this['step']).toFixed( typeof _this['precision'] == 'undefined' ? 0 : _this['precision']); 
+}
+};
 reactprops.precision = <any>{};
 
 @noView()

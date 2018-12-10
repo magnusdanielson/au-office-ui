@@ -16,7 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject, noView } from 'aurelia-framework';
 import { ColorPicker } from 'office-ui-fabric-react/lib/ColorPicker';
-import { renderReact, addProperties, ReactWrapper, defaultOnChangeEvent } from '../wrapper/ReactWrapper';
+import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
 var reactprops = {};
 reactprops.alphaLabel = {};
 reactprops.alphaSliderHidden = {};
@@ -24,7 +24,7 @@ reactprops.blueLabel = {};
 reactprops.color = {};
 reactprops.greenLabel = {};
 reactprops.hexLabel = {};
-reactprops.onColorChanged = defaultOnChangeEvent;
+reactprops.onColorChanged = function () { };
 reactprops.redLabel = {};
 var DuColorPicker = /** @class */ (function (_super) {
     __extends(DuColorPicker, _super);

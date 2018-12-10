@@ -8,7 +8,8 @@ reactprops.multiline = <any>{};
 reactprops.className = <any>{};
 reactprops.label = <any>{};
 reactprops.resizable = <any>{};
-reactprops.onChange = () => {};
+//@ts-ignore
+reactprops.onChanged = (_this, newValue) => { _this['value'] = newValue };
 reactprops.autoAdjustHeight = <any>{};
 reactprops.underlined = <any>{};
 reactprops.onNotifyValidationResult = () => {};
@@ -28,6 +29,12 @@ reactprops.inputClassName = <any>{};
 reactprops.mask = <any>{};
 reactprops.maskChar = <any>{};
 reactprops.maskFormat = <any>{};
+reactprops.required = <any>{};
+reactprops.placeholder = <any>{};
+reactprops.rows = <any>{};
+reactprops.iconProps = <any>{};
+reactprops.autoAdjustHeight = <any>{};
+
 
 
 
@@ -43,6 +50,20 @@ export class DuTextField extends ReactWrapper {
 
   public render() {
     renderReact.bind(this)(TextField, reactprops);
+  }
+  attached()
+  {
+    // Fixing issue with autoAdjustHeight
+    //@ts-ignore
+    if (this.autoAdjustHeight == true)
+    {
+    let elements = this.element.getElementsByTagName('textarea');
+    if ( elements.length > 0)
+    {
+      let element  = <HTMLTextAreaElement>elements.item(0);
+      element.setAttribute('style', '');
+    } 
+  }
   }
 }
 

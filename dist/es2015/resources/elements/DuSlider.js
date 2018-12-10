@@ -22,6 +22,7 @@ reactprops.disabled = {};
 reactprops.className = {};
 reactprops.label = {};
 reactprops.value = {};
+reactprops.defaultValue = {};
 reactprops.min = {};
 reactprops.max = {};
 reactprops.showValue = {};

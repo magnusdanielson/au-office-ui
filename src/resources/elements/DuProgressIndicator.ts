@@ -1,13 +1,14 @@
 import { customElement, inject, noView } from 'aurelia-framework';
 import { ProgressIndicator, IProgressIndicatorProps } from 'office-ui-fabric-react/lib/ProgressIndicator';
-import { renderReact, addProperties, ReactWrapper, defaultOnChangeEvent } from '../wrapper/ReactWrapper';
+import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
 
 let reactprops: IProgressIndicatorProps = <IProgressIndicatorProps>{};
 reactprops.className = <any>{};
 reactprops.barHeight = <any>{};
 reactprops.description = <any>{};
-reactprops.label = () => {};
-reactprops.onRenderProgress = <any>defaultOnChangeEvent;
+reactprops.label = <any>{};
+//@ts-ignore
+reactprops.onRenderProgress = () => {};
 reactprops.percentComplete = <any>{};
 reactprops.progressHidden = <any>{};
 

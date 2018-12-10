@@ -37,7 +37,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ComboBox", "..
             reactprops.className = {};
             reactprops.label = {};
             reactprops.options = {};
-            reactprops.onChange = function () { };
+            reactprops.onChanged = function () { };
             reactprops.defaultSelectedKey = {};
             reactprops.selectedKey = {};
             reactprops.onMenuOpen = function () { };
@@ -50,6 +50,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ComboBox", "..
             reactprops.dropdownWidth = {};
             reactprops.useComboBoxAsMenuWidth = {};
             reactprops.multiSelect = {};
+            reactprops.onFocus = function () { };
+            reactprops.onBlur = function () { };
             DuComboBox = /** @class */ (function (_super) {
                 __extends(DuComboBox, _super);
                 function DuComboBox(element) {

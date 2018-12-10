@@ -16,13 +16,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject, noView } from 'aurelia-framework';
 import { ProgressIndicator } from 'office-ui-fabric-react/lib/ProgressIndicator';
-import { renderReact, addProperties, ReactWrapper, defaultOnChangeEvent } from '../wrapper/ReactWrapper';
+import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
 var reactprops = {};
 reactprops.className = {};
 reactprops.barHeight = {};
 reactprops.description = {};
-reactprops.label = function () { };
-reactprops.onRenderProgress = defaultOnChangeEvent;
+reactprops.label = {};
+//@ts-ignore
+reactprops.onRenderProgress = function () { };
 reactprops.percentComplete = {};
 reactprops.progressHidden = {};
 var DuProgressIndicator = /** @class */ (function (_super) {

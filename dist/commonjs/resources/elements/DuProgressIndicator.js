@@ -23,8 +23,9 @@ var reactprops = {};
 reactprops.className = {};
 reactprops.barHeight = {};
 reactprops.description = {};
-reactprops.label = function () { };
-reactprops.onRenderProgress = ReactWrapper_1.defaultOnChangeEvent;
+reactprops.label = {};
+//@ts-ignore
+reactprops.onRenderProgress = function () { };
 reactprops.percentComplete = {};
 reactprops.progressHidden = {};
 var DuProgressIndicator = /** @class */ (function (_super) {

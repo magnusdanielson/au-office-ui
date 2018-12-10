@@ -23,15 +23,21 @@ var reactprops = {};
 reactprops.disabled = {};
 reactprops.className = {};
 reactprops.required = {};
+reactprops.htmlFor = {};
+//@ts-ignore
 var DuLabel = /** @class */ (function (_super) {
     __extends(DuLabel, _super);
     function DuLabel(element) {
         return _super.call(this, element) || this;
     }
+    //public id = Date.now();
     DuLabel.prototype.render = function () {
         ReactWrapper_1.renderReact.bind(this)(Label_1.Label, reactprops);
     };
     DuLabel = __decorate([
+        aurelia_framework_1.processContent(function (compiler, resources, node, instruction) {
+            return ReactWrapper_1.elementWrapper(node, '.ms-Label');
+        }),
         aurelia_framework_1.noView(),
         aurelia_framework_1.inject(Element),
         aurelia_framework_1.customElement('du-label')
