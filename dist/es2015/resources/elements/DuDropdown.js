@@ -19,16 +19,23 @@ import { Dropdown } from 'office-ui-fabric-react/lib/Dropdown';
 import { renderReact, addProperties, ReactWrapper, defaultActionEvent } from '../wrapper/ReactWrapper';
 var reactprops = {};
 reactprops.placeholder = {};
-reactprops.options = defaultActionEvent;
-reactprops.onChange = defaultActionEvent;
+reactprops.options = {};
 reactprops.onDismiss = defaultActionEvent;
+reactprops.onFocus = defaultActionEvent;
+reactprops.onBlur = defaultActionEvent;
+reactprops.onChanged = defaultActionEvent;
 reactprops.dropdownWidth = {};
 reactprops.responsiveMode = {};
 reactprops.multiSelect = {};
+reactprops.defaultSelectedKey = {};
 reactprops.defaultSelectedKeys = {};
 reactprops.selectedKeys = {};
+reactprops.selectedKey = {};
 reactprops.multiSelectDelimiter = {};
 reactprops.keytipProps = {};
+reactprops.disabled = {};
+reactprops.errorMessage = {};
+reactprops.required = {};
 var DuDropdown = /** @class */ (function (_super) {
     __extends(DuDropdown, _super);
     function DuDropdown(element) {

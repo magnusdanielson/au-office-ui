@@ -32,7 +32,7 @@ Then just use it as below
 ```
 
 ## Demo site
-[Demo site for most components](https://au-office-ui.azurewebistes.net)
+[Demo site for most components](https://au-office-ui.azurewebsites.net)
 
 ## Module support
 This plugin exports AMD, CommonJS, ES2015, native and System modules.

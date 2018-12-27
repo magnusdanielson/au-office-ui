@@ -36,8 +36,6 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ProgressIndica
             reactprops.barHeight = {};
             reactprops.description = {};
             reactprops.label = {};
-            //@ts-ignore
-            reactprops.onRenderProgress = function () { };
             reactprops.percentComplete = {};
             reactprops.progressHidden = {};
             DuProgressIndicator = /** @class */ (function (_super) {

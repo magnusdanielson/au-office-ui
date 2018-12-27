@@ -7,8 +7,6 @@ reactprops.className = <any>{};
 reactprops.barHeight = <any>{};
 reactprops.description = <any>{};
 reactprops.label = <any>{};
-//@ts-ignore
-reactprops.onRenderProgress = () => {};
 reactprops.percentComplete = <any>{};
 reactprops.progressHidden = <any>{};
 

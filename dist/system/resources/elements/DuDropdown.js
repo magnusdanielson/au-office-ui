@@ -33,16 +33,23 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Dropdown", "..
         execute: function () {
             reactprops = {};
             reactprops.placeholder = {};
-            reactprops.options = ReactWrapper_1.defaultActionEvent;
-            reactprops.onChange = ReactWrapper_1.defaultActionEvent;
+            reactprops.options = {};
             reactprops.onDismiss = ReactWrapper_1.defaultActionEvent;
+            reactprops.onFocus = ReactWrapper_1.defaultActionEvent;
+            reactprops.onBlur = ReactWrapper_1.defaultActionEvent;
+            reactprops.onChanged = ReactWrapper_1.defaultActionEvent;
             reactprops.dropdownWidth = {};
             reactprops.responsiveMode = {};
             reactprops.multiSelect = {};
+            reactprops.defaultSelectedKey = {};
             reactprops.defaultSelectedKeys = {};
             reactprops.selectedKeys = {};
+            reactprops.selectedKey = {};
             reactprops.multiSelectDelimiter = {};
             reactprops.keytipProps = {};
+            reactprops.disabled = {};
+            reactprops.errorMessage = {};
+            reactprops.required = {};
             DuDropdown = /** @class */ (function (_super) {
                 __extends(DuDropdown, _super);
                 function DuDropdown(element) {

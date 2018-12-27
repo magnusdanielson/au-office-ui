@@ -4,16 +4,23 @@ import { renderReact, addProperties, ReactWrapper, defaultActionEvent } from '..
 
 let reactprops: IDropdownProps = <IDropdownProps>{};
 reactprops.placeholder = <any>{};
-reactprops.options = <any>defaultActionEvent;
-reactprops.onChange = <any>defaultActionEvent;
+reactprops.options = <any>{};
 reactprops.onDismiss = <any>defaultActionEvent;
+reactprops.onFocus =  <any>defaultActionEvent;
+reactprops.onBlur =  <any>defaultActionEvent;
+reactprops.onChanged =  <any>defaultActionEvent;
 reactprops.dropdownWidth = <any>{};
 reactprops.responsiveMode = <any>{};
 reactprops.multiSelect = <any>{};
+reactprops.defaultSelectedKey = <any>{};
 reactprops.defaultSelectedKeys = <any>{};
 reactprops.selectedKeys = <any>{};
+reactprops.selectedKey = <any>{};
 reactprops.multiSelectDelimiter = <any>{};
 reactprops.keytipProps = <any>{};
+reactprops.disabled = <any>{};
+reactprops.errorMessage = <any>{};
+reactprops.required  = <any>{};
 
 @noView()
 @inject(Element)
