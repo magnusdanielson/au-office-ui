@@ -3,7 +3,7 @@ import { ContextualMenu, IContextualMenuProps  } from 'office-ui-fabric-react/li
 import { renderReact, addProperties, ReactWrapper, defaultActionEvent } from '../wrapper/ReactWrapper';
 
 let reactprops: IContextualMenuProps = <IContextualMenuProps>{};
-reactprops.arrowDirection = <any>{};
+//reactprops.arrowDirection = <any>{};
 reactprops.beakWidth = <any>{};
 reactprops.bounds = <any>{};
 reactprops.calloutProps = <any>{};

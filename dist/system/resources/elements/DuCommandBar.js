@@ -35,8 +35,6 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/CommandBar", "
             reactprops.items = {};
             reactprops.overflowItems = {};
             reactprops.farItems = {};
-            reactprops.overflowMenuProps = {};
-            //@ts-ignore
             reactprops.overflowButtonProps = {};
             reactprops.className = {};
             DuCommandBar = /** @class */ (function (_super) {

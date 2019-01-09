@@ -21,8 +21,6 @@ var reactprops = {};
 reactprops.items = {};
 reactprops.overflowItems = {};
 reactprops.farItems = {};
-reactprops.overflowMenuProps = {};
-//@ts-ignore
 reactprops.overflowButtonProps = {};
 reactprops.className = {};
 var DuCommandBar = /** @class */ (function (_super) {

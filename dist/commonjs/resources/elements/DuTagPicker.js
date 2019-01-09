@@ -20,11 +20,32 @@ var aurelia_framework_1 = require("aurelia-framework");
 var Pickers_1 = require("office-ui-fabric-react/lib/Pickers");
 var ReactWrapper_1 = require("../wrapper/ReactWrapper");
 var reactprops = {};
-reactprops.items = {};
-reactprops.focus = (function (_this) { _this.reactComponent.focus(); });
-reactprops.focusInput = (function (_this) { _this.reactComponent.focusInput(); });
+reactprops.onResolveSuggestions = (function () { });
+reactprops.resolveDelay = {};
+reactprops.onEmptyInputFocus = (function () { });
+reactprops.defaultSelectedItems = {};
+reactprops.onChange = function () { };
+reactprops.onFocus = function () { };
+reactprops.onBlur = function () { };
+reactprops.getTextFromItem = (function () { });
+reactprops.onGetMoreResults = (function () { });
+reactprops.className = {};
+reactprops.pickerSuggestionsProps = {};
+reactprops.pickerCalloutProps = {};
+reactprops.inputProps = {};
+reactprops.onRemoveSuggestion = function () { };
+reactprops.onValidateInput = (function () { });
+reactprops.searchingText = {};
+reactprops.disabled = {};
+reactprops.itemLimit = {};
+reactprops.createGenericItem = (function () { });
+reactprops.onItemSelected = (function () { });
+reactprops.selectedItems = {};
+//reactprops.onInputChange = <any>(() => {});
+reactprops.onDismiss = function () { };
+reactprops.enableSelectedSuggestionAlert = {};
 //@ts-ignore
-reactprops.getReactItems = function (_this) { return _this.reactComponent.items; };
+reactprops.items = {};
 var DuTagPicker = /** @class */ (function (_super) {
     __extends(DuTagPicker, _super);
     function DuTagPicker(element) {

@@ -15,6 +15,7 @@ export declare function onChangeEvent(propertyName: string, newValue: any): void
 export declare function camelToKebab(str: any): any;
 export declare function defaultActionEvent(): void;
 export declare function defaultOnChangeEvent(): void;
+export declare function onlyAureliaBound(): void;
 export declare function addProperties(aureliaClass: any, reactprops: any): void;
 export declare function renderReact(reactClass: any, reactprops: any): void;
 export declare function elementWrapper(node: Element, target: string): boolean;

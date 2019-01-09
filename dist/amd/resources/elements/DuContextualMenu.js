@@ -18,7 +18,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/C
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
-    reactprops.arrowDirection = {};
+    //reactprops.arrowDirection = <any>{};
     reactprops.beakWidth = {};
     reactprops.bounds = {};
     reactprops.calloutProps = {};

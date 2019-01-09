@@ -21,8 +21,6 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/C
     reactprops.items = {};
     reactprops.overflowItems = {};
     reactprops.farItems = {};
-    reactprops.overflowMenuProps = {};
-    //@ts-ignore
     reactprops.overflowButtonProps = {};
     reactprops.className = {};
     var DuCommandBar = /** @class */ (function (_super) {

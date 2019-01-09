@@ -6,8 +6,6 @@ let reactprops: ICommandBarProps = <ICommandBarProps>{};
 reactprops.items = <any>{};
 reactprops.overflowItems = <any>{};
 reactprops.farItems = <any>{};
-reactprops.overflowMenuProps = <any>{};
-//@ts-ignore
 reactprops.overflowButtonProps = <any>{};
 reactprops.className = <any>{};
 

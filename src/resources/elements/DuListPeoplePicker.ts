@@ -1,22 +1,36 @@
 import { customElement, inject, noView } from 'aurelia-framework';
-import { IBasePickerSuggestionsProps, ListPeoplePicker } from 'office-ui-fabric-react/lib/Pickers';
-import { renderReact, addProperties, ReactWrapper } from '../wrapper/ReactWrapper';
+import { IPeoplePickerProps  , ListPeoplePicker } from 'office-ui-fabric-react/lib/Pickers';
+import { renderReact, addProperties, ReactWrapper, onlyAureliaBound } from '../wrapper/ReactWrapper';
 
-let reactprops: IBasePickerSuggestionsProps = <IBasePickerSuggestionsProps>{};
+let reactprops: IPeoplePickerProps   = <IPeoplePickerProps>{};
+
+//@ts-ignore
+reactprops.items = <any>{}; // items: T[] | undefined;
+reactprops.onResolveSuggestions = <any>(() => {});
+reactprops.resolveDelay = <any>{}; 
+reactprops.onEmptyInputFocus = <any>(() => {});
+reactprops.defaultSelectedItems = <any>{};
+reactprops.onChange = <any>(() => {});
+reactprops.onFocus = <any>(() => {});
+reactprops.onBlur = <any>(() => {});
+reactprops.getTextFromItem = <any>(() => {});
+reactprops.onGetMoreResults = <any>(() => {});
 reactprops.className = <any>{};
-reactprops.forceResolveText = <any>{};
-reactprops.loadingText = <any>{};
-reactprops.mostRecentlyUsedHeaderText = <any>{};
-reactprops.noResultsFoundText = <any>{};
-//reactprops.onRenderNoResultFound = () => {};
-reactprops.resultsMaximumNumber = <any>{};
-reactprops.searchForMoreText = <any>{};
-reactprops.searchingText = <any>{};
-reactprops.showRemoveButtons = <any>{};
-reactprops.suggestionsAvailableAlertText = <any>{};
-reactprops.suggestionsClassName = <any>{};
-reactprops.suggestionsHeaderText = <any>{};
-reactprops.suggestionsItemClassName = <any>{};
+reactprops.pickerSuggestionsProps = <any>{};
+reactprops.pickerCalloutProps = <any>{};
+reactprops.inputProps = <any>{};
+reactprops.onRemoveSuggestion = <any>(() => {});
+reactprops.onValidateInput = <any>(() => {});
+reactprops.searchingText = <any>(() => {});
+reactprops.disabled = <any>{};
+reactprops.itemLimit = <any>{};
+reactprops.createGenericItem = <any>(() => {});
+reactprops.removeButtonAriaLabel = <any>{};
+reactprops.onItemSelected = <any>(() => {});
+reactprops.selectedItems = <any>{};
+reactprops.onInputChange = <any>onlyAureliaBound;
+reactprops.onDismiss = <any>(() => {});
+reactprops.enableSelectedSuggestionAlert = <any>{};
 
 @noView()
 @inject(Element)

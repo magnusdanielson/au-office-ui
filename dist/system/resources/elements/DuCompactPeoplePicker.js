@@ -32,20 +32,33 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../
         ],
         execute: function () {
             reactprops = {};
+            //@ts-ignore
+            reactprops.items = {}; // items: T[] | undefined;
+            reactprops.onResolveSuggestions = (function () { });
+            reactprops.resolveDelay = {};
+            reactprops.onEmptyInputFocus = (function () { });
+            reactprops.defaultSelectedItems = {};
+            reactprops.onChange = (function () { });
+            reactprops.onFocus = (function () { });
+            reactprops.onBlur = (function () { });
+            reactprops.getTextFromItem = (function () { });
+            reactprops.onGetMoreResults = (function () { });
             reactprops.className = {};
-            reactprops.forceResolveText = {};
-            reactprops.loadingText = {};
-            reactprops.mostRecentlyUsedHeaderText = {};
-            reactprops.noResultsFoundText = {};
-            //reactprops.onRenderNoResultFound = () => {};
-            reactprops.resultsMaximumNumber = {};
-            reactprops.searchForMoreText = {};
-            reactprops.searchingText = {};
-            reactprops.showRemoveButtons = {};
-            reactprops.suggestionsAvailableAlertText = {};
-            reactprops.suggestionsClassName = {};
-            reactprops.suggestionsHeaderText = {};
-            reactprops.suggestionsItemClassName = {};
+            reactprops.pickerSuggestionsProps = {};
+            reactprops.pickerCalloutProps = {};
+            reactprops.inputProps = {};
+            reactprops.onRemoveSuggestion = (function () { });
+            reactprops.onValidateInput = (function () { });
+            reactprops.searchingText = (function () { });
+            reactprops.disabled = {};
+            reactprops.itemLimit = {};
+            reactprops.createGenericItem = (function () { });
+            reactprops.removeButtonAriaLabel = {};
+            reactprops.onItemSelected = (function () { });
+            reactprops.selectedItems = {};
+            //reactprops.onInputChange = <any>(() => {});
+            reactprops.onDismiss = (function () { });
+            reactprops.enableSelectedSuggestionAlert = {};
             DuCompactPeoplePicker = /** @class */ (function (_super) {
                 __extends(DuCompactPeoplePicker, _super);
                 function DuCompactPeoplePicker(element) {

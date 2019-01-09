@@ -13,6 +13,7 @@ define(["require", "exports", "./resources/index", "aurelia-pal"], function (req
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuBreadcrumb'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCheckbox'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuChoiceGroup'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCallout'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuColorPicker'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuComboBox'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuCommandBar'),
@@ -26,6 +27,7 @@ define(["require", "exports", "./resources/index", "aurelia-pal"], function (req
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuIconButton'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuLabel'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuListPeoplePicker'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuNormalPeoplePicker'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuMessageBar'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuNav'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuPeoplePicker'),
@@ -34,6 +36,7 @@ define(["require", "exports", "./resources/index", "aurelia-pal"], function (req
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSearch'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSlider'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSpinButton'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuSpinner'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuTagPicker'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuTextField'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/DuToggle')

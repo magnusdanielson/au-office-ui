@@ -1,4 +1,4 @@
-System.register(["./elements/DuActionButton", "./elements/DuBreadcrumb", "./elements/DuCheckbox", "./elements/DuChoiceGroup", "./elements/DuColorPicker", "./elements/DuComboBox", "./elements/DuCommandBar", "./elements/DuCommandBarButton", "./elements/DuCompoundButton", "./elements/DuContextualMenu", "./elements/DuDatePicker", "./elements/DuDefaultButton", "./elements/DuDropdown", "./elements/DuIconButton", "./elements/DuLabel", "./elements/DuListPeoplePicker", "./elements/DuMessageBar", "./elements/DuNav", "./elements/DuPeoplePicker", "./elements/DuPivot", "./elements/DuProgressIndicator", "./elements/DuSearch", "./elements/DuSlider", "./elements/DuSpinButton", "./elements/DuTagPicker", "./elements/DuTextField", "./elements/DuToggle", "./wrapper/ReactWrapper"], function (exports_1, context_1) {
+System.register(["./elements/DuActionButton", "./elements/DuBreadcrumb", "./elements/DuCheckbox", "./elements/DuChoiceGroup", "./elements/DuCallout", "./elements/DuColorPicker", "./elements/DuComboBox", "./elements/DuCommandBar", "./elements/DuCommandBarButton", "./elements/DuCompoundButton", "./elements/DuContextualMenu", "./elements/DuDatePicker", "./elements/DuDefaultButton", "./elements/DuDropdown", "./elements/DuIconButton", "./elements/DuLabel", "./elements/DuListPeoplePicker", "./elements/DuNormalPeoplePicker", "./elements/DuMessageBar", "./elements/DuNav", "./elements/DuPeoplePicker", "./elements/DuPivot", "./elements/DuProgressIndicator", "./elements/DuSearch", "./elements/DuSlider", "./elements/DuSpinButton", "./elements/DuSpinner", "./elements/DuTagPicker", "./elements/DuTextField", "./elements/DuToggle", "./wrapper/ReactWrapper"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     function exportStar_1(m) {
@@ -21,6 +21,9 @@ System.register(["./elements/DuActionButton", "./elements/DuBreadcrumb", "./elem
             },
             function (DuChoiceGroup_1_1) {
                 exportStar_1(DuChoiceGroup_1_1);
+            },
+            function (DuCallout_1_1) {
+                exportStar_1(DuCallout_1_1);
             },
             function (DuColorPicker_1_1) {
                 exportStar_1(DuColorPicker_1_1);
@@ -58,6 +61,9 @@ System.register(["./elements/DuActionButton", "./elements/DuBreadcrumb", "./elem
             function (DuListPeoplePicker_1_1) {
                 exportStar_1(DuListPeoplePicker_1_1);
             },
+            function (DuNormalPeoplePicker_1_1) {
+                exportStar_1(DuNormalPeoplePicker_1_1);
+            },
             function (DuMessageBar_1_1) {
                 exportStar_1(DuMessageBar_1_1);
             },
@@ -81,6 +87,9 @@ System.register(["./elements/DuActionButton", "./elements/DuBreadcrumb", "./elem
             },
             function (DuSpinButton_1_1) {
                 exportStar_1(DuSpinButton_1_1);
+            },
+            function (DuSpinner_1_1) {
+                exportStar_1(DuSpinner_1_1);
             },
             function (DuTagPicker_1_1) {
                 exportStar_1(DuTagPicker_1_1);

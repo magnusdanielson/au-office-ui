@@ -18,7 +18,7 @@ import { customElement, inject, noView } from 'aurelia-framework';
 import { ContextualMenu } from 'office-ui-fabric-react/lib/ContextualMenu';
 import { renderReact, addProperties, ReactWrapper, defaultActionEvent } from '../wrapper/ReactWrapper';
 var reactprops = {};
-reactprops.arrowDirection = {};
+//reactprops.arrowDirection = <any>{};
 reactprops.beakWidth = {};
 reactprops.bounds = {};
 reactprops.calloutProps = {};

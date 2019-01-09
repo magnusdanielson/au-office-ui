@@ -11,6 +11,7 @@ export function configure(aurelia: FrameworkConfiguration) {
         PLATFORM.moduleName('./resources/elements/DuBreadcrumb'),
         PLATFORM.moduleName('./resources/elements/DuCheckbox'),
         PLATFORM.moduleName('./resources/elements/DuChoiceGroup'),
+        PLATFORM.moduleName('./resources/elements/DuCallout'),
         PLATFORM.moduleName('./resources/elements/DuColorPicker'),
         PLATFORM.moduleName('./resources/elements/DuComboBox'),
         PLATFORM.moduleName('./resources/elements/DuCommandBar'),
@@ -24,6 +25,7 @@ export function configure(aurelia: FrameworkConfiguration) {
         PLATFORM.moduleName('./resources/elements/DuIconButton'),
         PLATFORM.moduleName('./resources/elements/DuLabel'),
         PLATFORM.moduleName('./resources/elements/DuListPeoplePicker'),
+        PLATFORM.moduleName('./resources/elements/DuNormalPeoplePicker'),
         PLATFORM.moduleName('./resources/elements/DuMessageBar'),
         PLATFORM.moduleName('./resources/elements/DuNav'),
         PLATFORM.moduleName('./resources/elements/DuPeoplePicker'),
@@ -32,6 +34,7 @@ export function configure(aurelia: FrameworkConfiguration) {
         PLATFORM.moduleName('./resources/elements/DuSearch'),
         PLATFORM.moduleName('./resources/elements/DuSlider'),
         PLATFORM.moduleName('./resources/elements/DuSpinButton'),
+        PLATFORM.moduleName('./resources/elements/DuSpinner'),
         PLATFORM.moduleName('./resources/elements/DuTagPicker'),
         PLATFORM.moduleName('./resources/elements/DuTextField'),
         PLATFORM.moduleName('./resources/elements/DuToggle')

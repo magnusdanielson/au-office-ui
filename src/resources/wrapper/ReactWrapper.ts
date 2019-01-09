@@ -74,6 +74,8 @@ export function defaultActionEvent(){}
 
 export function defaultOnChangeEvent(){}
 
+export function onlyAureliaBound(){}
+
 
 export function addProperties(aureliaClass: any, reactprops: any) {
     var reactpropNames = Object.getOwnPropertyNames(reactprops);
@@ -120,34 +122,62 @@ export function addProperties(aureliaClass: any, reactprops: any) {
       if (typeof reactprops[renderPropName] === 'function')
         {
           this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
-        if (renderPropName.startsWith('on')) {
-          this.log.debug('on property ' + renderPropName);
-          a[renderPropName] = (...newValue: any[]) => {
-            this.log.debug('event called on ' + renderPropName);
-            if (typeof this[renderPropName] !== 'function')
-            {
-              this.log.debug('no Aurelia bound function');              
-              if ( reactprops[renderPropName].name === 'defaultOnChangeEvent' )
-              {
-                this.defaultOnChangeEvent(renderPropName, newValue);
-              }
-              else if ( reactprops[renderPropName].name === 'defaultActionEvent' )
-              {
-                this.defaultActionEvent(renderPropName, newValue);
-              }
-              else
-              {
-                this.log.debug('run func from reactprops');
-                return reactprops[renderPropName](this, newValue);
-              }
-            }
-            else
-            {
-                this.log.debug('bound function, go aurelia');
-                return this[renderPropName]( newValue);
-            }
-          };
+        //if (renderPropName.startsWith('on')) 
+        //{
+        //  this.log.debug('on property ' + renderPropName);
+
+        // function is aurelia bound, make sure to call it
+        this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
+        if (typeof this[renderPropName] === 'function') 
+        {
+          a[renderPropName] = (...newValue: any[]) => 
+          {
+            this.log.debug('bound function, go aurelia');
+            return this[renderPropName]( newValue);
+          }
         }
+        else
+        {
+
+          let funcNames = ['defaultOnChangeEvent', 'defaultActionEvent', 'onlyAureliaBound'];
+          if ( ! funcNames.includes( reactprops[renderPropName].name) )
+          {
+            a[renderPropName] = (...newValue: any[]) => 
+            {
+              this.log.debug('run func from reactprops');
+              return reactprops[renderPropName](this, newValue);
+            }
+          }
+        }
+          // a[renderPropName] = (...newValue: any[]) => {
+          //   this.log.debug('event called on ' + renderPropName);
+          //   if (typeof this[renderPropName] !== 'function')
+          //   {
+          //     this.log.debug('no Aurelia bound function');              
+          //     if ( reactprops[renderPropName].name === 'defaultOnChangeEvent' )
+          //     {
+          //       this.defaultOnChangeEvent(renderPropName, newValue);
+          //     }
+          //     else if ( reactprops[renderPropName].name === 'defaultActionEvent' )
+          //     {
+          //       this.defaultActionEvent(renderPropName, newValue);
+          //     }
+          //     else if ( reactprops[renderPropName].name === 'onlyAureliaBound' )
+          //     {
+                
+          //     }
+          //     else
+          //     {
+          //       this.log.debug('run func from reactprops');
+          //       return reactprops[renderPropName](this, newValue);
+          //     }
+          //   }
+          //   else
+          //   {
+                
+          //   }
+          // };
+        //}
        } else {
         if (typeof this[renderPropName] !== 'undefined') {
         this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);

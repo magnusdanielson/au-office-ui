@@ -51,6 +51,8 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework"], functi
     exports.defaultActionEvent = defaultActionEvent;
     function defaultOnChangeEvent() { }
     exports.defaultOnChangeEvent = defaultOnChangeEvent;
+    function onlyAureliaBound() { }
+    exports.onlyAureliaBound = onlyAureliaBound;
     function addProperties(aureliaClass, reactprops) {
         var reactpropNames = Object.getOwnPropertyNames(reactprops);
         for (var i = 0; i < reactpropNames.length; i++) {
@@ -87,33 +89,61 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework"], functi
             var renderPropName = reactpropNames[i];
             if (typeof reactprops[renderPropName] === 'function') {
                 this_1.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
-                if (renderPropName.startsWith('on')) {
-                    this_1.log.debug('on property ' + renderPropName);
+                //if (renderPropName.startsWith('on')) 
+                //{
+                //  this.log.debug('on property ' + renderPropName);
+                // function is aurelia bound, make sure to call it
+                this_1.log.debug('typeof this[renderPropName] = ' + typeof this_1[renderPropName]);
+                if (typeof this_1[renderPropName] === 'function') {
                     a[renderPropName] = function () {
                         var newValue = [];
                         for (var _i = 0; _i < arguments.length; _i++) {
                             newValue[_i] = arguments[_i];
                         }
-                        _this.log.debug('event called on ' + renderPropName);
-                        if (typeof _this[renderPropName] !== 'function') {
-                            _this.log.debug('no Aurelia bound function');
-                            if (reactprops[renderPropName].name === 'defaultOnChangeEvent') {
-                                _this.defaultOnChangeEvent(renderPropName, newValue);
-                            }
-                            else if (reactprops[renderPropName].name === 'defaultActionEvent') {
-                                _this.defaultActionEvent(renderPropName, newValue);
-                            }
-                            else {
-                                _this.log.debug('run func from reactprops');
-                                return reactprops[renderPropName](_this, newValue);
-                            }
-                        }
-                        else {
-                            _this.log.debug('bound function, go aurelia');
-                            return _this[renderPropName](newValue);
-                        }
+                        _this.log.debug('bound function, go aurelia');
+                        return _this[renderPropName](newValue);
                     };
                 }
+                else {
+                    var funcNames = ['defaultOnChangeEvent', 'defaultActionEvent', 'onlyAureliaBound'];
+                    if (!funcNames.includes(reactprops[renderPropName].name)) {
+                        a[renderPropName] = function () {
+                            var newValue = [];
+                            for (var _i = 0; _i < arguments.length; _i++) {
+                                newValue[_i] = arguments[_i];
+                            }
+                            _this.log.debug('run func from reactprops');
+                            return reactprops[renderPropName](_this, newValue);
+                        };
+                    }
+                }
+                // a[renderPropName] = (...newValue: any[]) => {
+                //   this.log.debug('event called on ' + renderPropName);
+                //   if (typeof this[renderPropName] !== 'function')
+                //   {
+                //     this.log.debug('no Aurelia bound function');              
+                //     if ( reactprops[renderPropName].name === 'defaultOnChangeEvent' )
+                //     {
+                //       this.defaultOnChangeEvent(renderPropName, newValue);
+                //     }
+                //     else if ( reactprops[renderPropName].name === 'defaultActionEvent' )
+                //     {
+                //       this.defaultActionEvent(renderPropName, newValue);
+                //     }
+                //     else if ( reactprops[renderPropName].name === 'onlyAureliaBound' )
+                //     {
+                //     }
+                //     else
+                //     {
+                //       this.log.debug('run func from reactprops');
+                //       return reactprops[renderPropName](this, newValue);
+                //     }
+                //   }
+                //   else
+                //   {
+                //   }
+                // };
+                //}
             }
             else {
                 if (typeof this_1[renderPropName] !== 'undefined') {

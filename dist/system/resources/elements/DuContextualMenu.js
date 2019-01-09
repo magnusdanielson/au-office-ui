@@ -32,7 +32,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ContextualMenu
         ],
         execute: function () {
             reactprops = {};
-            reactprops.arrowDirection = {};
+            //reactprops.arrowDirection = <any>{};
             reactprops.beakWidth = {};
             reactprops.bounds = {};
             reactprops.calloutProps = {};
