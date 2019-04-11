@@ -12,7 +12,6 @@ export declare abstract class ReactWrapper {
     unbind(): void;
 }
 export declare function onChangeEvent(propertyName: string, newValue: any): void;
-export declare function camelToKebab(str: any): any;
 export declare function defaultActionEvent(): void;
 export declare function defaultOnChangeEvent(): void;
 export declare function onlyAureliaBound(): void;

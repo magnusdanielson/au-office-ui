@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { LogManager, bindable, bindingMode } from 'aurelia-framework';
 import { Logger } from 'aurelia-logging';
+import { camelToKebab } from './Utilities';
 
 
 export abstract class ReactWrapper {
@@ -21,7 +22,7 @@ export abstract class ReactWrapper {
   
     public defaultOnChangeEvent(propertyName: string, newValue: any)
     {
-      this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
+      //this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
         let propName = propertyName
               .substring(2, propertyName.length - 'Changed'.length)
               .toLowerCase();
@@ -31,12 +32,14 @@ export abstract class ReactWrapper {
             //this.bind(null,null);
     }
   
+    //@ts-ignore
     public defaultActionEvent(propertyName: string, event: any)
     {
-        this.log.debug('Default event occurred on property ' + propertyName + ' with event ' + event);
+        //this.log.debug('Default event occurred on property ' + propertyName + ' with event ' + event);
     }
 
-    public bind(bindingContext) {
+    public bind(bindingContext) 
+    {
         if ( bindingContext !== null)
         {
             this.parent = bindingContext;
@@ -54,7 +57,7 @@ export abstract class ReactWrapper {
 
 export function onChangeEvent(propertyName: string, newValue: any)
 {
-    this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
+    //this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
     if (newValue != this[propertyName]) {
       this[propertyName] = newValue;
     }
@@ -62,13 +65,7 @@ export function onChangeEvent(propertyName: string, newValue: any)
 
 
 
-export function camelToKebab(str) {
-    // Matches all places where a two upper case chars followed by a lower case char are and split them with an hyphen
-    //@ts-ignore
-    return str.replace(/([a-zA-Z])([A-Z][a-z])/g, (match, before, after) => {
-        return `${before.toLowerCase()}-${after.toLowerCase()}`;
-    }).toLowerCase();
-}
+
 
 export function defaultActionEvent(){}
 
@@ -92,7 +89,9 @@ export function addProperties(aureliaClass: any, reactprops: any) {
   }
   
   
-  export function renderReact(reactClass: any, reactprops: any) {
+  export function renderReact(reactClass: any, reactprops: any) 
+  {
+
     // this is bound to Aurelia class
     this.container = this.element.querySelector('.au-react-root');
   
@@ -121,18 +120,15 @@ export function addProperties(aureliaClass: any, reactprops: any) {
       let renderPropName = reactpropNames[i];
       if (typeof reactprops[renderPropName] === 'function')
         {
-          this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
-        //if (renderPropName.startsWith('on')) 
-        //{
-        //  this.log.debug('on property ' + renderPropName);
-
+          //this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
+        
         // function is aurelia bound, make sure to call it
-        this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
+        //this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
         if (typeof this[renderPropName] === 'function') 
         {
           a[renderPropName] = (...newValue: any[]) => 
           {
-            this.log.debug('bound function, go aurelia');
+            //this.log.debug('bound function, go aurelia');
             return this[renderPropName]( newValue);
           }
         }
@@ -144,50 +140,19 @@ export function addProperties(aureliaClass: any, reactprops: any) {
           {
             a[renderPropName] = (...newValue: any[]) => 
             {
-              this.log.debug('run func from reactprops');
+              //this.log.debug('run func from reactprops');
               return reactprops[renderPropName](this, newValue);
             }
           }
         }
-          // a[renderPropName] = (...newValue: any[]) => {
-          //   this.log.debug('event called on ' + renderPropName);
-          //   if (typeof this[renderPropName] !== 'function')
-          //   {
-          //     this.log.debug('no Aurelia bound function');              
-          //     if ( reactprops[renderPropName].name === 'defaultOnChangeEvent' )
-          //     {
-          //       this.defaultOnChangeEvent(renderPropName, newValue);
-          //     }
-          //     else if ( reactprops[renderPropName].name === 'defaultActionEvent' )
-          //     {
-          //       this.defaultActionEvent(renderPropName, newValue);
-          //     }
-          //     else if ( reactprops[renderPropName].name === 'onlyAureliaBound' )
-          //     {
-                
-          //     }
-          //     else
-          //     {
-          //       this.log.debug('run func from reactprops');
-          //       return reactprops[renderPropName](this, newValue);
-          //     }
-          //   }
-          //   else
-          //   {
-                
-          //   }
-          // };
-        //}
+          
        } else {
         if (typeof this[renderPropName] !== 'undefined') {
-        this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);
+        //this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);
           a[renderPropName] = this[renderPropName];
         }
       }
       }
-    
-    // const reactElement = React.createElement(reactClass, a
-    //   , React.createElement('span', {type: 'innerHTML', value: 'And here is a child'}));
     
     const reactElement = React.createElement(reactClass, a);
     this.reactComponent = reactElement;
@@ -229,7 +194,6 @@ export function addProperties(aureliaClass: any, reactprops: any) {
       let nodeCount = node.childElementCount;
       for ( let i = nodeCount - 1 ; i >= 0 ; i--)
       {
-        //console.log(node.children[i]);
         rootspan.insertBefore(node.children[i], rootspan.firstChild);
         //node.removeChild(node.children[i]);
       }
