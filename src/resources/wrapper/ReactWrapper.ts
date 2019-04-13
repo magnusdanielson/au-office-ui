@@ -20,23 +20,23 @@ export abstract class ReactWrapper {
   
     public abstract render();
   
-    public defaultOnChangeEvent(propertyName: string, newValue: any)
-    {
-      //this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
-        let propName = propertyName
-              .substring(2, propertyName.length - 'Changed'.length)
-              .toLowerCase();
-            if (newValue != this[propName]) {
-              this[propName] = newValue;
-            }
-            //this.bind(null,null);
-    }
+    // public defaultOnChangeEvent(propertyName: string, newValue: any)
+    // {
+    //   //this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
+    //     let propName = propertyName
+    //           .substring(2, propertyName.length - 'Changed'.length)
+    //           .toLowerCase();
+    //         if (newValue != this[propName]) {
+    //           this[propName] = newValue;
+    //         }
+    //         //this.bind(null,null);
+    // }
   
-    //@ts-ignore
-    public defaultActionEvent(propertyName: string, event: any)
-    {
-        //this.log.debug('Default event occurred on property ' + propertyName + ' with event ' + event);
-    }
+    // //@ts-ignore
+    // public defaultActionEvent(propertyName: string, event: any)
+    // {
+    //     //this.log.debug('Default event occurred on property ' + propertyName + ' with event ' + event);
+    // }
 
     public bind(bindingContext) 
     {
@@ -55,13 +55,13 @@ export abstract class ReactWrapper {
   
 }
 
-export function onChangeEvent(propertyName: string, newValue: any)
-{
-    //this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
-    if (newValue != this[propertyName]) {
-      this[propertyName] = newValue;
-    }
-}
+// export function onChangeEvent(propertyName: string, newValue: any)
+// {
+//     //this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
+//     if (newValue != this[propertyName]) {
+//       this[propertyName] = newValue;
+//     }
+// }
 
 
 

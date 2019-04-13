@@ -14,20 +14,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (require, exports, aurelia_framework_1, Pivot_1, DuReactWrapperBaseClass_1, Utilities_1) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (require, exports, aurelia_framework_1, Pivot_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
     reactprops.className = {};
     reactprops.initialSelectedKey = {};
     reactprops.initialSelectedIndex = {};
-    reactprops.onLinkClick = function () { };
+    reactprops.onLinkClick = (ReactWrapper_1.onlyAureliaBound);
     reactprops.selectedKey = {};
     reactprops.linkSize = {};
     reactprops.linkFormat = {};
     reactprops.headersOnly = {};
-    //@ts-ignore
-    reactprops.getTabId = function (itemKey, index) { return ''; };
+    reactprops.getTabId = (ReactWrapper_1.onlyAureliaBound); // (itemKey: string, index: number): string => { return ''; };
     var DuPivot = /** @class */ (function (_super) {
         __extends(DuPivot, _super);
         function DuPivot(element) {

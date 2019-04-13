@@ -26,7 +26,7 @@ reactprops.placeholder = {};
 reactprops.onSearch = function () { };
 reactprops.onFocus = function () { };
 reactprops.onBlur = function () { };
-reactprops.onChange = function () { };
+reactprops.onChange = (function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; });
 reactprops.disableAnimation = {};
 reactprops.onClear = function () { };
 reactprops.onEscape = function () { };
@@ -38,11 +38,11 @@ reactprops.iconProps = {};
 var DuSearchBox = /** @class */ (function (_super) {
     __extends(DuSearchBox, _super);
     function DuSearchBox(element) {
-        var _this = _super.call(this, element) || this;
-        _this.hidden = false;
-        _this.hiddenIsHidden = true;
-        _this.hiddenName = 'hidden';
-        return _this;
+        var _this_1 = _super.call(this, element) || this;
+        _this_1.hidden = false;
+        _this_1.hiddenIsHidden = true;
+        _this_1.hiddenName = 'hidden';
+        return _this_1;
     }
     DuSearchBox.prototype.attached = function () {
         this.renderReact(SearchBox, this.createState(reactprops));

@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/DatePicker", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/DatePicker", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/DatePicker", "
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, DatePicker_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuDatePicker;
+    var aurelia_framework_1, DatePicker_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1, reactprops, DuDatePicker;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -31,11 +31,14 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/DatePicker", "
             },
             function (Utilities_1_1) {
                 Utilities_1 = Utilities_1_1;
+            },
+            function (ReactWrapper_1_1) {
+                ReactWrapper_1 = ReactWrapper_1_1;
             }
         ],
         execute: function () {
             reactprops = {};
-            reactprops.onSelectDate = function () { };
+            reactprops.onSelectDate = ReactWrapper_1.onlyAureliaBound;
             reactprops.label = {};
             reactprops.isRequired = {};
             reactprops.disabled = {};

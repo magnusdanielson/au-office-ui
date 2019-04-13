@@ -30,7 +30,7 @@ export class DuReactWrapperBaseClass
           //this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
         
         // function is aurelia bound, make sure to call it
-        //this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
+          //this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
         if (typeof this[renderPropName] === 'function') 
         {
           a[renderPropName] = (...newValue: any[]) => 
@@ -55,7 +55,7 @@ export class DuReactWrapperBaseClass
          
        } else {
         if (typeof this[renderPropName] !== 'undefined') {
-        //this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);
+          //this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);
           a[renderPropName] = this[renderPropName];
         }
       }
@@ -95,10 +95,10 @@ export class DuReactWrapperBaseClass
 
   propertyChanged(name, newValue) //, oldValue)
   {
-    // this.log.debug('propertyChanged');
-    // this.log.debug(name);
-    // this.log.debug(newValue);
-    // this.log.debug(oldValue);
+    //this.log.debug('propertyChanged');
+    //this.log.debug(name);
+    //this.log.debug(newValue);
+    //console.log(this);
     let obj = {};
     obj[name] = newValue;
 
@@ -110,6 +110,7 @@ export class DuReactWrapperBaseClass
       }
     }
     this.reactComponent.setState(obj);
+    this[name] = newValue;
     
   }
 

@@ -11,7 +11,7 @@ reactprops.onResolveSuggestions = <any>(() => {});
 reactprops.resolveDelay = <any>{}; 
 reactprops.onEmptyInputFocus = <any>(() => {});
 reactprops.defaultSelectedItems = <any>{};
-reactprops.onChange = <any>(() => {});
+reactprops.onChange = <any>((_this: any, items: any) => { _this['selectedItems'] = items; });
 reactprops.onFocus = <any>(() => {});
 reactprops.onBlur = <any>(() => {});
 reactprops.getTextFromItem = <any>(() => {});

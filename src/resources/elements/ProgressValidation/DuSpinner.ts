@@ -12,7 +12,7 @@ reactprops.labelPosition = <any>{};
 
 @inject(Element)
 @customElement('du-spinner')
-export class DuSpinner extends  DuReactWrapperBaseClass {
+export class DuSpinner extends  DuReactWrapperBaseClass implements ISpinnerProps {
 
   constructor(element) {
   super(element);

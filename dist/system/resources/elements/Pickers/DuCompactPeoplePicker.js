@@ -41,7 +41,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../
             reactprops.resolveDelay = {};
             reactprops.onEmptyInputFocus = (function () { });
             reactprops.defaultSelectedItems = {};
-            reactprops.onChange = (function () { });
+            reactprops.onChange = (function (_this, items) { _this['selectedItems'] = items; });
             reactprops.onFocus = (function () { });
             reactprops.onBlur = (function () { });
             reactprops.getTextFromItem = (function () { });
@@ -65,11 +65,11 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../
             DuCompactPeoplePicker = /** @class */ (function (_super) {
                 __extends(DuCompactPeoplePicker, _super);
                 function DuCompactPeoplePicker(element) {
-                    var _this = _super.call(this, element) || this;
-                    _this.hidden = false;
-                    _this.hiddenIsHidden = true;
-                    _this.hiddenName = 'hidden';
-                    return _this;
+                    var _this_1 = _super.call(this, element) || this;
+                    _this_1.hidden = false;
+                    _this_1.hiddenIsHidden = true;
+                    _this_1.hiddenName = 'hidden';
+                    return _this_1;
                 }
                 DuCompactPeoplePicker.prototype.attached = function () {
                     this.renderReact(Pickers_1.CompactPeoplePicker, this.createState(reactprops));

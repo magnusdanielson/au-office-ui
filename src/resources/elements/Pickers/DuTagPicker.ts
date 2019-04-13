@@ -2,13 +2,14 @@ import { customElement, inject } from 'aurelia-framework';
 import { TagPicker, IBasePickerProps, ITag } from 'office-ui-fabric-react/lib/Pickers';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
+import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 
 let reactprops: IBasePickerProps<ITag> = <IBasePickerProps<ITag>>{};
 reactprops.onResolveSuggestions = <any>(() => {});
 reactprops.resolveDelay = <any>{};
 reactprops.onEmptyInputFocus = <any>(() => {});
 reactprops.defaultSelectedItems = <any>{};
-reactprops.onChange = () => {};
+reactprops.onChange = onlyAureliaBound;
 reactprops.onFocus = () => {};
 reactprops.onBlur = () => {};
 reactprops.getTextFromItem = <any>(() => {});
@@ -30,7 +31,7 @@ reactprops.onDismiss = () => {};
 reactprops.enableSelectedSuggestionAlert = <any>{};
 //@ts-ignore
 reactprops.items = <any>{};
-
+reactprops.selectedItems = <any>{};
 
 @inject(Element)
 @customElement('du-tag-picker')

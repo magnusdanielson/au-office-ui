@@ -1,6 +1,6 @@
 import * as React from 'react';
 export declare class ReactStateWrapper extends React.Component {
-    inneridReact: number;
+    inneridReact: string;
     state: any;
     aureliaHost: any;
     reactClass: any;

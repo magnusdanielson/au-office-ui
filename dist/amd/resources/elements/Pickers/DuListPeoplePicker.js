@@ -24,7 +24,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/P
     reactprops.resolveDelay = {};
     reactprops.onEmptyInputFocus = (function () { });
     reactprops.defaultSelectedItems = {};
-    reactprops.onChange = (function () { });
+    reactprops.onChange = (function (_this, items) { _this['selectedItems'] = items; });
     reactprops.onFocus = (function () { });
     reactprops.onBlur = (function () { });
     reactprops.getTextFromItem = (function () { });
@@ -45,14 +45,15 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/P
     reactprops.onInputChange = ReactWrapper_1.onlyAureliaBound;
     reactprops.onDismiss = (function () { });
     reactprops.enableSelectedSuggestionAlert = {};
+    reactprops.selectedItems = {};
     var DuListPeoplePicker = /** @class */ (function (_super) {
         __extends(DuListPeoplePicker, _super);
         function DuListPeoplePicker(element) {
-            var _this = _super.call(this, element) || this;
-            _this.hidden = false;
-            _this.hiddenIsHidden = true;
-            _this.hiddenName = 'hidden';
-            return _this;
+            var _this_1 = _super.call(this, element) || this;
+            _this_1.hidden = false;
+            _this_1.hiddenIsHidden = true;
+            _this_1.hiddenName = 'hidden';
+            return _this_1;
         }
         DuListPeoplePicker.prototype.attached = function () {
             this.renderReact(Pickers_1.ListPeoplePicker, this.createState(reactprops));

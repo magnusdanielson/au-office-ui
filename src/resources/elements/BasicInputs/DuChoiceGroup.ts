@@ -1,26 +1,27 @@
 import { customElement, inject } from 'aurelia-framework';
-import { ChoiceGroup, IChoiceGroupProps } from 'office-ui-fabric-react/lib/ChoiceGroup';
+import { ChoiceGroup, IChoiceGroup, IChoiceGroupProps } from 'office-ui-fabric-react/lib/ChoiceGroup';
 import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
 
-let reactprops: IChoiceGroupProps = <IChoiceGroupProps>{};
+let reactprops: IChoiceGroupProps = <IChoiceGroupProps & IChoiceGroup>{};
 reactprops.ariaLabelledBy = <any>{};
 reactprops.disabled = <any>{};
 reactprops.checked = <any>{};
 reactprops.className = <any>{};
 reactprops.label = <any>{};
-reactprops.onChange = onlyAureliaBound;
+reactprops.onChange = (_this: any, onChangeTuple: any) => { _this['value'] = onChangeTuple[1]; };
 reactprops.options = <any>{};
 reactprops.onClick = onlyAureliaBound;
 reactprops.defaultSelectedKey = <any>{};
 reactprops.selectedKey = <any>{};
+reactprops.value = <any>{};
 
 
 
 @inject(Element)
 @customElement('du-choice-group')
-export class DuChoiceGroup extends  DuReactWrapperBaseClass {
+export class DuChoiceGroup extends  DuReactWrapperBaseClass implements IChoiceGroupProps {
 
   constructor(element) {
   super(element);

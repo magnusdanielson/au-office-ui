@@ -20,10 +20,10 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/D
     var reactprops = {};
     reactprops.placeholder = {};
     reactprops.options = {};
-    reactprops.onDismiss = ReactWrapper_1.defaultActionEvent;
-    reactprops.onFocus = ReactWrapper_1.defaultActionEvent;
-    reactprops.onBlur = ReactWrapper_1.defaultActionEvent;
-    reactprops.onChange = ReactWrapper_1.defaultActionEvent;
+    reactprops.onDismiss = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onFocus = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onBlur = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
     reactprops.dropdownWidth = {};
     reactprops.responsiveMode = {};
     reactprops.multiSelect = {};
@@ -35,6 +35,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/D
     reactprops.disabled = {};
     reactprops.errorMessage = {};
     reactprops.required = {};
+    reactprops.selectedKey = {};
     var DuDropdown = /** @class */ (function (_super) {
         __extends(DuDropdown, _super);
         function DuDropdown(element) {

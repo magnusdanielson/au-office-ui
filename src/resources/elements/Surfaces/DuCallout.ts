@@ -38,7 +38,7 @@ reactprops.target = <any>{};
 
 @inject(Element)
 @customElement('du-callout')
-export class DuCallout extends  DuReactWrapperBaseClass {
+export class DuCallout extends  DuReactWrapperBaseClass implements ICalloutProps {
 
   constructor(element) {
   super(element);

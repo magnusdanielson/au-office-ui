@@ -25,7 +25,7 @@ reactprops.onResolveSuggestions = (function () { });
 reactprops.resolveDelay = {};
 reactprops.onEmptyInputFocus = (function () { });
 reactprops.defaultSelectedItems = {};
-reactprops.onChange = (function () { });
+reactprops.onChange = (function (_this, items) { _this['selectedItems'] = items; });
 reactprops.onFocus = (function () { });
 reactprops.onBlur = (function () { });
 reactprops.getTextFromItem = (function () { });
@@ -46,14 +46,15 @@ reactprops.selectedItems = {};
 //reactprops.onInputChange = <any>(() => {});
 reactprops.onDismiss = (function () { });
 reactprops.enableSelectedSuggestionAlert = {};
+reactprops.selectedItems = {};
 var DuNormalPeoplePicker = /** @class */ (function (_super) {
     __extends(DuNormalPeoplePicker, _super);
     function DuNormalPeoplePicker(element) {
-        var _this = _super.call(this, element) || this;
-        _this.hidden = false;
-        _this.hiddenIsHidden = true;
-        _this.hiddenName = 'hidden';
-        return _this;
+        var _this_1 = _super.call(this, element) || this;
+        _this_1.hidden = false;
+        _this_1.hiddenIsHidden = true;
+        _this_1.hiddenName = 'hidden';
+        return _this_1;
     }
     DuNormalPeoplePicker.prototype.attached = function () {
         this.renderReact(NormalPeoplePicker, this.createState(reactprops));

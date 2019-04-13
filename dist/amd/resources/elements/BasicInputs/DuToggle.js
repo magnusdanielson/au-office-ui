@@ -25,7 +25,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/T
     reactprops.checked = {};
     reactprops.defaultChecked = {};
     reactprops.disabled = {};
-    reactprops.onChange = function (_this, checked) { _this['checked'] = checked; };
+    reactprops.onChange = function (_this, onChangeTuple) { _this['checked'] = onChangeTuple[1]; };
     reactprops.className = {};
     reactprops.keytipProps = {};
     var DuToggle = /** @class */ (function (_super) {

@@ -15,7 +15,7 @@ reactprops.title = <any>{};
 
 @inject(Element)
 @customElement('du-document-card-title')
-export class DuDocumentCardTitle extends  DuReactWrapperBaseClass {
+export class DuDocumentCardTitle extends  DuReactWrapperBaseClass implements IDocumentCardTitleProps {
 
   constructor(element) {
   super(element);
@@ -24,6 +24,7 @@ export class DuDocumentCardTitle extends  DuReactWrapperBaseClass {
   }
 
   hidden: boolean = false;
+  title: string;
 
   attached() {
     this.renderReact(DocumentCardTitle, this.createState(reactprops));

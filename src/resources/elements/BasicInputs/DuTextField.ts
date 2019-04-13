@@ -15,7 +15,7 @@ reactprops.multiline = <any>{};
 reactprops.className = <any>{};
 reactprops.label = <any>{};
 reactprops.resizable = <any>{};
-reactprops.onChange = (_this, newValue) => { _this['value'] = newValue };
+reactprops.onChange = (_this, onChangeTuple: any) => { _this['value'] = onChangeTuple[1]; };
 reactprops.autoAdjustHeight = <any>{};
 reactprops.underlined = <any>{};
 reactprops.onNotifyValidationResult = onlyAureliaBound;

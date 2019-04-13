@@ -41,16 +41,16 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ColorPicker", 
             reactprops.color = {};
             reactprops.greenLabel = {};
             reactprops.hexLabel = {};
-            reactprops.onColorChanged = function () { };
+            reactprops.onColorChanged = function (_this, onChangeTuple) { _this['color'] = onChangeTuple[1]; };
             reactprops.redLabel = {};
             DuColorPicker = /** @class */ (function (_super) {
                 __extends(DuColorPicker, _super);
                 function DuColorPicker(element) {
-                    var _this = _super.call(this, element) || this;
-                    _this.hidden = false;
-                    _this.hiddenIsHidden = true;
-                    _this.hiddenName = 'hidden';
-                    return _this;
+                    var _this_1 = _super.call(this, element) || this;
+                    _this_1.hidden = false;
+                    _this_1.hiddenIsHidden = true;
+                    _this_1.hiddenName = 'hidden';
+                    return _this_1;
                 }
                 DuColorPicker.prototype.attached = function () {
                     this.renderReact(ColorPicker_1.ColorPicker, this.createState(reactprops));

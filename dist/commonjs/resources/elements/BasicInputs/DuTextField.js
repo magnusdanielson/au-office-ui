@@ -32,7 +32,7 @@ reactprops.multiline = {};
 reactprops.className = {};
 reactprops.label = {};
 reactprops.resizable = {};
-reactprops.onChange = function (_this, newValue) { _this['value'] = newValue; };
+reactprops.onChange = function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; };
 reactprops.autoAdjustHeight = {};
 reactprops.underlined = {};
 reactprops.onNotifyValidationResult = ReactWrapper_1.onlyAureliaBound;

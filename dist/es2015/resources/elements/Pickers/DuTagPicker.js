@@ -18,12 +18,13 @@ import { customElement, inject } from 'aurelia-framework';
 import { TagPicker } from 'office-ui-fabric-react/lib/Pickers';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
+import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 var reactprops = {};
 reactprops.onResolveSuggestions = (function () { });
 reactprops.resolveDelay = {};
 reactprops.onEmptyInputFocus = (function () { });
 reactprops.defaultSelectedItems = {};
-reactprops.onChange = function () { };
+reactprops.onChange = onlyAureliaBound;
 reactprops.onFocus = function () { };
 reactprops.onBlur = function () { };
 reactprops.getTextFromItem = (function () { });
@@ -45,6 +46,7 @@ reactprops.onDismiss = function () { };
 reactprops.enableSelectedSuggestionAlert = {};
 //@ts-ignore
 reactprops.items = {};
+reactprops.selectedItems = {};
 var DuTagPicker = /** @class */ (function (_super) {
     __extends(DuTagPicker, _super);
     function DuTagPicker(element) {

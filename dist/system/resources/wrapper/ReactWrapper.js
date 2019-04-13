@@ -2,13 +2,13 @@ System.register(["react", "react-dom", "aurelia-framework", "./Utilities"], func
     "use strict";
     var React, ReactDom, aurelia_framework_1, Utilities_1, ReactWrapper;
     var __moduleName = context_1 && context_1.id;
-    function onChangeEvent(propertyName, newValue) {
-        //this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
-        if (newValue != this[propertyName]) {
-            this[propertyName] = newValue;
-        }
-    }
-    exports_1("onChangeEvent", onChangeEvent);
+    // export function onChangeEvent(propertyName: string, newValue: any)
+    // {
+    //     //this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
+    //     if (newValue != this[propertyName]) {
+    //       this[propertyName] = newValue;
+    //     }
+    // }
     function defaultActionEvent() { }
     exports_1("defaultActionEvent", defaultActionEvent);
     function defaultOnChangeEvent() { }
@@ -149,20 +149,22 @@ System.register(["react", "react-dom", "aurelia-framework", "./Utilities"], func
                     this.element = element;
                     this.log = aurelia_framework_1.LogManager.getLogger('reacthost');
                 }
-                ReactWrapper.prototype.defaultOnChangeEvent = function (propertyName, newValue) {
-                    //this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
-                    var propName = propertyName
-                        .substring(2, propertyName.length - 'Changed'.length)
-                        .toLowerCase();
-                    if (newValue != this[propName]) {
-                        this[propName] = newValue;
-                    }
-                    //this.bind(null,null);
-                };
-                //@ts-ignore
-                ReactWrapper.prototype.defaultActionEvent = function (propertyName, event) {
-                    //this.log.debug('Default event occurred on property ' + propertyName + ' with event ' + event);
-                };
+                // public defaultOnChangeEvent(propertyName: string, newValue: any)
+                // {
+                //   //this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
+                //     let propName = propertyName
+                //           .substring(2, propertyName.length - 'Changed'.length)
+                //           .toLowerCase();
+                //         if (newValue != this[propName]) {
+                //           this[propName] = newValue;
+                //         }
+                //         //this.bind(null,null);
+                // }
+                // //@ts-ignore
+                // public defaultActionEvent(propertyName: string, event: any)
+                // {
+                //     //this.log.debug('Default event occurred on property ' + propertyName + ' with event ' + event);
+                // }
                 ReactWrapper.prototype.bind = function (bindingContext) {
                     if (bindingContext !== null) {
                         this.parent = bindingContext;

@@ -12,7 +12,7 @@ reactprops.htmlFor = <any>{};
 
 @inject(Element)
 @customElement('du-label')
-export class DuLabel extends  DuReactWrapperBaseClass {
+export class DuLabel extends  DuReactWrapperBaseClass implements ILabelProps {
 
   constructor(element) {
   super(element);
@@ -21,8 +21,6 @@ export class DuLabel extends  DuReactWrapperBaseClass {
   }
 
   hidden: boolean = false;
-
-  //public id = Date.now();
 
   attached() {
     this.renderReact(Label, this.createState(reactprops));

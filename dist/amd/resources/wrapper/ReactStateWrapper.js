@@ -16,7 +16,7 @@ define(["require", "exports", "react"], function (require, exports, React) {
         function ReactStateWrapper(props) {
             var _this = _super.call(this, props) || this;
             _this.state = props;
-            _this.inneridReact = Date.now();
+            _this.inneridReact = 'du' + Math.round(Math.random() * 10000000000000000);
             _this.aureliaHost = props.aureliaHost;
             _this.reactClass = props.reactClass;
             return _this;

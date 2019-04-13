@@ -38,18 +38,19 @@ reactprops.disabled = {};
 reactprops.checked = {};
 reactprops.className = {};
 reactprops.label = {};
-reactprops.onChange = function (_this, checked) { _this['checked'] = checked; };
+reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
 reactprops.boxSide = {};
 reactprops.onClick = ReactWrapper_1.onlyAureliaBound;
 reactprops.focus = ReactWrapper_1.onlyAureliaBound;
+reactprops.checked = {};
 var DuCheckbox = /** @class */ (function (_super) {
     __extends(DuCheckbox, _super);
     function DuCheckbox(element) {
-        var _this_1 = _super.call(this, element) || this;
-        _this_1.hidden = false;
-        _this_1.hiddenIsHidden = true;
-        _this_1.hiddenName = 'hidden';
-        return _this_1;
+        var _this = _super.call(this, element) || this;
+        _this.hidden = false;
+        _this.hiddenIsHidden = true;
+        _this.hiddenName = 'hidden';
+        return _this;
     }
     DuCheckbox.prototype.attached = function () {
         this.renderReact(Checkbox_1.Checkbox, this.createState(reactprops));

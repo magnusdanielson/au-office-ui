@@ -20,17 +20,17 @@ var aurelia_framework_1 = require("aurelia-framework");
 var Pivot_1 = require("office-ui-fabric-react/lib/Pivot");
 var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
 var Utilities_1 = require("../../wrapper/Utilities");
+var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
 var reactprops = {};
 reactprops.className = {};
 reactprops.initialSelectedKey = {};
 reactprops.initialSelectedIndex = {};
-reactprops.onLinkClick = function () { };
+reactprops.onLinkClick = (ReactWrapper_1.onlyAureliaBound);
 reactprops.selectedKey = {};
 reactprops.linkSize = {};
 reactprops.linkFormat = {};
 reactprops.headersOnly = {};
-//@ts-ignore
-reactprops.getTabId = function (itemKey, index) { return ''; };
+reactprops.getTabId = (ReactWrapper_1.onlyAureliaBound); // (itemKey: string, index: number): string => { return ''; };
 var DuPivot = /** @class */ (function (_super) {
     __extends(DuPivot, _super);
     function DuPivot(element) {

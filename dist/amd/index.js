@@ -34,7 +34,6 @@ define(["require", "exports", "./resources/index", "aurelia-pal"], function (req
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuDatePicker'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuListPeoplePicker'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuNormalPeoplePicker'),
-            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuPeoplePicker'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuTagPicker'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/ProgressValidation/DuMessageBar'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/ProgressValidation/DuProgressIndicator'),
@@ -48,7 +47,8 @@ define(["require", "exports", "./resources/index", "aurelia-pal"], function (req
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardPreview'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardTitle'),
             aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDialog'),
-            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDialogFooter')
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDialogFooter'),
+            aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuPanel')
         ]);
     }
     exports.configure = configure;

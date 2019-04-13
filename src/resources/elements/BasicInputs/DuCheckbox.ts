@@ -21,10 +21,11 @@ reactprops.disabled = <any>{};
 reactprops.checked = <any>{};
 reactprops.className = <any>{};
 reactprops.label = <any>{};
-reactprops.onChange = (_this: any, checked: boolean) => { _this['checked'] = checked; };
+reactprops.onChange = onlyAureliaBound;
 reactprops.boxSide = <any>{};
 reactprops.onClick = onlyAureliaBound;
 reactprops.focus = onlyAureliaBound;
+reactprops.checked = <any>{};
 
 
 @inject(Element)

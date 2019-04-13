@@ -34,17 +34,17 @@ reactprops.min = {};
 reactprops.max = {};
 reactprops.showValue = {};
 reactprops.step = {};
-reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
+reactprops.onChange = (function (_this, value) { _this['value'] = value; });
 reactprops.onChanged = ReactWrapper_1.onlyAureliaBound;
 reactprops.vertical = {};
 var DuSlider = /** @class */ (function (_super) {
     __extends(DuSlider, _super);
     function DuSlider(element) {
-        var _this = _super.call(this, element) || this;
-        _this.hidden = false;
-        _this.hiddenIsHidden = true;
-        _this.hiddenName = 'hidden';
-        return _this;
+        var _this_1 = _super.call(this, element) || this;
+        _this_1.hidden = false;
+        _this_1.hiddenIsHidden = true;
+        _this_1.hiddenName = 'hidden';
+        return _this_1;
     }
     DuSlider.prototype.attached = function () {
         this.renderReact(Slider_1.Slider, this.createState(reactprops));

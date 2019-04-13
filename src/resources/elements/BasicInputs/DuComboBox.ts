@@ -1,5 +1,5 @@
 import { customElement, inject } from 'aurelia-framework';
-import { ComboBox, IComboBoxProps } from 'office-ui-fabric-react/lib/ComboBox';
+import { ComboBox, IComboBoxProps, IComboBoxOption } from 'office-ui-fabric-react/lib/ComboBox';
 import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
@@ -37,7 +37,7 @@ reactprops.onBlur = onlyAureliaBound;
 
 @inject(Element)
 @customElement('du-combo-box')
-export class DuComboBox extends  DuReactWrapperBaseClass {
+export class DuComboBox extends  DuReactWrapperBaseClass implements IComboBoxProps {
 
   constructor(element) {
   super(element);
@@ -46,6 +46,7 @@ export class DuComboBox extends  DuReactWrapperBaseClass {
   }
 
   hidden: boolean = false;
+  options: IComboBoxOption[];
 
   attached() {
     this.renderReact(ComboBox, this.createState(reactprops));

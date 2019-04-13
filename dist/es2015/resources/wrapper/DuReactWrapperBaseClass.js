@@ -77,10 +77,10 @@ var DuReactWrapperBaseClass = /** @class */ (function () {
         ReactDom.unmountComponentAtNode(this.element);
     };
     DuReactWrapperBaseClass.prototype.propertyChanged = function (name, newValue) {
-        // this.log.debug('propertyChanged');
-        // this.log.debug(name);
-        // this.log.debug(newValue);
-        // this.log.debug(oldValue);
+        //this.log.debug('propertyChanged');
+        //this.log.debug(name);
+        //this.log.debug(newValue);
+        //console.log(this);
         var obj = {};
         obj[name] = newValue;
         if (name == this.hiddenName) {
@@ -89,6 +89,7 @@ var DuReactWrapperBaseClass = /** @class */ (function () {
             }
         }
         this.reactComponent.setState(obj);
+        this[name] = newValue;
     };
     DuReactWrapperBaseClass.prototype.moveBack = function () {
         //this.log.debug('Move back');

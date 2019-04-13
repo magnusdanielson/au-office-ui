@@ -48,7 +48,6 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Label", "../..
                     _this.hiddenName = 'hidden';
                     return _this;
                 }
-                //public id = Date.now();
                 DuLabel.prototype.attached = function () {
                     this.renderReact(Label_1.Label, this.createState(reactprops));
                 };

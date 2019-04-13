@@ -20,12 +20,13 @@ var aurelia_framework_1 = require("aurelia-framework");
 var Pickers_1 = require("office-ui-fabric-react/lib/Pickers");
 var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
 var Utilities_1 = require("../../wrapper/Utilities");
+var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
 var reactprops = {};
 reactprops.onResolveSuggestions = (function () { });
 reactprops.resolveDelay = {};
 reactprops.onEmptyInputFocus = (function () { });
 reactprops.defaultSelectedItems = {};
-reactprops.onChange = function () { };
+reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
 reactprops.onFocus = function () { };
 reactprops.onBlur = function () { };
 reactprops.getTextFromItem = (function () { });
@@ -47,6 +48,7 @@ reactprops.onDismiss = function () { };
 reactprops.enableSelectedSuggestionAlert = {};
 //@ts-ignore
 reactprops.items = {};
+reactprops.selectedItems = {};
 var DuTagPicker = /** @class */ (function (_super) {
     __extends(DuTagPicker, _super);
     function DuTagPicker(element) {

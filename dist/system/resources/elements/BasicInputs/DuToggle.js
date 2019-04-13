@@ -42,7 +42,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Toggle", "../.
             reactprops.checked = {};
             reactprops.defaultChecked = {};
             reactprops.disabled = {};
-            reactprops.onChange = function (_this, checked) { _this['checked'] = checked; };
+            reactprops.onChange = function (_this, onChangeTuple) { _this['checked'] = onChangeTuple[1]; };
             reactprops.className = {};
             reactprops.keytipProps = {};
             DuToggle = /** @class */ (function (_super) {

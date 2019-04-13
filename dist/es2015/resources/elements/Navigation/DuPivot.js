@@ -18,17 +18,17 @@ import { customElement, inject, bindable } from 'aurelia-framework';
 import { Pivot } from 'office-ui-fabric-react/lib/Pivot';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
+import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 var reactprops = {};
 reactprops.className = {};
 reactprops.initialSelectedKey = {};
 reactprops.initialSelectedIndex = {};
-reactprops.onLinkClick = function () { };
+reactprops.onLinkClick = (onlyAureliaBound);
 reactprops.selectedKey = {};
 reactprops.linkSize = {};
 reactprops.linkFormat = {};
 reactprops.headersOnly = {};
-//@ts-ignore
-reactprops.getTabId = function (itemKey, index) { return ''; };
+reactprops.getTabId = (onlyAureliaBound); // (itemKey: string, index: number): string => { return ''; };
 var DuPivot = /** @class */ (function (_super) {
     __extends(DuPivot, _super);
     function DuPivot(element) {

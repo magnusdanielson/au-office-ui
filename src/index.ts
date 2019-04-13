@@ -32,7 +32,6 @@ export function configure(aurelia: FrameworkConfiguration) {
         PLATFORM.moduleName('./resources/elements/Pickers/DuDatePicker'),
         PLATFORM.moduleName('./resources/elements/Pickers/DuListPeoplePicker'),
         PLATFORM.moduleName('./resources/elements/Pickers/DuNormalPeoplePicker'),
-        PLATFORM.moduleName('./resources/elements/Pickers/DuPeoplePicker'),
         PLATFORM.moduleName('./resources/elements/Pickers/DuTagPicker'),
         PLATFORM.moduleName('./resources/elements/ProgressValidation/DuMessageBar'),
         PLATFORM.moduleName('./resources/elements/ProgressValidation/DuProgressIndicator'),
@@ -46,6 +45,7 @@ export function configure(aurelia: FrameworkConfiguration) {
         PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardPreview'),
         PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardTitle'),
         PLATFORM.moduleName('./resources/elements/Surfaces/DuDialog'),
-        PLATFORM.moduleName('./resources/elements/Surfaces/DuDialogFooter')
+        PLATFORM.moduleName('./resources/elements/Surfaces/DuDialogFooter'),
+        PLATFORM.moduleName('./resources/elements/Surfaces/DuPanel')
     ]);
 }

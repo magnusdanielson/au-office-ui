@@ -1,9 +1,9 @@
 import { customElement, inject } from 'aurelia-framework';
-import { Toggle } from 'office-ui-fabric-react/lib/Toggle';
+import { Toggle, IToggleProps } from 'office-ui-fabric-react/lib/Toggle';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
 
-let reactprops = <any> {};
+let reactprops: IToggleProps = {} as IToggleProps;
 reactprops.ariaLabel = <any>{}; 
 reactprops.label = <any>{};
 reactprops.onText = <any>{};
@@ -11,14 +11,14 @@ reactprops.offText = <any>{};
 reactprops.checked = <any>{};
 reactprops.defaultChecked = <any>{};
 reactprops.disabled  = <any>{};
-reactprops.onChange = (_this: any, checked: boolean) => { _this['checked'] = checked; };
+reactprops.onChange = (_this, onChangeTuple: any) => { _this['checked'] = onChangeTuple[1]; };
 reactprops.className = <any>{};
 reactprops.keytipProps  = <any>{};
 
 
 @inject(Element)
 @customElement('du-toggle')
-export class DuToggle extends  DuReactWrapperBaseClass {
+export class DuToggle extends  DuReactWrapperBaseClass implements IToggleProps {
 
   constructor(element) {
   super(element);

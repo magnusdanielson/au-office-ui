@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../..
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Pivot_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuPivot;
+    var aurelia_framework_1, Pivot_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1, reactprops, DuPivot;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -31,6 +31,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../..
             },
             function (Utilities_1_1) {
                 Utilities_1 = Utilities_1_1;
+            },
+            function (ReactWrapper_1_1) {
+                ReactWrapper_1 = ReactWrapper_1_1;
             }
         ],
         execute: function () {
@@ -38,13 +41,12 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../..
             reactprops.className = {};
             reactprops.initialSelectedKey = {};
             reactprops.initialSelectedIndex = {};
-            reactprops.onLinkClick = function () { };
+            reactprops.onLinkClick = (ReactWrapper_1.onlyAureliaBound);
             reactprops.selectedKey = {};
             reactprops.linkSize = {};
             reactprops.linkFormat = {};
             reactprops.headersOnly = {};
-            //@ts-ignore
-            reactprops.getTabId = function (itemKey, index) { return ''; };
+            reactprops.getTabId = (ReactWrapper_1.onlyAureliaBound); // (itemKey: string, index: number): string => { return ''; };
             DuPivot = /** @class */ (function (_super) {
                 __extends(DuPivot, _super);
                 function DuPivot(element) {

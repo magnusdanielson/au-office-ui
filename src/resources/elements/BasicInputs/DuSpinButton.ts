@@ -56,7 +56,7 @@ reactprops.precision = <any>{};
 
 @inject(Element)
 @customElement('du-spin-button')
-export class DuSpinButton extends  DuReactWrapperBaseClass {
+export class DuSpinButton extends DuReactWrapperBaseClass implements ISpinButtonProps {
 
   constructor(element) {
   super(element);
@@ -65,6 +65,7 @@ export class DuSpinButton extends  DuReactWrapperBaseClass {
   }
 
   hidden: boolean = false;
+  className: string;
 
   attached() {
     this.renderReact(SpinButton, this.createState(reactprops));

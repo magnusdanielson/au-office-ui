@@ -2,9 +2,10 @@ import { customElement, inject } from 'aurelia-framework';
 import { DatePicker, IDatePickerProps  } from 'office-ui-fabric-react/lib/DatePicker';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
+import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 
 let reactprops: IDatePickerProps = <IDatePickerProps>{};
-reactprops.onSelectDate = () => {};
+reactprops.onSelectDate = <any>onlyAureliaBound;
 reactprops.label = <any>{};
 reactprops.isRequired = <any>{};
 reactprops.disabled = <any>{};

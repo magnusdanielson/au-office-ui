@@ -92,10 +92,10 @@ System.register(["react", "react-dom", "aurelia-framework", "./ReactStateWrapper
                     ReactDom.unmountComponentAtNode(this.element);
                 };
                 DuReactWrapperBaseClass.prototype.propertyChanged = function (name, newValue) {
-                    // this.log.debug('propertyChanged');
-                    // this.log.debug(name);
-                    // this.log.debug(newValue);
-                    // this.log.debug(oldValue);
+                    //this.log.debug('propertyChanged');
+                    //this.log.debug(name);
+                    //this.log.debug(newValue);
+                    //console.log(this);
                     var obj = {};
                     obj[name] = newValue;
                     if (name == this.hiddenName) {
@@ -104,6 +104,7 @@ System.register(["react", "react-dom", "aurelia-framework", "./ReactStateWrapper
                         }
                     }
                     this.reactComponent.setState(obj);
+                    this[name] = newValue;
                 };
                 DuReactWrapperBaseClass.prototype.moveBack = function () {
                     //this.log.debug('Move back');

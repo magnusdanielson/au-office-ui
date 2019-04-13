@@ -18,14 +18,14 @@ reactprops.min = <any>{};
 reactprops.max = <any>{};
 reactprops.showValue = <any>{};
 reactprops.step = <any>{};
-reactprops.onChange = <any>onlyAureliaBound;
-reactprops.onChanged = <any>onlyAureliaBound;
+reactprops.onChange = <any>( (_this: any, value: any) => { _this['value'] = value; });
+reactprops.onChanged = onlyAureliaBound;
 reactprops.vertical = <any>{};
 
 
 @inject(Element)
 @customElement('du-slider')
-export class DuSlider extends  DuReactWrapperBaseClass {
+export class DuSlider extends  DuReactWrapperBaseClass implements ISliderProps {
 
   constructor(element) {
   super(element);
@@ -34,6 +34,7 @@ export class DuSlider extends  DuReactWrapperBaseClass {
   }
 
   hidden: boolean = false;
+  className: string;
 
   attached() {
     this.renderReact(Slider, this.createState(reactprops));

@@ -7,20 +7,22 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework", "./Util
             this.element = element;
             this.log = aurelia_framework_1.LogManager.getLogger('reacthost');
         }
-        ReactWrapper.prototype.defaultOnChangeEvent = function (propertyName, newValue) {
-            //this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
-            var propName = propertyName
-                .substring(2, propertyName.length - 'Changed'.length)
-                .toLowerCase();
-            if (newValue != this[propName]) {
-                this[propName] = newValue;
-            }
-            //this.bind(null,null);
-        };
-        //@ts-ignore
-        ReactWrapper.prototype.defaultActionEvent = function (propertyName, event) {
-            //this.log.debug('Default event occurred on property ' + propertyName + ' with event ' + event);
-        };
+        // public defaultOnChangeEvent(propertyName: string, newValue: any)
+        // {
+        //   //this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
+        //     let propName = propertyName
+        //           .substring(2, propertyName.length - 'Changed'.length)
+        //           .toLowerCase();
+        //         if (newValue != this[propName]) {
+        //           this[propName] = newValue;
+        //         }
+        //         //this.bind(null,null);
+        // }
+        // //@ts-ignore
+        // public defaultActionEvent(propertyName: string, event: any)
+        // {
+        //     //this.log.debug('Default event occurred on property ' + propertyName + ' with event ' + event);
+        // }
         ReactWrapper.prototype.bind = function (bindingContext) {
             if (bindingContext !== null) {
                 this.parent = bindingContext;
@@ -33,13 +35,13 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework", "./Util
         return ReactWrapper;
     }());
     exports.ReactWrapper = ReactWrapper;
-    function onChangeEvent(propertyName, newValue) {
-        //this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
-        if (newValue != this[propertyName]) {
-            this[propertyName] = newValue;
-        }
-    }
-    exports.onChangeEvent = onChangeEvent;
+    // export function onChangeEvent(propertyName: string, newValue: any)
+    // {
+    //     //this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
+    //     if (newValue != this[propertyName]) {
+    //       this[propertyName] = newValue;
+    //     }
+    // }
     function defaultActionEvent() { }
     exports.defaultActionEvent = defaultActionEvent;
     function defaultOnChangeEvent() { }

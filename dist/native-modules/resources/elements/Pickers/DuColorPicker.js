@@ -25,16 +25,16 @@ reactprops.blueLabel = {};
 reactprops.color = {};
 reactprops.greenLabel = {};
 reactprops.hexLabel = {};
-reactprops.onColorChanged = function () { };
+reactprops.onColorChanged = function (_this, onChangeTuple) { _this['color'] = onChangeTuple[1]; };
 reactprops.redLabel = {};
 var DuColorPicker = /** @class */ (function (_super) {
     __extends(DuColorPicker, _super);
     function DuColorPicker(element) {
-        var _this = _super.call(this, element) || this;
-        _this.hidden = false;
-        _this.hiddenIsHidden = true;
-        _this.hiddenName = 'hidden';
-        return _this;
+        var _this_1 = _super.call(this, element) || this;
+        _this_1.hidden = false;
+        _this_1.hiddenIsHidden = true;
+        _this_1.hiddenName = 'hidden';
+        return _this_1;
     }
     DuColorPicker.prototype.attached = function () {
         this.renderReact(ColorPicker, this.createState(reactprops));

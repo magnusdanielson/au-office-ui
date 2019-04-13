@@ -16,16 +16,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Dropdown } from 'office-ui-fabric-react/lib/Dropdown';
-import { defaultActionEvent } from '../../wrapper/ReactWrapper';
+import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
 var reactprops = {};
 reactprops.placeholder = {};
 reactprops.options = {};
-reactprops.onDismiss = defaultActionEvent;
-reactprops.onFocus = defaultActionEvent;
-reactprops.onBlur = defaultActionEvent;
-reactprops.onChange = defaultActionEvent;
+reactprops.onDismiss = onlyAureliaBound;
+reactprops.onFocus = onlyAureliaBound;
+reactprops.onBlur = onlyAureliaBound;
+reactprops.onChange = onlyAureliaBound;
 reactprops.dropdownWidth = {};
 reactprops.responsiveMode = {};
 reactprops.multiSelect = {};
@@ -37,6 +37,7 @@ reactprops.keytipProps = {};
 reactprops.disabled = {};
 reactprops.errorMessage = {};
 reactprops.required = {};
+reactprops.selectedKey = {};
 var DuDropdown = /** @class */ (function (_super) {
     __extends(DuDropdown, _super);
     function DuDropdown(element) {

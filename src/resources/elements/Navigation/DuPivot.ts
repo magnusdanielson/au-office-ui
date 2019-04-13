@@ -2,25 +2,24 @@ import {  customElement, inject, bindable } from 'aurelia-framework';
 import { Pivot, IPivotProps, IPivotItemProps } from 'office-ui-fabric-react/lib/Pivot';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
+import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 
 let reactprops: IPivotProps = <IPivotProps>{};
 reactprops.className = <any>{};
 reactprops.initialSelectedKey = <any>{};
 reactprops.initialSelectedIndex = <any>{};
-reactprops.onLinkClick = () => {};
+reactprops.onLinkClick = <any>( onlyAureliaBound);
 reactprops.selectedKey = <any>{};
 reactprops.linkSize = <any>{};
 reactprops.linkFormat = <any>{};
 reactprops.headersOnly = <any>{};
-
-//@ts-ignore
-reactprops.getTabId = (itemKey: string, index: number): string => { return ''; };
+reactprops.getTabId = <any>( onlyAureliaBound); // (itemKey: string, index: number): string => { return ''; };
 
 
 
 @inject(Element)
 @customElement('du-pivot')
-export class DuPivot extends  DuReactWrapperBaseClass {
+export class DuPivot extends  DuReactWrapperBaseClass implements IPivotProps {
 
   container: HTMLElement | null;
   

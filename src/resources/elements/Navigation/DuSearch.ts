@@ -1,9 +1,9 @@
 import { customElement, inject } from 'aurelia-framework';
-import { SearchBox, ISearchBoxProps } from 'office-ui-fabric-react/lib/SearchBox';
+import { SearchBox, ISearchBox, ISearchBoxProps } from 'office-ui-fabric-react/lib/SearchBox';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
 
-let reactprops: ISearchBoxProps = <ISearchBoxProps>{};
+let reactprops: ISearchBoxProps = <ISearchBoxProps & ISearchBox>{};
 reactprops.disabled = <any>{};
 reactprops.className = <any>{};
 reactprops.required = <any>{};
@@ -11,7 +11,7 @@ reactprops.placeholder = <any>{};
 reactprops.onSearch = () => {};
 reactprops.onFocus = () => {};
 reactprops.onBlur = () => {};
-reactprops.onChange = () => {};
+reactprops.onChange = <any>( (_this: any, onChangeTuple: any) => { _this['value'] = onChangeTuple[1]; });
 reactprops.disableAnimation = <any>{};
 reactprops.onClear = () => {};
 reactprops.onEscape =  () => {};
@@ -24,7 +24,7 @@ reactprops.iconProps =  <any>{};
 
 @inject(Element)
 @customElement('du-search-box')
-export class DuSearchBox extends  DuReactWrapperBaseClass {
+export class DuSearchBox extends  DuReactWrapperBaseClass implements ISearchBoxProps {
 
   constructor(element) {
   super(element);
