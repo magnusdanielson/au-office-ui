@@ -1,54 +1,49 @@
 "use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
+//export * from './resources/index';
 Object.defineProperty(exports, "__esModule", { value: true });
-//export * from './test-plugin';
-//export * from './test-plugin-configuration';
-__export(require("./resources/index"));
-var aurelia_pal_1 = require("aurelia-pal");
+//import { PLATFORM } from 'aurelia-pal';
 function configure(aurelia) {
     aurelia.globalResources([
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuActionButton'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuCommandBarButton'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuCheckbox'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuChoiceGroup'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuComboBox'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuCompoundButton'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuContextualMenu'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuDefaultButton'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuDropdown'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuIconButton'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuLabel'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuSlider'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuSpinButton'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuTextField'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/BasicInputs/DuToggle'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Navigation/DuBreadcrumb'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Navigation/DuCommandBar'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Navigation/DuNav'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Navigation/DuPivot'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Navigation/DuSearch'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuColorPicker'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuCompactPeoplePicker'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuDatePicker'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuListPeoplePicker'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuNormalPeoplePicker'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Pickers/DuTagPicker'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/ProgressValidation/DuMessageBar'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/ProgressValidation/DuProgressIndicator'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/ProgressValidation/DuSpinner'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuCallout'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDialog'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCard'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardActions'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardActivity'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardLocation'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardPreview'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardTitle'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDialog'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuDialogFooter'),
-        aurelia_pal_1.PLATFORM.moduleName('./resources/elements/Surfaces/DuPanel')
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuActionButton'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuCommandBarButton'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuCheckbox'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuChoiceGroup'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuComboBox'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuCompoundButton'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuContextualMenu'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuDefaultButton'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuDropdown'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuIconButton'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuLabel'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuSlider'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuSpinButton'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuTextField'),
+    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuToggle'),
+    //     PLATFORM.moduleName('./resources/elements/Navigation/DuBreadcrumb'),
+    //     PLATFORM.moduleName('./resources/elements/Navigation/DuCommandBar'),
+    //     PLATFORM.moduleName('./resources/elements/Navigation/DuNav'),
+    //     PLATFORM.moduleName('./resources/elements/Navigation/DuPivot'),
+    //     PLATFORM.moduleName('./resources/elements/Navigation/DuSearch'),
+    //     PLATFORM.moduleName('./resources/elements/Pickers/DuColorPicker'),
+    //     PLATFORM.moduleName('./resources/elements/Pickers/DuCompactPeoplePicker'),
+    //     PLATFORM.moduleName('./resources/elements/Pickers/DuDatePicker'),
+    //     PLATFORM.moduleName('./resources/elements/Pickers/DuListPeoplePicker'),
+    //     PLATFORM.moduleName('./resources/elements/Pickers/DuNormalPeoplePicker'),
+    //     PLATFORM.moduleName('./resources/elements/Pickers/DuTagPicker'),
+    //     PLATFORM.moduleName('./resources/elements/ProgressValidation/DuMessageBar'),
+    //     PLATFORM.moduleName('./resources/elements/ProgressValidation/DuProgressIndicator'),
+    //     PLATFORM.moduleName('./resources/elements/ProgressValidation/DuSpinner'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuCallout'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDialog'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCard'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardActions'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardActivity'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardLocation'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardPreview'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDocumentCardTitle'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDialog'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDialogFooter'),
+    //     PLATFORM.moduleName('./resources/elements/Surfaces/DuPanel')
     ]);
 }
 exports.configure = configure;
