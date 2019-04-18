@@ -1,10 +1,10 @@
 import { customElement, inject } from 'aurelia-framework';
-import { ChoiceGroup, IChoiceGroup, IChoiceGroupProps } from 'office-ui-fabric-react/lib/ChoiceGroup';
+import { ChoiceGroup, IChoiceGroupProps } from 'office-ui-fabric-react/lib/ChoiceGroup';
 import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
 
-let reactprops: IChoiceGroupProps = <IChoiceGroupProps & IChoiceGroup>{};
+let reactprops: IChoiceGroupProps = <IChoiceGroupProps>{};
 reactprops.ariaLabelledBy = <any>{};
 reactprops.disabled = <any>{};
 reactprops.checked = <any>{};

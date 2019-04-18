@@ -2,9 +2,11 @@
 System.register([], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
+    //import { FrameworkConfiguration } from 'aurelia-framework';
     //import { PLATFORM } from 'aurelia-pal';
+    //@ts-ignore
     function configure(aurelia) {
-        aurelia.globalResources([
+        //aurelia.globalResources([
         //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuActionButton'),
         //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuCommandBarButton'),
         //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuCheckbox'),
@@ -45,7 +47,7 @@ System.register([], function (exports_1, context_1) {
         //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDialog'),
         //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDialogFooter'),
         //     PLATFORM.moduleName('./resources/elements/Surfaces/DuPanel')
-        ]);
+        //]);
     }
     exports_1("configure", configure);
     return {

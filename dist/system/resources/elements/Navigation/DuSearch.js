@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/SearchBox", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/SearchBox", "../../wrapper/Utilities", "../../wrapper/DuReactWrapperNoChildren"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/SearchBox", ".
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, SearchBox_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuSearchBox;
+    var aurelia_framework_1, SearchBox_1, Utilities_1, DuReactWrapperNoChildren_1, reactprops, DuSearchBox;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,11 +26,11 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/SearchBox", ".
             function (SearchBox_1_1) {
                 SearchBox_1 = SearchBox_1_1;
             },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
             function (Utilities_1_1) {
                 Utilities_1 = Utilities_1_1;
+            },
+            function (DuReactWrapperNoChildren_1_1) {
+                DuReactWrapperNoChildren_1 = DuReactWrapperNoChildren_1_1;
             }
         ],
         execute: function () {
@@ -68,7 +68,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/SearchBox", ".
                     aurelia_framework_1.customElement('du-search-box')
                 ], DuSearchBox);
                 return DuSearchBox;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(DuReactWrapperNoChildren_1.DuReactWrapperNoChildren));
             exports_1("DuSearchBox", DuSearchBox);
             Utilities_1.addProperties(DuSearchBox, reactprops);
         }

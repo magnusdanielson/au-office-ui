@@ -1,11 +1,14 @@
 //export * from './resources/index';
 
-import { FrameworkConfiguration } from 'aurelia-framework';
+//import { FrameworkConfiguration } from 'aurelia-framework';
 //import { PLATFORM } from 'aurelia-pal';
 
-export function configure(aurelia: FrameworkConfiguration) {
-     aurelia.globalResources([
-    //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuActionButton'),
+//@ts-ignore
+export function configure(aurelia: any) {
+
+     //aurelia.globalResources([
+    
+          //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuActionButton'),
     //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuCommandBarButton'),
     //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuCheckbox'),
     //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuChoiceGroup'),
@@ -45,5 +48,5 @@ export function configure(aurelia: FrameworkConfiguration) {
     //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDialog'),
     //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDialogFooter'),
     //     PLATFORM.moduleName('./resources/elements/Surfaces/DuPanel')
-     ]);
+     //]);
 }

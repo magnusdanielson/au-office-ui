@@ -38,7 +38,7 @@ reactprops.secondaryText = <any>{};
 
 @inject(Element)
 @customElement('du-compound-button')
-export class DuCompoundButton extends  DuReactWrapperBaseClass {
+export class DuCompoundButton extends  DuReactWrapperBaseClass implements IButtonProps {
 
   constructor(element) {
   super(element);

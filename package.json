@@ -1,6 +1,6 @@
 {
   "name": "@dunite/au-office-ui",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Microsoft Office-UI-Fabric wrapper for Aurelia",
   "keywords": [
     "office",
@@ -74,7 +74,7 @@
     "type": "git",
     "url": "git+https://github.com/magnusdanielson/au-office-ui.git"
   },
-  "author": "Magnus Danielson <dmagnus@dunite.se>",
+  "author": "Magnus Danielson <magnus@dunite.se>",
   "license": "MIT",
   "homepage": "https://au-office-ui.azurewebsites.net",
   "bugs": {
@@ -90,9 +90,7 @@
     }
   },
   "dependencies": {
-    "aurelia-bootstrapper": "^2.3.0",
-    "aurelia-portal-attribute": "^1.3.0",
-    "bluebird": "^3.5.0",
+    "aurelia-framework": "1.3.1",
     "office-ui-fabric-react": "^6.164.8",
     "react": "16.7.0",
     "react-dom": "16.7.0"

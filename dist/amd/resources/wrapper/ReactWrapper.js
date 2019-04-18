@@ -7,22 +7,6 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework", "./Util
             this.element = element;
             this.log = aurelia_framework_1.LogManager.getLogger('reacthost');
         }
-        // public defaultOnChangeEvent(propertyName: string, newValue: any)
-        // {
-        //   //this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
-        //     let propName = propertyName
-        //           .substring(2, propertyName.length - 'Changed'.length)
-        //           .toLowerCase();
-        //         if (newValue != this[propName]) {
-        //           this[propName] = newValue;
-        //         }
-        //         //this.bind(null,null);
-        // }
-        // //@ts-ignore
-        // public defaultActionEvent(propertyName: string, event: any)
-        // {
-        //     //this.log.debug('Default event occurred on property ' + propertyName + ' with event ' + event);
-        // }
         ReactWrapper.prototype.bind = function (bindingContext) {
             if (bindingContext !== null) {
                 this.parent = bindingContext;
@@ -32,16 +16,60 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework", "./Util
         ReactWrapper.prototype.unbind = function () {
             ReactDom.unmountComponentAtNode(this.element);
         };
+        ReactWrapper.prototype.createState = function (reactprops) {
+            var _this = this;
+            var reactpropNames = Object.getOwnPropertyNames(reactprops);
+            var a = {};
+            var _loop_1 = function (i) {
+                var renderPropName = reactpropNames[i];
+                if (typeof reactprops[renderPropName] === 'function') {
+                    //this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
+                    // function is aurelia bound, make sure to call it
+                    //this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
+                    if (typeof this_1[renderPropName] === 'function') {
+                        a[renderPropName] = function () {
+                            var newValue = [];
+                            for (var _i = 0; _i < arguments.length; _i++) {
+                                newValue[_i] = arguments[_i];
+                            }
+                            //this.log.debug('bound function, go aurelia');
+                            return _this[renderPropName](newValue);
+                        };
+                    }
+                    else {
+                        var funcNames = [
+                            'defaultOnChangeEvent',
+                            'defaultActionEvent',
+                            'onlyAureliaBound'
+                        ];
+                        if (!funcNames.includes(reactprops[renderPropName].name)) {
+                            a[renderPropName] = function () {
+                                var newValue = [];
+                                for (var _i = 0; _i < arguments.length; _i++) {
+                                    newValue[_i] = arguments[_i];
+                                }
+                                //this.log.debug('run func from reactprops');
+                                return reactprops[renderPropName](_this, newValue);
+                            };
+                        }
+                    }
+                }
+                else {
+                    if (typeof this_1[renderPropName] !== 'undefined') {
+                        //this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);
+                        a[renderPropName] = this_1[renderPropName];
+                    }
+                }
+            };
+            var this_1 = this;
+            for (var i = 0; i < reactpropNames.length; i++) {
+                _loop_1(i);
+            }
+            return a;
+        };
         return ReactWrapper;
     }());
     exports.ReactWrapper = ReactWrapper;
-    // export function onChangeEvent(propertyName: string, newValue: any)
-    // {
-    //     //this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
-    //     if (newValue != this[propertyName]) {
-    //       this[propertyName] = newValue;
-    //     }
-    // }
     function defaultActionEvent() { }
     exports.defaultActionEvent = defaultActionEvent;
     function defaultOnChangeEvent() { }
@@ -68,25 +96,17 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework", "./Util
         if (this.container == null) {
             this.container = document.createElement('span');
             this.container.setAttribute('class', 'au-react-root');
-            // <span id="${id}" portal="target ${id} ms-Label"><slot></slot></span>
-            //let id = Date.now();
-            //this.container.setAttribute('id', id);
-            //this.container.setAttribute('portal', `target #${id} ms-Label`);
-            //let slot = document.createElement('slot');
-            //this.container.appendChild(slot);
             this.element.appendChild(this.container);
-            //const content = this.element.querySelector('au-content');
-            //content.setAttribute('portal', `target #${id} ms-Label`);
         }
         var reactpropNames = Object.getOwnPropertyNames(reactprops);
         var a = {};
-        var _loop_1 = function (i) {
+        var _loop_2 = function (i) {
             var renderPropName = reactpropNames[i];
             if (typeof reactprops[renderPropName] === 'function') {
                 //this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
                 // function is aurelia bound, make sure to call it
                 //this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
-                if (typeof this_1[renderPropName] === 'function') {
+                if (typeof this_2[renderPropName] === 'function') {
                     a[renderPropName] = function () {
                         var newValue = [];
                         for (var _i = 0; _i < arguments.length; _i++) {
@@ -97,7 +117,11 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework", "./Util
                     };
                 }
                 else {
-                    var funcNames = ['defaultOnChangeEvent', 'defaultActionEvent', 'onlyAureliaBound'];
+                    var funcNames = [
+                        'defaultOnChangeEvent',
+                        'defaultActionEvent',
+                        'onlyAureliaBound'
+                    ];
                     if (!funcNames.includes(reactprops[renderPropName].name)) {
                         a[renderPropName] = function () {
                             var newValue = [];
@@ -111,53 +135,19 @@ define(["require", "exports", "react", "react-dom", "aurelia-framework", "./Util
                 }
             }
             else {
-                if (typeof this_1[renderPropName] !== 'undefined') {
+                if (typeof this_2[renderPropName] !== 'undefined') {
                     //this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);
-                    a[renderPropName] = this_1[renderPropName];
+                    a[renderPropName] = this_2[renderPropName];
                 }
             }
         };
-        var this_1 = this;
+        var this_2 = this;
         for (var i = 0; i < reactpropNames.length; i++) {
-            _loop_1(i);
+            _loop_2(i);
         }
         var reactElement = React.createElement(reactClass, a);
         this.reactComponent = reactElement;
         ReactDom.render(reactElement, this.container);
     }
     exports.renderReact = renderReact;
-    function elementWrapper(node, target) {
-        var id = 'du' + Math.round(Math.random() * 10000000000000000);
-        node.setAttribute('class', (node.getAttribute('class') == null ? '' : node.getAttribute('class')) + ' ' + id);
-        var portalAttribute = 'target: .' + id + ' ' + target;
-        if (node.childElementCount == 0) {
-            var rootspan = document.createElement('span');
-            rootspan.setAttribute('portal', portalAttribute);
-            //@ts-ignore
-            rootspan.innerText = node.innerText;
-            //@ts-ignore
-            node.innerText = '';
-            node.appendChild(rootspan);
-            return true;
-        }
-        if (node.childElementCount == 1) {
-            if (node.firstElementChild) {
-                node.firstElementChild.setAttribute('portal', portalAttribute);
-            }
-        }
-        if (node.childElementCount > 1) {
-            var rootspan = document.createElement('span');
-            rootspan.setAttribute('portal', portalAttribute);
-            if (node.parentNode) {
-                var nodeCount = node.childElementCount;
-                for (var i = nodeCount - 1; i >= 0; i--) {
-                    rootspan.insertBefore(node.children[i], rootspan.firstChild);
-                    //node.removeChild(node.children[i]);
-                }
-                node.parentNode.appendChild(rootspan);
-            }
-        }
-        return true;
-    }
-    exports.elementWrapper = elementWrapper;
 });

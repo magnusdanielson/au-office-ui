@@ -1,5 +1,5 @@
 import { customElement, inject } from 'aurelia-framework';
-import { ContextualMenu, IContextualMenuProps  } from 'office-ui-fabric-react/lib/ContextualMenu';
+import { ContextualMenu, IContextualMenuProps, IContextualMenuItem  } from 'office-ui-fabric-react/lib/ContextualMenu';
 import { defaultActionEvent } from '../../wrapper/ReactWrapper';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
@@ -39,7 +39,7 @@ reactprops.useTargetWidth = <any>{};
 
 @inject(Element)
 @customElement('du-contextual-menu')
-export class DuContextualMenu extends  DuReactWrapperBaseClass {
+export class DuContextualMenu extends  DuReactWrapperBaseClass implements IContextualMenuProps {
 
   constructor(element) {
   super(element);
@@ -48,6 +48,7 @@ export class DuContextualMenu extends  DuReactWrapperBaseClass {
   }
 
   hidden: boolean = false;
+  items: IContextualMenuItem[];
 
   attached() {
     this.renderReact(ContextualMenu, this.createState(reactprops));

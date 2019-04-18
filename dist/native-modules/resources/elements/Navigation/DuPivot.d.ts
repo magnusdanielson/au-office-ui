@@ -1,10 +1,10 @@
-import { IPivotProps, IPivotItemProps } from 'office-ui-fabric-react/lib/Pivot';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-export declare class DuPivot extends DuReactWrapperBaseClass implements IPivotProps {
+import { IPivotItemProps } from 'office-ui-fabric-react/lib/Pivot';
+import { ReactWrapper } from '../../wrapper/ReactWrapper';
+export declare class DuPivot extends ReactWrapper {
     container: HTMLElement | null;
     constructor(element: any);
-    hidden: boolean;
     pivotChildren: any[];
     items: IPivotItemProps[];
-    attached(): void;
+    render(): void;
+    renderReact(reactprops: any): void;
 }

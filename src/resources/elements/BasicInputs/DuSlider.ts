@@ -1,27 +1,27 @@
 import { customElement, inject } from 'aurelia-framework';
-import { Slider, ISlider, ISliderProps } from 'office-ui-fabric-react/lib/Slider';
+import { Slider, ISliderProps } from 'office-ui-fabric-react/lib/Slider';
 import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
 
-let reactprops: ISliderProps & ISlider = {} as ISlider & ISliderProps;
+let reactprops: ISliderProps = {} as ISliderProps;
 reactprops.value = <any>{};
 reactprops.ariaLabel = <any>{};
 reactprops.ariaValueText = <any>onlyAureliaBound;
-
-reactprops.disabled = <any>{};
 reactprops.className = <any>{};
-reactprops.label = <any>{};
-reactprops.value = <any>{};
 reactprops.defaultValue = <any>{};
-reactprops.min = <any>{};
+reactprops.disabled = <any>{};
+reactprops.label = <any>{};
 reactprops.max = <any>{};
+reactprops.min = <any>{};
+reactprops.onChange = <any>onlyAureliaBound; //( (_this: any, value: any) => { _this['value'] = value; });
+reactprops.onChanged = <any>onlyAureliaBound;
 reactprops.showValue = <any>{};
 reactprops.step = <any>{};
-reactprops.onChange = <any>( (_this: any, value: any) => { _this['value'] = value; });
-reactprops.onChanged = onlyAureliaBound;
+reactprops.value = <any>{};
 reactprops.vertical = <any>{};
-
+reactprops.valueFormat = <any>onlyAureliaBound;
+reactprops.vertical  = <any>{};
 
 @inject(Element)
 @customElement('du-slider')

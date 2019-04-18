@@ -25,7 +25,7 @@ reactprops.blueLabel = {};
 reactprops.color = {};
 reactprops.greenLabel = {};
 reactprops.hexLabel = {};
-reactprops.onColorChanged = function (_this, onChangeTuple) { _this['color'] = onChangeTuple[1]; };
+reactprops.onChange = function (_this, onChangeTuple) { _this['color'] = onChangeTuple[1].str; };
 reactprops.redLabel = {};
 var DuColorPicker = /** @class */ (function (_super) {
     __extends(DuColorPicker, _super);

@@ -1,44 +1,44 @@
 import { customElement, inject } from 'aurelia-framework';
-import { TextField, ITextFieldProps, ITextField } from 'office-ui-fabric-react/lib/TextField';
+import { TextField, ITextFieldProps } from 'office-ui-fabric-react/lib/TextField';
 import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 import { addProperties } from '../../wrapper/Utilities';
 import { DuReactWrapperNoChildren } from '../../wrapper/DuReactWrapperNoChildren';
 
-let reactprops: ITextFieldProps & ITextField = {} as ITextFieldProps & ITextField;
+let reactprops: ITextFieldProps = {} as ITextFieldProps;
+
 reactprops.ariaLabel = <any>{};
-reactprops.onBeforeChange = onlyAureliaBound;
-reactprops.validateOnFocusIn = <any>{};
-reactprops.validateOnFocusOut = <any>{};
-reactprops.validateOnLoad = <any>{};
-reactprops.disabled = <any>{};
-reactprops.multiline = <any>{};
-reactprops.className = <any>{};
-reactprops.label = <any>{};
-reactprops.resizable = <any>{};
-reactprops.onChange = (_this, onChangeTuple: any) => { _this['value'] = onChangeTuple[1]; };
 reactprops.autoAdjustHeight = <any>{};
-reactprops.underlined = <any>{};
-reactprops.onNotifyValidationResult = onlyAureliaBound;
-reactprops.onGetErrorMessage = <any>onlyAureliaBound;
-reactprops.borderless = <any>{};
 reactprops.autoComplete = <any>{};
-reactprops.label = <any>{};
-reactprops.value = <any>{};
-reactprops.description = <any>{};
-reactprops.prefix = <any>{};
-reactprops.suffix = <any>{};
+reactprops.borderless = <any>{};
+reactprops.className = <any>{};
 reactprops.defaultValue = <any>{};
-reactprops.readOnly = <any>{};
-reactprops.errorMessage = <any>{};
 reactprops.deferredValidationTime = <any>{};
+reactprops.description = <any>{};
+reactprops.disabled = <any>{};
+reactprops.errorMessage = <any>{};
+reactprops.iconProps = <any>{};
 reactprops.inputClassName = <any>{};
+reactprops.label = <any>{};
 reactprops.mask = <any>{};
 reactprops.maskChar = <any>{};
 reactprops.maskFormat = <any>{};
+reactprops.multiline = <any>{};
+reactprops.onBeforeChange = onlyAureliaBound;
+reactprops.onChange = (_this, onChangeTuple: any) => { _this['value'] = onChangeTuple[1]; };
+reactprops.onNotifyValidationResult = onlyAureliaBound;
+reactprops.onGetErrorMessage = <any>onlyAureliaBound;
+reactprops.prefix = <any>{};
+reactprops.readOnly = <any>{};
+reactprops.resizable = <any>{};
+reactprops.underlined = <any>{};
+reactprops.validateOnFocusIn = <any>{};
+reactprops.validateOnFocusOut = <any>{};
+reactprops.validateOnLoad = <any>{};
+reactprops.value = <any>{};
+
+// HTML attributes
 reactprops.required = <any>{};
 reactprops.placeholder = <any>{};
-reactprops.rows = <any>{};
-reactprops.iconProps = <any>{};
 
 
 @inject(Element)
@@ -67,6 +67,39 @@ export class DuTextField extends  DuReactWrapperNoChildren implements ITextField
       } 
     }
   
+  }
+
+  blur()
+  {
+    this.reactComponent.blur();
+  }
+  focus()
+  {
+    this.reactComponent.focus();
+  }
+  select()
+  {
+    this.reactComponent.select();
+  }
+  selectionEnd()
+  {
+    return this.reactComponent.selectionEnd();
+  }
+  selectionStart()
+  {
+    return this.reactComponent.selectionStart();
+  }
+  setSelectionEnd(value: number)
+  {
+    this.reactComponent.setSelectionEnd(value);
+  }
+  setSelectionRange(start: number, end: number)
+  {
+    this.reactComponent.setSelectionRange(start, end);
+  }
+  setSelectionStart(value: number)
+  {
+    this.reactComponent.setSelectionStart(value);
   }
 }
 

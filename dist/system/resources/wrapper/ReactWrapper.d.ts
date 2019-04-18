@@ -8,10 +8,10 @@ export declare abstract class ReactWrapper {
     abstract render(): any;
     bind(bindingContext: any): void;
     unbind(): void;
+    createState(reactprops: any): any;
 }
 export declare function defaultActionEvent(): void;
 export declare function defaultOnChangeEvent(): void;
 export declare function onlyAureliaBound(): void;
 export declare function addProperties(aureliaClass: any, reactprops: any): void;
 export declare function renderReact(reactClass: any, reactprops: any): void;
-export declare function elementWrapper(node: Element, target: string): boolean;

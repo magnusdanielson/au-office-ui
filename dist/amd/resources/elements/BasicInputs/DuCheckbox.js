@@ -37,7 +37,6 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/C
     reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
     reactprops.boxSide = {};
     reactprops.onClick = ReactWrapper_1.onlyAureliaBound;
-    reactprops.focus = ReactWrapper_1.onlyAureliaBound;
     reactprops.checked = {};
     var DuCheckbox = /** @class */ (function (_super) {
         __extends(DuCheckbox, _super);

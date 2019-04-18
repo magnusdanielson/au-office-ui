@@ -1,16 +1,13 @@
 npm publish --access public
 
-gör:
-CoachMark
+för test:
 Tooltip
 TeachingBubble
-Modal
+CoachMark
+DetailsList
+FacePile
+Persona
 
-Person
-Separator
+gör:
 Image
 GroupedList
-FacePile
-DetailsList
-
-Stack

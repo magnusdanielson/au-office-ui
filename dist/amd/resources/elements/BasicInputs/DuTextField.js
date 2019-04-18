@@ -19,39 +19,37 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/T
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
     reactprops.ariaLabel = {};
-    reactprops.onBeforeChange = ReactWrapper_1.onlyAureliaBound;
-    reactprops.validateOnFocusIn = {};
-    reactprops.validateOnFocusOut = {};
-    reactprops.validateOnLoad = {};
-    reactprops.disabled = {};
-    reactprops.multiline = {};
-    reactprops.className = {};
-    reactprops.label = {};
-    reactprops.resizable = {};
-    reactprops.onChange = function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; };
     reactprops.autoAdjustHeight = {};
-    reactprops.underlined = {};
-    reactprops.onNotifyValidationResult = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onGetErrorMessage = ReactWrapper_1.onlyAureliaBound;
-    reactprops.borderless = {};
     reactprops.autoComplete = {};
-    reactprops.label = {};
-    reactprops.value = {};
-    reactprops.description = {};
-    reactprops.prefix = {};
-    reactprops.suffix = {};
+    reactprops.borderless = {};
+    reactprops.className = {};
     reactprops.defaultValue = {};
-    reactprops.readOnly = {};
-    reactprops.errorMessage = {};
     reactprops.deferredValidationTime = {};
+    reactprops.description = {};
+    reactprops.disabled = {};
+    reactprops.errorMessage = {};
+    reactprops.iconProps = {};
     reactprops.inputClassName = {};
+    reactprops.label = {};
     reactprops.mask = {};
     reactprops.maskChar = {};
     reactprops.maskFormat = {};
+    reactprops.multiline = {};
+    reactprops.onBeforeChange = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onChange = function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; };
+    reactprops.onNotifyValidationResult = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onGetErrorMessage = ReactWrapper_1.onlyAureliaBound;
+    reactprops.prefix = {};
+    reactprops.readOnly = {};
+    reactprops.resizable = {};
+    reactprops.underlined = {};
+    reactprops.validateOnFocusIn = {};
+    reactprops.validateOnFocusOut = {};
+    reactprops.validateOnLoad = {};
+    reactprops.value = {};
+    // HTML attributes
     reactprops.required = {};
     reactprops.placeholder = {};
-    reactprops.rows = {};
-    reactprops.iconProps = {};
     var DuTextField = /** @class */ (function (_super) {
         __extends(DuTextField, _super);
         function DuTextField(element) {
@@ -72,6 +70,30 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/T
                     element.setAttribute('style', '');
                 }
             }
+        };
+        DuTextField.prototype.blur = function () {
+            this.reactComponent.blur();
+        };
+        DuTextField.prototype.focus = function () {
+            this.reactComponent.focus();
+        };
+        DuTextField.prototype.select = function () {
+            this.reactComponent.select();
+        };
+        DuTextField.prototype.selectionEnd = function () {
+            return this.reactComponent.selectionEnd();
+        };
+        DuTextField.prototype.selectionStart = function () {
+            return this.reactComponent.selectionStart();
+        };
+        DuTextField.prototype.setSelectionEnd = function (value) {
+            this.reactComponent.setSelectionEnd(value);
+        };
+        DuTextField.prototype.setSelectionRange = function (start, end) {
+            this.reactComponent.setSelectionRange(start, end);
+        };
+        DuTextField.prototype.setSelectionStart = function (value) {
+            this.reactComponent.setSelectionStart(value);
         };
         DuTextField = __decorate([
             aurelia_framework_1.inject(Element),

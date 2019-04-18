@@ -38,7 +38,7 @@ reactprops.secondaryText = <any>{};
 
 @inject(Element)
 @customElement('du-icon-button')
-export class DuIconButton extends  DuReactWrapperBaseClass {
+export class DuIconButton extends  DuReactWrapperBaseClass implements IButtonProps {
 
   constructor(element) {
   super(element);

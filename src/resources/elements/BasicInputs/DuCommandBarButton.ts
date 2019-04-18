@@ -20,7 +20,7 @@ reactprops.secondaryText = <any>{};
 
 @inject(Element)
 @customElement('du-command-bar-button')
-export class DuCommandBarButton extends  DuReactWrapperBaseClass {
+export class DuCommandBarButton extends  DuReactWrapperBaseClass implements IButtonProps {
 
   constructor(element) {
   super(element);

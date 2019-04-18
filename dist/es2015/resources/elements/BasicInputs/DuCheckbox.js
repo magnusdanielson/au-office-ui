@@ -39,7 +39,6 @@ reactprops.label = {};
 reactprops.onChange = onlyAureliaBound;
 reactprops.boxSide = {};
 reactprops.onClick = onlyAureliaBound;
-reactprops.focus = onlyAureliaBound;
 reactprops.checked = {};
 var DuCheckbox = /** @class */ (function (_super) {
     __extends(DuCheckbox, _super);

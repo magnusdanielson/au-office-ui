@@ -2,9 +2,11 @@
 define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
+    //import { FrameworkConfiguration } from 'aurelia-framework';
     //import { PLATFORM } from 'aurelia-pal';
+    //@ts-ignore
     function configure(aurelia) {
-        aurelia.globalResources([
+        //aurelia.globalResources([
         //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuActionButton'),
         //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuCommandBarButton'),
         //     PLATFORM.moduleName('./resources/elements/BasicInputs/DuCheckbox'),
@@ -45,7 +47,7 @@ define(["require", "exports"], function (require, exports) {
         //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDialog'),
         //     PLATFORM.moduleName('./resources/elements/Surfaces/DuDialogFooter'),
         //     PLATFORM.moduleName('./resources/elements/Surfaces/DuPanel')
-        ]);
+        //]);
     }
     exports.configure = configure;
 });

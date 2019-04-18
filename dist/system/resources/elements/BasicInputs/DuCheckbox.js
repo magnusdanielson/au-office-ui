@@ -57,7 +57,6 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Checkbox", "..
             reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
             reactprops.boxSide = {};
             reactprops.onClick = ReactWrapper_1.onlyAureliaBound;
-            reactprops.focus = ReactWrapper_1.onlyAureliaBound;
             reactprops.checked = {};
             DuCheckbox = /** @class */ (function (_super) {
                 __extends(DuCheckbox, _super);
