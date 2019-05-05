@@ -5,7 +5,7 @@ An Office UI Aurelia that wraps React components from Office UI Fabric.
 Install with
 `au install @dunite/au-office-ui`
 
-It is not necessery/no point in calling the .plugin method. All components must be manually loaded with a call to .globalResources() or by adding a `<require from="@dunite/au-office-ui/resources/elements/Surfaces/DuPanel"></require>` tag to your html view.
+It is necessery to calling the .plugin method. All components must also be manually loaded with a call to .globalResources() or by adding a `<require from="@dunite/au-office-ui/resources/elements/Surfaces/DuPanel"></require>` tag to your html view.
 
 ```
 export function configure(aurelia: Aurelia) {
