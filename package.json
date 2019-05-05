@@ -1,6 +1,6 @@
 {
   "name": "@dunite/au-office-ui",
-  "version": "1.1.4",
+  "version": "1.2.2",
   "description": "Microsoft Office-UI-Fabric wrapper for Aurelia",
   "keywords": [
     "office",
@@ -12,6 +12,7 @@
     "aurelia"
   ],
   "main": "dist/commonjs/index.js",
+  "module": "dist/native-modules/index.js",
   "typings": "dist/commonjs/index.d.ts",
   "scripts": {
     "lint": "cross-env tslint --project tsconfig.json",
@@ -74,9 +75,9 @@
     "type": "git",
     "url": "git+https://github.com/magnusdanielson/au-office-ui.git"
   },
-  "author": "Magnus Danielson <dmagnus@dunite.se>",
+  "author": "Magnus Danielson <magnus@dunite.se>",
   "license": "MIT",
-  "homepage": "https://github.com/magnusdanielson/au-office-ui/blob/master/README.md",
+  "homepage": "https://au-office-ui.azurewebsites.net",
   "bugs": {
     "url": "https://github.com/magnusdanielson/au-office-ui/issues"
   },
@@ -90,12 +91,11 @@
     }
   },
   "dependencies": {
-    "aurelia-bootstrapper": "^2.3.0",
-    "aurelia-portal-attribute": "^1.3.0",
-    "bluebird": "^3.5.0",
-    "office-ui-fabric-react": "^5.124.0",
-    "react": "16.3.2",
-    "react-dom": "16.3.2"
+    "@dunite/au-react-wrapper": "^1.0.1",
+    "aurelia-framework": "1.3.1",
+    "office-ui-fabric-react": "^6.164.8",
+    "react": "16.7.0",
+    "react-dom": "16.7.0"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.20",

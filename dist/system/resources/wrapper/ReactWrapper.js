@@ -1,136 +1,121 @@
-System.register(["react", "react-dom", "aurelia-framework"], function (exports_1, context_1) {
-    "use strict";
-    var React, ReactDom, aurelia_framework_1, ReactWrapper;
-    var __moduleName = context_1 && context_1.id;
-    function onChangeEvent(propertyName, newValue) {
-        this.log.debug('onChangeEvent occurred on property ' + propertyName + ' with value ' + newValue);
-        if (newValue != this[propertyName]) {
-            this[propertyName] = newValue;
-        }
-    }
-    exports_1("onChangeEvent", onChangeEvent);
-    function camelToKebab(str) {
-        // Matches all places where a two upper case chars followed by a lower case char are and split them with an hyphen
-        //@ts-ignore
-        return str.replace(/([a-zA-Z])([A-Z][a-z])/g, function (match, before, after) {
-            return before.toLowerCase() + "-" + after.toLowerCase();
-        }).toLowerCase();
-    }
-    exports_1("camelToKebab", camelToKebab);
-    function defaultActionEvent() { }
-    exports_1("defaultActionEvent", defaultActionEvent);
-    function defaultOnChangeEvent() { }
-    exports_1("defaultOnChangeEvent", defaultOnChangeEvent);
-    function addProperties(aureliaClass, reactprops) {
-        var reactpropNames = Object.getOwnPropertyNames(reactprops);
-        for (var i = 0; i < reactpropNames.length; i++) {
-            var renderPropName = reactpropNames[i];
-            aurelia_framework_1.bindable({
-                name: renderPropName,
-                attribute: camelToKebab(renderPropName),
-                changeHandler: 'render',
-                defaultBindingMode: aurelia_framework_1.bindingMode.twoWay
-            })(aureliaClass);
-        }
-    }
-    exports_1("addProperties", addProperties);
-    function renderReact(reactClass, reactprops) {
-        var _this = this;
-        this.container = this.element.querySelector('.au-react-root');
-        if (this.container == null) {
-            this.container = document.createElement('div');
-            this.container.setAttribute('class', 'au-react-root');
-            this.element.appendChild(this.container);
-        }
-        var reactpropNames = Object.getOwnPropertyNames(reactprops);
-        var a = {};
-        var _loop_1 = function (i) {
-            var renderPropName = reactpropNames[i];
-            if (typeof reactprops[renderPropName] === 'function') {
-                this_1.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
-                if (renderPropName.startsWith('on')) {
-                    this_1.log.debug('on property ' + renderPropName);
-                    a[renderPropName] = function (newValue) {
-                        _this.log.debug('event called on ' + renderPropName);
-                        if (typeof _this[renderPropName] !== 'function') {
-                            _this.log.debug('no Aurelia bound function');
-                            if (reactprops[renderPropName].name === 'defaultOnChangeEvent') {
-                                _this.defaultOnChangeEvent(renderPropName, newValue);
-                            }
-                            else if (reactprops[renderPropName].name === 'defaultActionEvent') {
-                                _this.defaultActionEvent(renderPropName, newValue);
-                            }
-                            else {
-                                _this.log.debug('run func from reactprops');
-                                reactprops[renderPropName](_this, newValue);
-                            }
-                        }
-                        else {
-                            _this.log.debug('bound function, go aurelia');
-                            _this[renderPropName].bind(_this.parent)(newValue);
-                        }
-                    };
-                }
-            }
-            else {
-                if (typeof this_1[renderPropName] !== 'undefined') {
-                    this_1.log.debug('adding ' + renderPropName + ' with value ' + this_1[renderPropName]);
-                    a[renderPropName] = this_1[renderPropName];
-                }
-            }
-        };
-        var this_1 = this;
-        for (var i = 0; i < reactpropNames.length; i++) {
-            _loop_1(i);
-        }
-        var reactElement = React.createElement(reactClass, a);
-        ReactDom.render(reactElement, this.container);
-    }
-    exports_1("renderReact", renderReact);
-    return {
-        setters: [
-            function (React_1) {
-                React = React_1;
-            },
-            function (ReactDom_1) {
-                ReactDom = ReactDom_1;
-            },
-            function (aurelia_framework_1_1) {
-                aurelia_framework_1 = aurelia_framework_1_1;
-            }
-        ],
-        execute: function () {
-            ReactWrapper = /** @class */ (function () {
-                function ReactWrapper(element) {
-                    this.reactComponent = {};
-                    this.element = element;
-                    this.log = aurelia_framework_1.LogManager.getLogger('reacthost');
-                }
-                ReactWrapper.prototype.defaultOnChangeEvent = function (propertyName, newValue) {
-                    this.log.debug('Default onChange event occurred on property ' + propertyName + ' with value ' + newValue);
-                    var propName = propertyName
-                        .substring(2, propertyName.length - 'Changed'.length)
-                        .toLowerCase();
-                    if (newValue != this[propName]) {
-                        this[propName] = newValue;
-                    }
-                    //this.bind(null,null);
-                };
-                ReactWrapper.prototype.defaultActionEvent = function (propertyName, event) {
-                    this.log.debug('Default event occurred on property ' + propertyName + ' with event ' + event);
-                };
-                ReactWrapper.prototype.bind = function (bindingContext) {
-                    if (bindingContext !== null) {
-                        this.parent = bindingContext;
-                    }
-                    this.render();
-                };
-                ReactWrapper.prototype.unbind = function () {
-                    ReactDom.unmountComponentAtNode(this.element);
-                };
-                return ReactWrapper;
-            }());
-            exports_1("ReactWrapper", ReactWrapper);
-        }
-    };
-});
+// import * as ReactDom from 'react-dom';
+// import { LogManager, bindable, bindingMode } from 'aurelia-framework';
+// import { Logger } from 'aurelia-logging';
+// import { camelToKebab } from './Utilities';
+// import { IDuReactWrapper } from './IDuReactWrapper';
+// export abstract class ReactWrapper  implements IDuReactWrapper
+// {
+//     public element: HTMLElement;
+//     public reactComponent;
+//     public parent: any;
+//     public log: Logger;
+//     constructor(element) {
+//         this.element = element;
+//         this.log = LogManager.getLogger('reacthost');
+//     }
+//     public abstract render();
+//     public bind(bindingContext) {
+//         if (bindingContext !== null) {
+//             this.parent = bindingContext;
+//         }
+//         this.render();
+//     }
+//     public unbind() {
+//         ReactDom.unmountComponentAtNode(this.element);
+//     }
+//     public createState(reactprops: any): any {
+//         var reactpropNames = Object.getOwnPropertyNames(reactprops);
+//         var a = {};
+//         for (let i = 0; i < reactpropNames.length; i++) {
+//             let renderPropName = reactpropNames[i];
+//             if (typeof reactprops[renderPropName] === 'function') {
+//                 //this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
+//                 // function is aurelia bound, make sure to call it
+//                 //this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
+//                 if (typeof this[renderPropName] === 'function') {
+//                     a[renderPropName] = (...newValue: any[]) => {
+//                         //this.log.debug('bound function, go aurelia');
+//                         return this[renderPropName](newValue);
+//                     };
+//                 } else {
+//                     let funcNames = [
+//                         'defaultOnChangeEvent',
+//                         'defaultActionEvent',
+//                         'onlyAureliaBound'
+//                     ];
+//                     if (!funcNames.includes(reactprops[renderPropName].name)) {
+//                         a[renderPropName] = (...newValue: any[]) => {
+//                             //this.log.debug('run func from reactprops');
+//                             return reactprops[renderPropName](this, newValue);
+//                         };
+//                     }
+//                 }
+//             } else {
+//                 if (typeof this[renderPropName] !== 'undefined') {
+//                     //this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);
+//                     a[renderPropName] = this[renderPropName];
+//                 }
+//             }
+//         }
+//         return a;
+//     }
+// }
+// export function defaultActionEvent() {}
+// export function defaultOnChangeEvent() {}
+// export function onlyAureliaBound() {}
+// export function addProperties(aureliaClass: any, reactprops: any) {
+//     var reactpropNames = Object.getOwnPropertyNames(reactprops);
+//     for (let i = 0; i < reactpropNames.length; i++) {
+//         let renderPropName = reactpropNames[i];
+//         bindable({
+//             name: renderPropName,
+//             attribute: camelToKebab(renderPropName),
+//             changeHandler: 'render',
+//             defaultBindingMode: bindingMode.twoWay
+//         })(aureliaClass);
+//     }
+// }
+// // export function renderReact(reactClass: any, reactprops: any) {
+// //     // this is bound to Aurelia class
+// //     this.container = this.element.querySelector('.au-react-root');
+// //     if (this.container == null) {
+// //         this.container = document.createElement('span');
+// //         this.container.setAttribute('class', 'au-react-root');
+// //         this.element.appendChild(this.container);
+// //     }
+// //     var reactpropNames = Object.getOwnPropertyNames(reactprops);
+// //     var a = {};
+// //     for (let i = 0; i < reactpropNames.length; i++) {
+// //         let renderPropName = reactpropNames[i];
+// //         if (typeof reactprops[renderPropName] === 'function') {
+// //             //this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
+// //             // function is aurelia bound, make sure to call it
+// //             //this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
+// //             if (typeof this[renderPropName] === 'function') {
+// //                 a[renderPropName] = (...newValue: any[]) => {
+// //                     //this.log.debug('bound function, go aurelia');
+// //                     return this[renderPropName](newValue);
+// //                 };
+// //             } else {
+// //                 let funcNames = [
+// //                     'defaultOnChangeEvent',
+// //                     'defaultActionEvent',
+// //                     'onlyAureliaBound'
+// //                 ];
+// //                 if (!funcNames.includes(reactprops[renderPropName].name)) {
+// //                     a[renderPropName] = (...newValue: any[]) => {
+// //                         //this.log.debug('run func from reactprops');
+// //                         return reactprops[renderPropName](this, newValue);
+// //                     };
+// //                 }
+// //             }
+// //         } else {
+// //             if (typeof this[renderPropName] !== 'undefined') {
+// //                 //this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);
+// //                 a[renderPropName] = this[renderPropName];
+// //             }
+// //         }
+// //     }
+// //     const reactElement = React.createElement(reactClass, a);
+// //     this.reactComponent = ReactDom.render(reactElement, this.container);
+// // }
