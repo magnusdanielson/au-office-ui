@@ -1,4 +1,4 @@
-import { customElement, inject } from 'aurelia-framework';
+import { customElement, inject, bindable } from 'aurelia-framework';
 import { TeachingBubble, ITeachingBubbleProps } from 'office-ui-fabric-react/lib/TeachingBubble';
 import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
 import { addProperties } from '../../wrapper/Utilities';
@@ -29,7 +29,9 @@ export class DuTeachingBubble  extends DuReactWrapperBaseClass implements ITeach
     this.hiddenName = 'hidden';
   }
 
+  @bindable()
   hidden: boolean;
+  
   isWide: boolean;
 
   attached()

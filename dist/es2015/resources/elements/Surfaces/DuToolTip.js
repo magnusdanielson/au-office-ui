@@ -27,22 +27,23 @@ reactprops.directionalHint = {};
 reactprops.maxWidth = {};
 reactprops.onRenderContent = onlyAureliaBound;
 reactprops.targetElement = {};
-var DuTeachingBubble = /** @class */ (function (_super) {
-    __extends(DuTeachingBubble, _super);
-    function DuTeachingBubble(element) {
+reactprops.hidden = {};
+var DuToolTip = /** @class */ (function (_super) {
+    __extends(DuToolTip, _super);
+    function DuToolTip(element) {
         var _this = _super.call(this, element) || this;
         _this.hiddenIsHidden = true;
         _this.hiddenName = 'hidden';
         return _this;
     }
-    DuTeachingBubble.prototype.attached = function () {
+    DuToolTip.prototype.attached = function () {
         this.renderReact(Tooltip, this.createState(reactprops));
     };
-    DuTeachingBubble = __decorate([
+    DuToolTip = __decorate([
         inject(Element),
         customElement('du-tool-tip')
-    ], DuTeachingBubble);
-    return DuTeachingBubble;
+    ], DuToolTip);
+    return DuToolTip;
 }(DuReactWrapperBaseClass));
-export { DuTeachingBubble };
-addProperties(DuTeachingBubble, reactprops);
+export { DuToolTip };
+addProperties(DuToolTip, reactprops);

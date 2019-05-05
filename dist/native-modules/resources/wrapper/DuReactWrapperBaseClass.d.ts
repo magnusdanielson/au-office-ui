@@ -1,5 +1,6 @@
 import { Logger } from 'aurelia-logging';
-export declare class DuReactWrapperBaseClass {
+import { IDuReactWrapper } from './IDuReactWrapper';
+export declare class DuReactWrapperBaseClass implements IDuReactWrapper {
     element: HTMLElement;
     container: HTMLElement | null;
     reactComponent: any;

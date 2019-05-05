@@ -3,10 +3,11 @@ import * as ReactDom from 'react-dom';
 import { inlineView, LogManager } from 'aurelia-framework';
 import { Logger } from 'aurelia-logging';
 import { ReactStateWrapper } from './ReactStateWrapper';
+import { IDuReactWrapper } from './IDuReactWrapper';
 
 // Den här filen har endast "ReactStateWrapper" som unik referens
 @inlineView('<template><div id.bind="inneridAurelia" show.bind="!hidden"><slot></slot></div></template>')
-export class DuReactWrapperBaseClass 
+export class DuReactWrapperBaseClass implements IDuReactWrapper
 {
   public element: HTMLElement;
   public container: HTMLElement | null;

@@ -62,8 +62,8 @@ export class DuPivot extends ReactWrapper {
       };
 
     const reactElement = React.createElement(Pivot, a, this.pivotChildren);
-    this.reactComponent = reactElement;
-    ReactDom.render(reactElement, this.container);
+    // TODO below <any> might be a bug
+    this.reactComponent = <any> ReactDom.render(reactElement, this.container);
   }
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "@dunite/au-office-ui",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Microsoft Office-UI-Fabric wrapper for Aurelia",
   "keywords": [
     "office",
@@ -12,6 +12,7 @@
     "aurelia"
   ],
   "main": "dist/commonjs/index.js",
+  "module": "dist/native-modules/index.js",
   "typings": "dist/commonjs/index.d.ts",
   "scripts": {
     "lint": "cross-env tslint --project tsconfig.json",

@@ -1,4 +1,4 @@
-//export * from './resources/index';
+export * from './resources/index';
 
 //import { FrameworkConfiguration } from 'aurelia-framework';
 //import { PLATFORM } from 'aurelia-pal';

@@ -1,7 +1,8 @@
 import { Logger } from 'aurelia-logging';
-export declare abstract class ReactWrapper {
+import { IDuReactWrapper } from './IDuReactWrapper';
+export declare abstract class ReactWrapper implements IDuReactWrapper {
     element: HTMLElement;
-    reactComponent: {};
+    reactComponent: any;
     parent: any;
     log: Logger;
     constructor(element: any);
@@ -14,4 +15,3 @@ export declare function defaultActionEvent(): void;
 export declare function defaultOnChangeEvent(): void;
 export declare function onlyAureliaBound(): void;
 export declare function addProperties(aureliaClass: any, reactprops: any): void;
-export declare function renderReact(reactClass: any, reactprops: any): void;

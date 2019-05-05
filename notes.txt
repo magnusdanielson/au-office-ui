@@ -1,12 +1,7 @@
 npm publish --access public
 
 för test:
-Tooltip
-TeachingBubble
-CoachMark
 DetailsList
-FacePile
-Persona
 
 gör:
 Image

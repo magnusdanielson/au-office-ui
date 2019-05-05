@@ -13,11 +13,12 @@ reactprops.directionalHint = <any>{};
 reactprops.maxWidth = <any>{};
 reactprops.onRenderContent = <any>onlyAureliaBound;
 reactprops.targetElement = <any>{};
+reactprops.hidden = <any>{};
 
 
 @inject(Element)
 @customElement('du-tool-tip')
-export class DuTeachingBubble  extends DuReactWrapperBaseClass implements ITooltipProps
+export class DuToolTip  extends DuReactWrapperBaseClass implements ITooltipProps
 {
   constructor(element) {
     super(element);
@@ -34,4 +35,4 @@ export class DuTeachingBubble  extends DuReactWrapperBaseClass implements IToolt
 }
 
 
-addProperties(DuTeachingBubble, reactprops);
+addProperties(DuToolTip, reactprops);

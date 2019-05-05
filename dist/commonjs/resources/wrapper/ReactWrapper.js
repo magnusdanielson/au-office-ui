@@ -1,12 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var React = require("react");
 var ReactDom = require("react-dom");
 var aurelia_framework_1 = require("aurelia-framework");
 var Utilities_1 = require("./Utilities");
 var ReactWrapper = /** @class */ (function () {
     function ReactWrapper(element) {
-        this.reactComponent = {};
         this.element = element;
         this.log = aurelia_framework_1.LogManager.getLogger('reacthost');
     }
@@ -92,64 +90,47 @@ function addProperties(aureliaClass, reactprops) {
     }
 }
 exports.addProperties = addProperties;
-function renderReact(reactClass, reactprops) {
-    var _this = this;
-    // this is bound to Aurelia class
-    this.container = this.element.querySelector('.au-react-root');
-    if (this.container == null) {
-        this.container = document.createElement('span');
-        this.container.setAttribute('class', 'au-react-root');
-        this.element.appendChild(this.container);
-    }
-    var reactpropNames = Object.getOwnPropertyNames(reactprops);
-    var a = {};
-    var _loop_2 = function (i) {
-        var renderPropName = reactpropNames[i];
-        if (typeof reactprops[renderPropName] === 'function') {
-            //this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
-            // function is aurelia bound, make sure to call it
-            //this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
-            if (typeof this_2[renderPropName] === 'function') {
-                a[renderPropName] = function () {
-                    var newValue = [];
-                    for (var _i = 0; _i < arguments.length; _i++) {
-                        newValue[_i] = arguments[_i];
-                    }
-                    //this.log.debug('bound function, go aurelia');
-                    return _this[renderPropName](newValue);
-                };
-            }
-            else {
-                var funcNames = [
-                    'defaultOnChangeEvent',
-                    'defaultActionEvent',
-                    'onlyAureliaBound'
-                ];
-                if (!funcNames.includes(reactprops[renderPropName].name)) {
-                    a[renderPropName] = function () {
-                        var newValue = [];
-                        for (var _i = 0; _i < arguments.length; _i++) {
-                            newValue[_i] = arguments[_i];
-                        }
-                        //this.log.debug('run func from reactprops');
-                        return reactprops[renderPropName](_this, newValue);
-                    };
-                }
-            }
-        }
-        else {
-            if (typeof this_2[renderPropName] !== 'undefined') {
-                //this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);
-                a[renderPropName] = this_2[renderPropName];
-            }
-        }
-    };
-    var this_2 = this;
-    for (var i = 0; i < reactpropNames.length; i++) {
-        _loop_2(i);
-    }
-    var reactElement = React.createElement(reactClass, a);
-    this.reactComponent = reactElement;
-    ReactDom.render(reactElement, this.container);
-}
-exports.renderReact = renderReact;
+// export function renderReact(reactClass: any, reactprops: any) {
+//     // this is bound to Aurelia class
+//     this.container = this.element.querySelector('.au-react-root');
+//     if (this.container == null) {
+//         this.container = document.createElement('span');
+//         this.container.setAttribute('class', 'au-react-root');
+//         this.element.appendChild(this.container);
+//     }
+//     var reactpropNames = Object.getOwnPropertyNames(reactprops);
+//     var a = {};
+//     for (let i = 0; i < reactpropNames.length; i++) {
+//         let renderPropName = reactpropNames[i];
+//         if (typeof reactprops[renderPropName] === 'function') {
+//             //this.log.debug('typeof reactprops[renderPropName] ' + renderPropName + ' is function');
+//             // function is aurelia bound, make sure to call it
+//             //this.log.debug('typeof this[renderPropName] = ' + typeof this[renderPropName] );
+//             if (typeof this[renderPropName] === 'function') {
+//                 a[renderPropName] = (...newValue: any[]) => {
+//                     //this.log.debug('bound function, go aurelia');
+//                     return this[renderPropName](newValue);
+//                 };
+//             } else {
+//                 let funcNames = [
+//                     'defaultOnChangeEvent',
+//                     'defaultActionEvent',
+//                     'onlyAureliaBound'
+//                 ];
+//                 if (!funcNames.includes(reactprops[renderPropName].name)) {
+//                     a[renderPropName] = (...newValue: any[]) => {
+//                         //this.log.debug('run func from reactprops');
+//                         return reactprops[renderPropName](this, newValue);
+//                     };
+//                 }
+//             }
+//         } else {
+//             if (typeof this[renderPropName] !== 'undefined') {
+//                 //this.log.debug('adding ' + renderPropName + ' with value ' +  this[renderPropName]);
+//                 a[renderPropName] = this[renderPropName];
+//             }
+//         }
+//     }
+//     const reactElement = React.createElement(reactClass, a);
+//     this.reactComponent = ReactDom.render(reactElement, this.container);
+// }

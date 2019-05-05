@@ -1,6 +1,9 @@
 "use strict";
-//export * from './resources/index';
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 Object.defineProperty(exports, "__esModule", { value: true });
+__export(require("./resources/index"));
 //import { FrameworkConfiguration } from 'aurelia-framework';
 //import { PLATFORM } from 'aurelia-pal';
 //@ts-ignore

@@ -44,6 +44,9 @@ var DuTeachingBubble = /** @class */ (function (_super) {
     DuTeachingBubble.prototype.attached = function () {
         this.renderReact(TeachingBubble_1.TeachingBubble, this.createState(reactprops));
     };
+    __decorate([
+        aurelia_framework_1.bindable()
+    ], DuTeachingBubble.prototype, "hidden", void 0);
     DuTeachingBubble = __decorate([
         aurelia_framework_1.inject(Element),
         aurelia_framework_1.customElement('du-teaching-bubble')

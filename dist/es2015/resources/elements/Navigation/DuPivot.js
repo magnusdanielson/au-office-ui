@@ -61,8 +61,8 @@ var DuPivot = /** @class */ (function (_super) {
         }
         ;
         var reactElement = React.createElement(Pivot, a, this.pivotChildren);
-        this.reactComponent = reactElement;
-        ReactDom.render(reactElement, this.container);
+        // TODO below <any> might be a bug
+        this.reactComponent = ReactDom.render(reactElement, this.container);
     };
     __decorate([
         bindable()

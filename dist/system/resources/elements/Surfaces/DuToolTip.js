@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Tooltip", "../
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Tooltip_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1, reactprops, DuTeachingBubble;
+    var aurelia_framework_1, Tooltip_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1, reactprops, DuToolTip;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -45,25 +45,26 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Tooltip", "../
             reactprops.maxWidth = {};
             reactprops.onRenderContent = ReactWrapper_1.onlyAureliaBound;
             reactprops.targetElement = {};
-            DuTeachingBubble = /** @class */ (function (_super) {
-                __extends(DuTeachingBubble, _super);
-                function DuTeachingBubble(element) {
+            reactprops.hidden = {};
+            DuToolTip = /** @class */ (function (_super) {
+                __extends(DuToolTip, _super);
+                function DuToolTip(element) {
                     var _this = _super.call(this, element) || this;
                     _this.hiddenIsHidden = true;
                     _this.hiddenName = 'hidden';
                     return _this;
                 }
-                DuTeachingBubble.prototype.attached = function () {
+                DuToolTip.prototype.attached = function () {
                     this.renderReact(Tooltip_1.Tooltip, this.createState(reactprops));
                 };
-                DuTeachingBubble = __decorate([
+                DuToolTip = __decorate([
                     aurelia_framework_1.inject(Element),
                     aurelia_framework_1.customElement('du-tool-tip')
-                ], DuTeachingBubble);
-                return DuTeachingBubble;
+                ], DuToolTip);
+                return DuToolTip;
             }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
-            exports_1("DuTeachingBubble", DuTeachingBubble);
-            Utilities_1.addProperties(DuTeachingBubble, reactprops);
+            exports_1("DuToolTip", DuToolTip);
+            Utilities_1.addProperties(DuToolTip, reactprops);
         }
     };
 });
