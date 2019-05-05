@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/Breadcrumb", "../../wrapper/ReactWrapper", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/Breadcrumb", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Breadcrumb", "
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Breadcrumb_1, ReactWrapper_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuBreadcrumb;
+    var aurelia_framework_1, Breadcrumb_1, au_react_wrapper_1, reactprops, DuBreadcrumb;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,14 +26,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Breadcrumb", "
             function (Breadcrumb_1_1) {
                 Breadcrumb_1 = Breadcrumb_1_1;
             },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
-            },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
@@ -42,7 +36,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Breadcrumb", "
             reactprops.className = {};
             reactprops.dividerAs = {};
             reactprops.maxDisplayedItems = {};
-            reactprops.onReduceData = ReactWrapper_1.defaultActionEvent;
+            reactprops.onReduceData = au_react_wrapper_1.onlyAureliaBound;
             reactprops.overflowIndex = {};
             DuBreadcrumb = /** @class */ (function (_super) {
                 __extends(DuBreadcrumb, _super);
@@ -61,9 +55,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Breadcrumb", "
                     aurelia_framework_1.customElement('du-breadcrumb')
                 ], DuBreadcrumb);
                 return DuBreadcrumb;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuBreadcrumb", DuBreadcrumb);
-            Utilities_1.addProperties(DuBreadcrumb, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuBreadcrumb, reactprops);
         }
     };
 });

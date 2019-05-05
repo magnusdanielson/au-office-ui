@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Dialog, IDialogProps } from 'office-ui-fabric-react/lib/Dialog';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 let reactprops: IDialogProps = <IDialogProps>{};
 reactprops.dialogContentProps = <any>{};
@@ -12,7 +11,7 @@ reactprops.onDismiss = <any>{};
 
 @inject(Element)
 @customElement('du-dialog')
-export class DuDialog  extends DuReactWrapperBaseClass implements IDialogProps
+export class DuDialog  extends AuReactStateWrapper implements IDialogProps
 {
   constructor(element) {
     super(element);
@@ -26,28 +25,7 @@ export class DuDialog  extends DuReactWrapperBaseClass implements IDialogProps
   {
     this.renderReact(Dialog, this.createState(reactprops));
   }
-
-//   @bindable({ defaultBindingMode: bindingMode.twoWay  ,name:"dialogContentProps" 
-//   ,attribute: "dialog-content-props" 
-// }) 
-//   public dialogContentProps:IDialogContentProps;
-
-//   @bindable({ defaultBindingMode: bindingMode.twoWay  ,name:"modalProps" 
-//   ,attribute: "modal-props" 
-// }) 
-//   public modalProps:IModalProps;
-
-//   @bindable({ defaultBindingMode: bindingMode.twoWay  ,name:"onDismiss" 
-//   ,attribute: "on-dismiss" 
-// }) 
-//   public onDismiss:any;
-
-
-//   @bindable({ defaultBindingMode: bindingMode.twoWay  ,name:"hidden" 
-//   ,attribute: "hidden" 
-// }) 
-//   public hidden:boolean;
 }
 
 
-addProperties(DuDialog, reactprops);
+addPropertiesState(DuDialog, reactprops);

@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { DetailsList, IDetailsListProps } from 'office-ui-fabric-react/lib/DetailsList';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 import { ScrollToMode } from 'office-ui-fabric-react/lib/List';
 
 let reactprops: IDetailsListProps = <IDetailsListProps>{};
@@ -42,7 +40,7 @@ reactprops.items = <any>{};
 
 @inject(Element)
 @customElement('du-details-list')
-export class DuDetailsList  extends DuReactWrapperBaseClass implements IDetailsListProps
+export class DuDetailsList  extends AuReactStateWrapper implements IDetailsListProps
 {
   constructor(element) {
     super(element);
@@ -78,4 +76,4 @@ export class DuDetailsList  extends DuReactWrapperBaseClass implements IDetailsL
 }
 
 
-addProperties(DuDetailsList, reactprops);
+addPropertiesState(DuDetailsList, reactprops);

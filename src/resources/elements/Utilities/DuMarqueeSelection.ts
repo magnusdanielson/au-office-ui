@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { MarqueeSelection } from 'office-ui-fabric-react/lib/MarqueeSelection';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 let reactprops = <any>{};
 reactprops.hidden = <any>{};
@@ -10,7 +9,7 @@ reactprops.hidden = <any>{};
 
 @inject(Element)
 @customElement('du-marquee-selection')
-export class DuMarqueeSelection  extends DuReactWrapperBaseClass
+export class DuMarqueeSelection  extends AuReactStateWrapper
 {
   constructor(element) {
     super(element);
@@ -27,4 +26,4 @@ export class DuMarqueeSelection  extends DuReactWrapperBaseClass
 }
 
 
-addProperties(DuMarqueeSelection, reactprops);
+addPropertiesState(DuMarqueeSelection, reactprops);

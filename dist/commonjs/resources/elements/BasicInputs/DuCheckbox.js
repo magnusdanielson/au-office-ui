@@ -18,9 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Checkbox_1 = require("office-ui-fabric-react/lib/Checkbox");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
 // following parameters are from the event
@@ -38,9 +36,9 @@ reactprops.disabled = {};
 reactprops.checked = {};
 reactprops.className = {};
 reactprops.label = {};
-reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
+reactprops.onChange = au_react_wrapper_1.onlyAureliaBound;
 reactprops.boxSide = {};
-reactprops.onClick = ReactWrapper_1.onlyAureliaBound;
+reactprops.onClick = au_react_wrapper_1.onlyAureliaBound;
 reactprops.checked = {};
 var DuCheckbox = /** @class */ (function (_super) {
     __extends(DuCheckbox, _super);
@@ -59,6 +57,6 @@ var DuCheckbox = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-checkbox')
     ], DuCheckbox);
     return DuCheckbox;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuCheckbox = DuCheckbox;
-Utilities_1.addProperties(DuCheckbox, reactprops);
+au_react_wrapper_1.addPropertiesState(DuCheckbox, reactprops);

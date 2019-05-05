@@ -1,5 +1,5 @@
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-export declare class DuDocumentCardLocation extends DuReactWrapperBaseClass {
+import { AuReactStateWrapper } from '@dunite/au-react-wrapper';
+export declare class DuDocumentCardLocation extends AuReactStateWrapper {
     constructor(element: any);
     hidden: boolean;
     attached(): void;

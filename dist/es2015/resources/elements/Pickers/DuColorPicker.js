@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { ColorPicker } from 'office-ui-fabric-react/lib/ColorPicker';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.alphaLabel = {};
 reactprops.alphaSliderHidden = {};
@@ -44,6 +43,6 @@ var DuColorPicker = /** @class */ (function (_super) {
         customElement('du-color-picker')
     ], DuColorPicker);
     return DuColorPicker;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuColorPicker };
-addProperties(DuColorPicker, reactprops);
+addPropertiesState(DuColorPicker, reactprops);

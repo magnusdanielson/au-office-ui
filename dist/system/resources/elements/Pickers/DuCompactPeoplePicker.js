@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Pickers_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuCompactPeoplePicker;
+    var aurelia_framework_1, Pickers_1, au_react_wrapper_1, reactprops, DuCompactPeoplePicker;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,41 +26,38 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../
             function (Pickers_1_1) {
                 Pickers_1 = Pickers_1_1;
             },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
             reactprops = {};
             //@ts-ignore
             reactprops.items = {}; // items: T[] | undefined;
-            reactprops.onResolveSuggestions = (function () { });
+            reactprops.onResolveSuggestions = au_react_wrapper_1.onlyAureliaBound;
             reactprops.resolveDelay = {};
-            reactprops.onEmptyInputFocus = (function () { });
+            reactprops.onEmptyInputFocus = au_react_wrapper_1.onlyAureliaBound;
             reactprops.defaultSelectedItems = {};
             reactprops.onChange = (function (_this, items) { _this['selectedItems'] = items; });
-            reactprops.onFocus = (function () { });
-            reactprops.onBlur = (function () { });
-            reactprops.getTextFromItem = (function () { });
-            reactprops.onGetMoreResults = (function () { });
+            reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.getTextFromItem = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onGetMoreResults = au_react_wrapper_1.onlyAureliaBound;
             reactprops.className = {};
             reactprops.pickerSuggestionsProps = {};
             reactprops.pickerCalloutProps = {};
             reactprops.inputProps = {};
-            reactprops.onRemoveSuggestion = (function () { });
-            reactprops.onValidateInput = (function () { });
-            reactprops.searchingText = (function () { });
+            reactprops.onRemoveSuggestion = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onValidateInput = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.searchingText = au_react_wrapper_1.onlyAureliaBound;
             reactprops.disabled = {};
             reactprops.itemLimit = {};
-            reactprops.createGenericItem = (function () { });
+            reactprops.createGenericItem = au_react_wrapper_1.onlyAureliaBound;
             reactprops.removeButtonAriaLabel = {};
-            reactprops.onItemSelected = (function () { });
+            reactprops.onItemSelected = au_react_wrapper_1.onlyAureliaBound;
             reactprops.selectedItems = {};
-            //reactprops.onInputChange = <any>(() => {});
-            reactprops.onDismiss = (function () { });
+            //reactprops.onInputChange = <any>onlyAureliaBound;
+            reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
             reactprops.enableSelectedSuggestionAlert = {};
             DuCompactPeoplePicker = /** @class */ (function (_super) {
                 __extends(DuCompactPeoplePicker, _super);
@@ -79,9 +76,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../
                     aurelia_framework_1.customElement('du-compact-people-picker')
                 ], DuCompactPeoplePicker);
                 return DuCompactPeoplePicker;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuCompactPeoplePicker", DuCompactPeoplePicker);
-            Utilities_1.addProperties(DuCompactPeoplePicker, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuCompactPeoplePicker, reactprops);
         }
     };
 });

@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { ColorPicker, IColorPickerProps } from 'office-ui-fabric-react/lib/ColorPicker';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 import { IColor } from 'office-ui-fabric-react/lib/utilities/color/interfaces';
 
 let reactprops: IColorPickerProps = <IColorPickerProps>{};
@@ -17,7 +16,7 @@ reactprops.redLabel = <any>{};
 
 @inject(Element)
 @customElement('du-color-picker')
-export class DuColorPicker extends  DuReactWrapperBaseClass implements IColorPickerProps {
+export class DuColorPicker extends  AuReactStateWrapper implements IColorPickerProps {
 
   constructor(element) {
   super(element);
@@ -34,4 +33,4 @@ export class DuColorPicker extends  DuReactWrapperBaseClass implements IColorPic
   }
 }
 
-addProperties(DuColorPicker, reactprops);
+addPropertiesState(DuColorPicker, reactprops);

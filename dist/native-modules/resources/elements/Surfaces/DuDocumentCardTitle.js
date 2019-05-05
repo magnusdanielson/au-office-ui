@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { DocumentCardTitle } from 'office-ui-fabric-react/lib/DocumentCard';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
 // following parameters are from the event
@@ -43,6 +42,6 @@ var DuDocumentCardTitle = /** @class */ (function (_super) {
         customElement('du-document-card-title')
     ], DuDocumentCardTitle);
     return DuDocumentCardTitle;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuDocumentCardTitle };
-addProperties(DuDocumentCardTitle, reactprops);
+addPropertiesState(DuDocumentCardTitle, reactprops);

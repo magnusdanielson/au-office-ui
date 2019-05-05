@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Checkbox, ICheckboxProps } from 'office-ui-fabric-react/lib/Checkbox';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
@@ -28,7 +26,7 @@ reactprops.checked = <any>{};
 
 @inject(Element)
 @customElement('du-checkbox')
-export class DuCheckbox extends  DuReactWrapperBaseClass implements ICheckboxProps {
+export class DuCheckbox extends  AuReactStateWrapper implements ICheckboxProps {
 
   constructor(element) {
   super(element);
@@ -43,4 +41,4 @@ export class DuCheckbox extends  DuReactWrapperBaseClass implements ICheckboxPro
   }
 }
 
-addProperties(DuCheckbox, reactprops);
+addPropertiesState(DuCheckbox, reactprops);

@@ -1,6 +1,6 @@
 import { ITextFieldProps } from 'office-ui-fabric-react/lib/TextField';
-import { DuReactWrapperNoChildren } from '../../wrapper/DuReactWrapperNoChildren';
-export declare class DuTextField extends DuReactWrapperNoChildren implements ITextFieldProps {
+import { AuReactStateWrapperNoChildren } from '@dunite/au-react-wrapper';
+export declare class DuTextField extends AuReactStateWrapperNoChildren implements ITextFieldProps {
     constructor(element: any);
     hidden: boolean;
     attached(): void;

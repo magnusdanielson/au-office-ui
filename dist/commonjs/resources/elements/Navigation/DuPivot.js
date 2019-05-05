@@ -18,7 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Pivot_1 = require("office-ui-fabric-react/lib/Pivot");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var React = require("react");
 var ReactDom = require("react-dom");
 var reactprops = {};
@@ -75,6 +75,6 @@ var DuPivot = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-pivot')
     ], DuPivot);
     return DuPivot;
-}(ReactWrapper_1.ReactWrapper));
+}(au_react_wrapper_1.AuReactNoStateWrapper));
 exports.DuPivot = DuPivot;
-ReactWrapper_1.addProperties(DuPivot, reactprops);
+au_react_wrapper_1.addPropertiesNoState(DuPivot, reactprops);

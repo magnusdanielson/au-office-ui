@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Persona, IPersonaProps } from 'office-ui-fabric-react/lib/Persona';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IPersonaProps = <IPersonaProps>{};
 
@@ -36,7 +34,7 @@ reactprops.onRenderTertiaryText = <any>onlyAureliaBound;
 
 @inject(Element)
 @customElement('du-persona')
-export class DuPersona  extends DuReactWrapperBaseClass implements IPersonaProps
+export class DuPersona  extends AuReactStateWrapper implements IPersonaProps
 {
   constructor(element) {
     super(element);
@@ -53,4 +51,4 @@ export class DuPersona  extends DuReactWrapperBaseClass implements IPersonaProps
 }
 
 
-addProperties(DuPersona, reactprops);
+addPropertiesState(DuPersona, reactprops);

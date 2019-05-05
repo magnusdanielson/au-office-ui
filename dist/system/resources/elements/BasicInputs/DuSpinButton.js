@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/SpinButton", "../../wrapper/ReactWrapper", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/SpinButton", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/SpinButton", "
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, SpinButton_1, ReactWrapper_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuSpinButton;
+    var aurelia_framework_1, SpinButton_1, au_react_wrapper_1, reactprops, DuSpinButton;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,19 +26,13 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/SpinButton", "
             function (SpinButton_1_1) {
                 SpinButton_1 = SpinButton_1_1;
             },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
-            },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
             reactprops = {};
-            reactprops.focus = ReactWrapper_1.onlyAureliaBound;
+            reactprops.focus = au_react_wrapper_1.onlyAureliaBound;
             reactprops.disabled = {};
             reactprops.className = {};
             reactprops.label = {};
@@ -50,7 +44,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/SpinButton", "
             reactprops.step = {};
             reactprops.iconProps = {};
             reactprops.labelPosition = {};
-            reactprops.onValidate = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onValidate = au_react_wrapper_1.onlyAureliaBound;
             reactprops.ariaLabel = {};
             reactprops.ariaPositionInSet = {};
             reactprops.ariaSetSize = {};
@@ -63,8 +57,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/SpinButton", "
             reactprops.incrementButtonAriaLabel = {};
             reactprops.incrementButtonIcon = {};
             reactprops.keytipProps = {};
-            reactprops.onBlur = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onFocus = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
             //@ts-ignore
             reactprops.onIncrement = function (_this, value) {
                 var _value = parseFloat(_this['value']);
@@ -97,9 +91,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/SpinButton", "
                     aurelia_framework_1.customElement('du-spin-button')
                 ], DuSpinButton);
                 return DuSpinButton;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuSpinButton", DuSpinButton);
-            Utilities_1.addProperties(DuSpinButton, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuSpinButton, reactprops);
         }
     };
 });

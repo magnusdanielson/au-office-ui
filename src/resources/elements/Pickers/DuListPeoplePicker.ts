@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { IPeoplePickerProps  , ListPeoplePicker } from 'office-ui-fabric-react/lib/Pickers';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IPeoplePickerProps   = <IPeoplePickerProps>{};
 
@@ -38,7 +36,7 @@ reactprops.selectedItems = <any>{};
 
 @inject(Element)
 @customElement('du-list-people-picker')
-export class DuListPeoplePicker extends  DuReactWrapperBaseClass {
+export class DuListPeoplePicker extends  AuReactStateWrapper {
 
   constructor(element) {
   super(element);
@@ -53,4 +51,4 @@ export class DuListPeoplePicker extends  DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DuListPeoplePicker, reactprops)
+addPropertiesState(DuListPeoplePicker, reactprops)

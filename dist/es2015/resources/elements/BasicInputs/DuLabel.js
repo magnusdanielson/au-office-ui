@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Label } from 'office-ui-fabric-react/lib/Label';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.disabled = {};
 reactprops.className = {};
@@ -40,6 +39,6 @@ var DuLabel = /** @class */ (function (_super) {
         customElement('du-label')
     ], DuLabel);
     return DuLabel;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuLabel };
-addProperties(DuLabel, reactprops);
+addPropertiesState(DuLabel, reactprops);

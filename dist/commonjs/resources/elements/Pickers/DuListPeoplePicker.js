@@ -18,9 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Pickers_1 = require("office-ui-fabric-react/lib/Pickers");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 //@ts-ignore
 reactprops.items = {}; // items: T[] | undefined;
@@ -46,7 +44,7 @@ reactprops.createGenericItem = (function () { });
 reactprops.removeButtonAriaLabel = {};
 reactprops.onItemSelected = (function () { });
 reactprops.selectedItems = {};
-reactprops.onInputChange = ReactWrapper_1.onlyAureliaBound;
+reactprops.onInputChange = au_react_wrapper_1.onlyAureliaBound;
 reactprops.onDismiss = (function () { });
 reactprops.enableSelectedSuggestionAlert = {};
 reactprops.selectedItems = {};
@@ -67,6 +65,6 @@ var DuListPeoplePicker = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-list-people-picker')
     ], DuListPeoplePicker);
     return DuListPeoplePicker;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuListPeoplePicker = DuListPeoplePicker;
-Utilities_1.addProperties(DuListPeoplePicker, reactprops);
+au_react_wrapper_1.addPropertiesState(DuListPeoplePicker, reactprops);

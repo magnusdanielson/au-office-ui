@@ -14,7 +14,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Persona", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (require, exports, aurelia_framework_1, Persona_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Persona", "@dunite/au-react-wrapper"], function (require, exports, aurelia_framework_1, Persona_1, au_react_wrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
@@ -28,9 +28,9 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/P
     reactprops.imageShouldStartVisible = {};
     reactprops.imageUrl = {};
     reactprops.initialsColor = {};
-    reactprops.onPhotoLoadingStateChange = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onRenderCoin = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onRenderInitials = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onPhotoLoadingStateChange = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onRenderCoin = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onRenderInitials = au_react_wrapper_1.onlyAureliaBound;
     reactprops.optionalText = {};
     reactprops.presence = {};
     reactprops.secondaryText = {};
@@ -41,10 +41,10 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/P
     reactprops.tertiaryText = {};
     reactprops.text = {};
     reactprops.className = {};
-    reactprops.onRenderOptionalText = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onRenderPrimaryText = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onRenderSecondaryText = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onRenderTertiaryText = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onRenderOptionalText = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onRenderPrimaryText = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onRenderSecondaryText = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onRenderTertiaryText = au_react_wrapper_1.onlyAureliaBound;
     var DuPersona = /** @class */ (function (_super) {
         __extends(DuPersona, _super);
         function DuPersona(element) {
@@ -61,7 +61,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/P
             aurelia_framework_1.customElement('du-persona')
         ], DuPersona);
         return DuPersona;
-    }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+    }(au_react_wrapper_1.AuReactStateWrapper));
     exports.DuPersona = DuPersona;
-    Utilities_1.addProperties(DuPersona, reactprops);
+    au_react_wrapper_1.addPropertiesState(DuPersona, reactprops);
 });

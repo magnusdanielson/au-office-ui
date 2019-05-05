@@ -1,7 +1,6 @@
 import {  customElement, inject } from 'aurelia-framework';
 import { DocumentCardPreview, IDocumentCardPreviewProps } from 'office-ui-fabric-react/lib/DocumentCard';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
@@ -15,7 +14,7 @@ reactprops.previewImages = <any>{};
 
 @inject(Element)
 @customElement('du-document-card-preview')
-export class DuDocumentCardPreview extends  DuReactWrapperBaseClass {
+export class DuDocumentCardPreview extends  AuReactStateWrapper {
 
   constructor(element) {
   super(element);
@@ -30,4 +29,4 @@ export class DuDocumentCardPreview extends  DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DuDocumentCardPreview, reactprops);
+addPropertiesState(DuDocumentCardPreview, reactprops);

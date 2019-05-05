@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { ChoiceGroup, IChoiceGroupProps } from 'office-ui-fabric-react/lib/ChoiceGroup';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IChoiceGroupProps = <IChoiceGroupProps>{};
 reactprops.ariaLabelledBy = <any>{};
@@ -21,7 +19,7 @@ reactprops.value = <any>{};
 
 @inject(Element)
 @customElement('du-choice-group')
-export class DuChoiceGroup extends  DuReactWrapperBaseClass implements IChoiceGroupProps {
+export class DuChoiceGroup extends  AuReactStateWrapper implements IChoiceGroupProps {
 
   constructor(element) {
   super(element);
@@ -36,4 +34,4 @@ export class DuChoiceGroup extends  DuReactWrapperBaseClass implements IChoiceGr
   }
 }
 
-addProperties(DuChoiceGroup, reactprops);
+addPropertiesState(DuChoiceGroup, reactprops);

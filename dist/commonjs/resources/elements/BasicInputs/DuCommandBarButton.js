@@ -18,8 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Button_1 = require("office-ui-fabric-react/lib/Button");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.href = {};
 reactprops.primary = {};
@@ -31,7 +30,7 @@ reactprops.text = {};
 reactprops.iconProps = {};
 reactprops.menuProps = {};
 reactprops.split = {};
-reactprops.onClick = function () { };
+reactprops.onClick = au_react_wrapper_1.onlyAureliaBound;
 reactprops.secondaryText = {};
 var DuCommandBarButton = /** @class */ (function (_super) {
     __extends(DuCommandBarButton, _super);
@@ -50,6 +49,6 @@ var DuCommandBarButton = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-command-bar-button')
     ], DuCommandBarButton);
     return DuCommandBarButton;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuCommandBarButton = DuCommandBarButton;
-Utilities_1.addProperties(DuCommandBarButton, reactprops);
+au_react_wrapper_1.addPropertiesState(DuCommandBarButton, reactprops);

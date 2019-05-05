@@ -18,9 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var HoverCard_1 = require("office-ui-fabric-react/lib/HoverCard");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.cardDismissDelay = {};
 reactprops.hidden = {};
@@ -29,9 +27,9 @@ reactprops.cardOpenDelay = {};
 reactprops.expandedCardOpenDelay = {};
 reactprops.expandingCardProps = {};
 reactprops.instantOpenOnClick = {};
-reactprops.onCardExpand = ReactWrapper_1.onlyAureliaBound;
-reactprops.onCardHide = ReactWrapper_1.onlyAureliaBound;
-reactprops.onCardVisible = ReactWrapper_1.onlyAureliaBound;
+reactprops.onCardExpand = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onCardHide = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onCardVisible = au_react_wrapper_1.onlyAureliaBound;
 reactprops.openHotKey = {};
 reactprops.plainCardProps = {};
 reactprops.setAriaDescribedBy = {};
@@ -56,6 +54,6 @@ var DuHoverCard = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-hover-card')
     ], DuHoverCard);
     return DuHoverCard;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuHoverCard = DuHoverCard;
-Utilities_1.addProperties(DuHoverCard, reactprops);
+au_react_wrapper_1.addPropertiesState(DuHoverCard, reactprops);

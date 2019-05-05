@@ -18,9 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Button_1 = require("office-ui-fabric-react/lib/Button");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.allowDisabledFocus = {};
 reactprops.ariaDescription = {};
@@ -29,12 +27,12 @@ reactprops.ariaLabel = {};
 reactprops.keytipProps = {};
 reactprops.menuIconProps = {};
 reactprops.menuTriggerKeyCode = {};
-reactprops.onAfterMenuDismiss = ReactWrapper_1.onlyAureliaBound;
-reactprops.onMenuClick = ReactWrapper_1.onlyAureliaBound;
-reactprops.onAfterMenuDismiss = ReactWrapper_1.onlyAureliaBound;
-reactprops.onAfterMenuDismiss = ReactWrapper_1.onlyAureliaBound;
-reactprops.onAfterMenuDismiss = ReactWrapper_1.onlyAureliaBound;
-reactprops.onAfterMenuDismiss = ReactWrapper_1.onlyAureliaBound;
+reactprops.onAfterMenuDismiss = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onMenuClick = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onAfterMenuDismiss = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onAfterMenuDismiss = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onAfterMenuDismiss = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onAfterMenuDismiss = au_react_wrapper_1.onlyAureliaBound;
 reactprops.persistMenu = {};
 reactprops.primaryDisabled = {};
 reactprops.splitButtonAriaLabel = {};
@@ -49,7 +47,7 @@ reactprops.text = {};
 reactprops.iconProps = {};
 reactprops.menuProps = {};
 reactprops.split = {};
-reactprops.onClick = ReactWrapper_1.onlyAureliaBound;
+reactprops.onClick = au_react_wrapper_1.onlyAureliaBound;
 reactprops.secondaryText = {};
 var DuDefaultButton = /** @class */ (function (_super) {
     __extends(DuDefaultButton, _super);
@@ -68,6 +66,6 @@ var DuDefaultButton = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-default-button')
     ], DuDefaultButton);
     return DuDefaultButton;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuDefaultButton = DuDefaultButton;
-Utilities_1.addProperties(DuDefaultButton, reactprops);
+au_react_wrapper_1.addPropertiesState(DuDefaultButton, reactprops);

@@ -14,7 +14,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "office-ui-fabric-react/lib/Coachmark", "aurelia-framework", "../../wrapper/ReactWrapper", "office-ui-fabric-react/lib/TeachingBubble", "react", "react-dom", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactStateWrapper", "../../wrapper/ReactStateWrapperNoChildren"], function (require, exports, Coachmark_1, aurelia_framework_1, ReactWrapper_1, TeachingBubble_1, React, ReactDom, DuReactWrapperBaseClass_1, Utilities_1, ReactStateWrapper_1, ReactStateWrapperNoChildren_1) {
+define(["require", "exports", "office-ui-fabric-react/lib/Coachmark", "aurelia-framework", "office-ui-fabric-react/lib/TeachingBubble", "react", "react-dom", "@dunite/au-react-wrapper"], function (require, exports, Coachmark_1, aurelia_framework_1, TeachingBubble_1, React, ReactDom, au_react_wrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
@@ -28,10 +28,10 @@ define(["require", "exports", "office-ui-fabric-react/lib/Coachmark", "aurelia-f
     reactprops.isPositionForced = {};
     reactprops.mouseProximityOffset = {};
     reactprops.target = {};
-    reactprops.onAnimationOpenEnd = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onAnimationOpenStart = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onDismiss = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onMouseMove = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onAnimationOpenEnd = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onAnimationOpenStart = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onMouseMove = au_react_wrapper_1.onlyAureliaBound;
     reactprops.positioningContainerProps = {};
     reactprops.preventDismissOnLostFocus = {};
     reactprops.preventFocusOnMount = {};
@@ -63,11 +63,11 @@ define(["require", "exports", "office-ui-fabric-react/lib/Coachmark", "aurelia-f
             //@ts-ignore
             this.teachingBubbleContent.reactClass = TeachingBubble_1.TeachingBubbleContent;
             //let reactTeachingBubbleElement = React.createElement(TeachingBubbleContent, this.teachingBubbleContent);
-            var reactTeachingBubbleElement = React.createElement(ReactStateWrapper_1.ReactStateWrapper, this.teachingBubbleContent);
+            var reactTeachingBubbleElement = React.createElement(au_react_wrapper_1.ReactStateWrapper, this.teachingBubbleContent);
             var a = this.createState(reactprops);
             a.aureliaHost = this;
             a.reactClass = Coachmark_1.Coachmark;
-            var reactElement = React.createElement(ReactStateWrapperNoChildren_1.ReactStateWrapperNoChildren, a, reactTeachingBubbleElement);
+            var reactElement = React.createElement(au_react_wrapper_1.ReactStateWrapperNoChildren, a, reactTeachingBubbleElement);
             this.reactComponent = ReactDom.render(reactElement, this.container);
         };
         __decorate([
@@ -81,7 +81,7 @@ define(["require", "exports", "office-ui-fabric-react/lib/Coachmark", "aurelia-f
             aurelia_framework_1.customElement('du-coachmark')
         ], DuCoachmark);
         return DuCoachmark;
-    }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+    }(au_react_wrapper_1.AuReactStateWrapperNoChildren));
     exports.DuCoachmark = DuCoachmark;
-    Utilities_1.addProperties(DuCoachmark, reactprops);
+    au_react_wrapper_1.addPropertiesState(DuCoachmark, reactprops);
 });

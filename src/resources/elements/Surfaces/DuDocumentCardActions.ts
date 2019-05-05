@@ -1,7 +1,6 @@
 import {  customElement, inject } from 'aurelia-framework';
 import { DocumentCardActions, IDocumentCardActionsProps } from 'office-ui-fabric-react/lib/DocumentCard';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
@@ -14,7 +13,7 @@ reactprops.views = <any>{};
 
 @inject(Element)
 @customElement('du-document-card-actions')
-export class DuDocumentCardActions extends  DuReactWrapperBaseClass {
+export class DuDocumentCardActions extends  AuReactStateWrapper {
 
   constructor(element) {
   super(element);
@@ -29,4 +28,4 @@ export class DuDocumentCardActions extends  DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DuDocumentCardActions, reactprops);
+addPropertiesState(DuDocumentCardActions, reactprops);

@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { SpinButton } from 'office-ui-fabric-react/lib/SpinButton';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.focus = onlyAureliaBound;
 reactprops.disabled = {};
@@ -79,6 +77,6 @@ var DuSpinButton = /** @class */ (function (_super) {
         customElement('du-spin-button')
     ], DuSpinButton);
     return DuSpinButton;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuSpinButton };
-addProperties(DuSpinButton, reactprops);
+addPropertiesState(DuSpinButton, reactprops);

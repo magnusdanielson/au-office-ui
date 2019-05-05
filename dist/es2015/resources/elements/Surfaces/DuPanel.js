@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Panel } from 'office-ui-fabric-react/lib/Panel';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.isOpen = {};
 reactprops.onDismiss = {};
@@ -39,6 +38,6 @@ var DuPanel = /** @class */ (function (_super) {
         customElement('du-panel')
     ], DuPanel);
     return DuPanel;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuPanel };
-addProperties(DuPanel, reactprops);
+addPropertiesState(DuPanel, reactprops);

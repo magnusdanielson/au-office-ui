@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Persona } from 'office-ui-fabric-react/lib/Persona';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.allowPhoneInitials = {};
 reactprops.coinProps = {};
@@ -63,6 +61,6 @@ var DuPersona = /** @class */ (function (_super) {
         customElement('du-persona')
     ], DuPersona);
     return DuPersona;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuPersona };
-addProperties(DuPersona, reactprops);
+addPropertiesState(DuPersona, reactprops);

@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { ProgressIndicator } from 'office-ui-fabric-react/lib/ProgressIndicator';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.className = {};
 reactprops.barHeight = {};
@@ -42,6 +41,6 @@ var DuProgressIndicator = /** @class */ (function (_super) {
         customElement('du-progress-indicator')
     ], DuProgressIndicator);
     return DuProgressIndicator;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuProgressIndicator };
-addProperties(DuProgressIndicator, reactprops);
+addPropertiesState(DuProgressIndicator, reactprops);

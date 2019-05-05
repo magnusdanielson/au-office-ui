@@ -18,9 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var ContextualMenu_1 = require("office-ui-fabric-react/lib/ContextualMenu");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.beakWidth = {};
 reactprops.bounds = {};
@@ -32,10 +30,10 @@ reactprops.hidden = {};
 reactprops.isBeakVisible = {};
 reactprops.isSubMenu = {};
 reactprops.items = {};
-reactprops.onDismiss = ReactWrapper_1.defaultActionEvent;
-reactprops.onItemClick = ReactWrapper_1.defaultActionEvent;
-reactprops.onMenuDismissed = ReactWrapper_1.defaultActionEvent;
-reactprops.onMenuOpened = ReactWrapper_1.defaultActionEvent;
+reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onItemClick = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onMenuDismissed = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onMenuOpened = au_react_wrapper_1.onlyAureliaBound;
 reactprops.alignTargetEdge = {};
 reactprops.ariaLabel = {};
 reactprops.delayUpdateFocusOnHover = {};
@@ -69,6 +67,6 @@ var DuContextualMenu = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-contextual-menu')
     ], DuContextualMenu);
     return DuContextualMenu;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuContextualMenu = DuContextualMenu;
-Utilities_1.addProperties(DuContextualMenu, reactprops);
+au_react_wrapper_1.addPropertiesState(DuContextualMenu, reactprops);

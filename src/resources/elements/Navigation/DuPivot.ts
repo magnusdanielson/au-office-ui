@@ -1,6 +1,6 @@
 import {  customElement, inject, noView, bindable } from 'aurelia-framework';
 import { Pivot, PivotItem, IPivotProps, IPivotItemProps } from 'office-ui-fabric-react/lib/Pivot';
-import { addProperties, ReactWrapper } from '../../wrapper/ReactWrapper';
+import { AuReactNoStateWrapper, addPropertiesNoState } from '@dunite/au-react-wrapper';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
@@ -19,7 +19,7 @@ reactprops.selectedKey = <any>{};
 @noView()
 @inject(Element)
 @customElement('du-pivot')
-export class DuPivot extends ReactWrapper {
+export class DuPivot extends AuReactNoStateWrapper {
 
   container: HTMLElement | null;
   
@@ -67,4 +67,4 @@ export class DuPivot extends ReactWrapper {
   }
 }
 
-addProperties(DuPivot, reactprops);
+addPropertiesNoState(DuPivot, reactprops);

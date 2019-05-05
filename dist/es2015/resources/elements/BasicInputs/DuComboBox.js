@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { ComboBox } from 'office-ui-fabric-react/lib/ComboBox';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.buttonIconProps = {};
 reactprops.caretDownButtonStyles = {};
@@ -65,6 +63,6 @@ var DuComboBox = /** @class */ (function (_super) {
         customElement('du-combo-box')
     ], DuComboBox);
     return DuComboBox;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuComboBox };
-addProperties(DuComboBox, reactprops);
+addPropertiesState(DuComboBox, reactprops);

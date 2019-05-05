@@ -14,7 +14,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../../wrapper/ReactWrapper", "react", "react-dom"], function (require, exports, aurelia_framework_1, Pivot_1, ReactWrapper_1, React, ReactDom) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Pivot", "@dunite/au-react-wrapper", "react", "react-dom"], function (require, exports, aurelia_framework_1, Pivot_1, au_react_wrapper_1, React, ReactDom) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
@@ -71,7 +71,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/P
             aurelia_framework_1.customElement('du-pivot')
         ], DuPivot);
         return DuPivot;
-    }(ReactWrapper_1.ReactWrapper));
+    }(au_react_wrapper_1.AuReactNoStateWrapper));
     exports.DuPivot = DuPivot;
-    ReactWrapper_1.addProperties(DuPivot, reactprops);
+    au_react_wrapper_1.addPropertiesNoState(DuPivot, reactprops);
 });

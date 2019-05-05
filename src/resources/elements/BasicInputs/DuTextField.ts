@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { TextField, ITextFieldProps } from 'office-ui-fabric-react/lib/TextField';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { addProperties } from '../../wrapper/Utilities';
-import { DuReactWrapperNoChildren } from '../../wrapper/DuReactWrapperNoChildren';
+import { AuReactStateWrapperNoChildren, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: ITextFieldProps = {} as ITextFieldProps;
 
@@ -43,7 +41,7 @@ reactprops.placeholder = <any>{};
 
 @inject(Element)
 @customElement('du-text-field')
-export class DuTextField extends  DuReactWrapperNoChildren implements ITextFieldProps {
+export class DuTextField extends  AuReactStateWrapperNoChildren implements ITextFieldProps {
 
   constructor(element) {
   super(element);
@@ -103,4 +101,4 @@ export class DuTextField extends  DuReactWrapperNoChildren implements ITextField
   }
 }
 
-addProperties(DuTextField, reactprops);
+addPropertiesState(DuTextField, reactprops);

@@ -1,13 +1,9 @@
 import { Coachmark, ICoachmarkProps } from 'office-ui-fabric-react/lib/Coachmark';
 import {  customElement, inject, bindable } from 'aurelia-framework';
-import {  onlyAureliaBound } from '../../wrapper/ReactWrapper';
 import { ITeachingBubbleProps, TeachingBubbleContent } from 'office-ui-fabric-react/lib/TeachingBubble';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { ReactStateWrapper } from '../../wrapper/ReactStateWrapper';
-import { ReactStateWrapperNoChildren } from '../../wrapper/ReactStateWrapperNoChildren';
+import { AuReactStateWrapperNoChildren, addPropertiesState, onlyAureliaBound, ReactStateWrapper, ReactStateWrapperNoChildren } from '@dunite/au-react-wrapper';
 
 let reactprops: ICoachmarkProps = <ICoachmarkProps>{};
 reactprops.beaconColorOne = <any>{};
@@ -30,7 +26,7 @@ reactprops.preventFocusOnMount = <any>{};
 
 @inject(Element)
 @customElement('du-coachmark')
-export class DuCoachmark extends DuReactWrapperBaseClass {
+export class DuCoachmark extends AuReactStateWrapperNoChildren {
 
   container: HTMLElement | null;
   
@@ -89,4 +85,4 @@ export class DuCoachmark extends DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DuCoachmark, reactprops);
+addPropertiesState(DuCoachmark, reactprops);

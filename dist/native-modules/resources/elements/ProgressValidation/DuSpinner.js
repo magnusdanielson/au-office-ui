@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Spinner } from 'office-ui-fabric-react/lib/Spinner';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.className = {};
 reactprops.size = {};
@@ -40,6 +39,6 @@ var DuSpinner = /** @class */ (function (_super) {
         customElement('du-spinner')
     ], DuSpinner);
     return DuSpinner;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuSpinner };
-addProperties(DuSpinner, reactprops);
+addPropertiesState(DuSpinner, reactprops);

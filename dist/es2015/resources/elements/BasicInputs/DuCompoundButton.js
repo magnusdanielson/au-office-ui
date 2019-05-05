@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { CompoundButton } from 'office-ui-fabric-react/lib/Button';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.allowDisabledFocus = {};
 reactprops.ariaDescription = {};
@@ -66,6 +64,6 @@ var DuCompoundButton = /** @class */ (function (_super) {
         customElement('du-compound-button')
     ], DuCompoundButton);
     return DuCompoundButton;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuCompoundButton };
-addProperties(DuCompoundButton, reactprops);
+addPropertiesState(DuCompoundButton, reactprops);

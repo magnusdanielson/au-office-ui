@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { SpinButton, ISpinButton, ISpinButtonProps } from 'office-ui-fabric-react/lib/SpinButton';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: ISpinButtonProps & ISpinButton = {} as ISpinButton & ISpinButtonProps;
 reactprops.focus = onlyAureliaBound;
@@ -56,7 +54,7 @@ reactprops.precision = <any>{};
 
 @inject(Element)
 @customElement('du-spin-button')
-export class DuSpinButton extends DuReactWrapperBaseClass implements ISpinButtonProps {
+export class DuSpinButton extends AuReactStateWrapper implements ISpinButtonProps {
 
   constructor(element) {
   super(element);
@@ -72,4 +70,4 @@ export class DuSpinButton extends DuReactWrapperBaseClass implements ISpinButton
   }
 }
 
-addProperties(DuSpinButton, reactprops);
+addPropertiesState(DuSpinButton, reactprops);

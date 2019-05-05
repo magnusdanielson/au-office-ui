@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { HoverCard } from 'office-ui-fabric-react/lib/HoverCard';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.cardDismissDelay = {};
 reactprops.hidden = {};
@@ -54,6 +52,6 @@ var DuHoverCard = /** @class */ (function (_super) {
         customElement('du-hover-card')
     ], DuHoverCard);
     return DuHoverCard;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuHoverCard };
-addProperties(DuHoverCard, reactprops);
+addPropertiesState(DuHoverCard, reactprops);

@@ -18,26 +18,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Slider_1 = require("office-ui-fabric-react/lib/Slider");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.value = {};
 reactprops.ariaLabel = {};
-reactprops.ariaValueText = ReactWrapper_1.onlyAureliaBound;
+reactprops.ariaValueText = au_react_wrapper_1.onlyAureliaBound;
 reactprops.className = {};
 reactprops.defaultValue = {};
 reactprops.disabled = {};
 reactprops.label = {};
 reactprops.max = {};
 reactprops.min = {};
-reactprops.onChange = ReactWrapper_1.onlyAureliaBound; //( (_this: any, value: any) => { _this['value'] = value; });
-reactprops.onChanged = ReactWrapper_1.onlyAureliaBound;
+reactprops.onChange = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onChanged = au_react_wrapper_1.onlyAureliaBound;
 reactprops.showValue = {};
 reactprops.step = {};
 reactprops.value = {};
 reactprops.vertical = {};
-reactprops.valueFormat = ReactWrapper_1.onlyAureliaBound;
+reactprops.valueFormat = au_react_wrapper_1.onlyAureliaBound;
 reactprops.vertical = {};
 var DuSlider = /** @class */ (function (_super) {
     __extends(DuSlider, _super);
@@ -56,6 +54,6 @@ var DuSlider = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-slider')
     ], DuSlider);
     return DuSlider;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuSlider = DuSlider;
-Utilities_1.addProperties(DuSlider, reactprops);
+au_react_wrapper_1.addPropertiesState(DuSlider, reactprops);

@@ -1,7 +1,6 @@
 import {  customElement, inject } from 'aurelia-framework';
 import { DialogFooter, IDialogFooterProps } from 'office-ui-fabric-react/lib/Dialog';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
@@ -13,7 +12,7 @@ reactprops.className = <any>{};
 
 @inject(Element)
 @customElement('du-dialog-footer')
-export class DuDialogFooter extends DuReactWrapperBaseClass {
+export class DuDialogFooter extends AuReactStateWrapper {
 
   constructor(element) {
   super(element);
@@ -28,4 +27,4 @@ export class DuDialogFooter extends DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DuDialogFooter, reactprops);
+addPropertiesState(DuDialogFooter, reactprops);

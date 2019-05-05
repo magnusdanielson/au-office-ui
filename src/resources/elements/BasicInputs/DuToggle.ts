@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Toggle, IToggleProps } from 'office-ui-fabric-react/lib/Toggle';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 let reactprops: IToggleProps = {} as IToggleProps;
 reactprops.ariaLabel = <any>{}; 
@@ -18,7 +17,7 @@ reactprops.keytipProps  = <any>{};
 
 @inject(Element)
 @customElement('du-toggle')
-export class DuToggle extends  DuReactWrapperBaseClass implements IToggleProps {
+export class DuToggle extends  AuReactStateWrapper implements IToggleProps {
 
   constructor(element) {
   super(element);
@@ -35,4 +34,4 @@ export class DuToggle extends  DuReactWrapperBaseClass implements IToggleProps {
   }
 }
 
-addProperties(DuToggle, reactprops);
+addPropertiesState(DuToggle, reactprops);

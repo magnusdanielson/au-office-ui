@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { SearchBox, ISearchBox, ISearchBoxProps } from 'office-ui-fabric-react/lib/SearchBox';
-import { addProperties } from '../../wrapper/Utilities';
-import { DuReactWrapperNoChildren } from '../../wrapper/DuReactWrapperNoChildren';
+import { AuReactStateWrapperNoChildren, addPropertiesState } from '@dunite/au-react-wrapper';
 
 let reactprops: ISearchBoxProps = <ISearchBoxProps & ISearchBox>{};
 reactprops.disabled = <any>{};
@@ -24,7 +23,7 @@ reactprops.iconProps =  <any>{};
 
 @inject(Element)
 @customElement('du-search-box')
-export class DuSearchBox extends  DuReactWrapperNoChildren implements ISearchBoxProps {
+export class DuSearchBox extends  AuReactStateWrapperNoChildren implements ISearchBoxProps {
 
   constructor(element) {
   super(element);
@@ -39,4 +38,4 @@ export class DuSearchBox extends  DuReactWrapperNoChildren implements ISearchBox
   }
 }
 
-addProperties(DuSearchBox, reactprops);
+addPropertiesState(DuSearchBox, reactprops);

@@ -14,7 +14,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/DetailsList", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (require, exports, aurelia_framework_1, DetailsList_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/DetailsList", "@dunite/au-react-wrapper"], function (require, exports, aurelia_framework_1, DetailsList_1, au_react_wrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
@@ -36,13 +36,13 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/D
     reactprops.layoutMode = {};
     reactprops.listProps = {};
     reactprops.minimumPixelsForDrag = {};
-    reactprops.onActiveItemChanged = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onColumnHeaderClick = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onColumnHeaderContextMenu = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onColumnResize = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onDidUpdate = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onItemContextMenu = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onItemInvoked = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onActiveItemChanged = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onColumnHeaderClick = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onColumnHeaderContextMenu = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onColumnResize = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onDidUpdate = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onItemContextMenu = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onItemInvoked = au_react_wrapper_1.onlyAureliaBound;
     reactprops.selection = {};
     reactprops.selectionMode = {};
     reactprops.selectionPreservedOnEmptyClick = {};
@@ -75,7 +75,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/D
             aurelia_framework_1.customElement('du-details-list')
         ], DuDetailsList);
         return DuDetailsList;
-    }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+    }(au_react_wrapper_1.AuReactStateWrapper));
     exports.DuDetailsList = DuDetailsList;
-    Utilities_1.addProperties(DuDetailsList, reactprops);
+    au_react_wrapper_1.addPropertiesState(DuDetailsList, reactprops);
 });

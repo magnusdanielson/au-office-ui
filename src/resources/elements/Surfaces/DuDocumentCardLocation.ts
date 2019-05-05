@@ -1,8 +1,6 @@
 import {  customElement, inject } from 'aurelia-framework';
 import { DocumentCardLocation, IDocumentCardLocationProps } from 'office-ui-fabric-react/lib/DocumentCard';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
@@ -17,7 +15,7 @@ reactprops.onClick = onlyAureliaBound;
 
 @inject(Element)
 @customElement('du-document-card-location')
-export class DuDocumentCardLocation extends  DuReactWrapperBaseClass {
+export class DuDocumentCardLocation extends  AuReactStateWrapper {
 
   constructor(element) {
   super(element);
@@ -32,4 +30,4 @@ export class DuDocumentCardLocation extends  DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DocumentCardLocation, reactprops);
+addPropertiesState(DocumentCardLocation, reactprops);

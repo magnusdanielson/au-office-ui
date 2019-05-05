@@ -18,8 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Dialog_1 = require("office-ui-fabric-react/lib/Dialog");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
 // following parameters are from the event
@@ -43,6 +42,6 @@ var DuDialogFooter = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-dialog-footer')
     ], DuDialogFooter);
     return DuDialogFooter;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuDialogFooter = DuDialogFooter;
-Utilities_1.addProperties(DuDialogFooter, reactprops);
+au_react_wrapper_1.addPropertiesState(DuDialogFooter, reactprops);

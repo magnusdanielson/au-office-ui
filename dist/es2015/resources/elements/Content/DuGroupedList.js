@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { GroupedList } from 'office-ui-fabric-react/lib/GroupedList';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.items = {};
 reactprops.onRenderCell = onlyAureliaBound;
@@ -57,6 +55,6 @@ var DuGroupedList = /** @class */ (function (_super) {
         //@ts-ignore Due to onRenderCell
     ], DuGroupedList);
     return DuGroupedList;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuGroupedList };
-addProperties(DuGroupedList, reactprops);
+addPropertiesState(DuGroupedList, reactprops);

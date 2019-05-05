@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { HoverCard, IHoverCardProps } from 'office-ui-fabric-react/lib/HoverCard';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IHoverCardProps = <IHoverCardProps>{};
 reactprops.cardDismissDelay = <any>{};
@@ -27,7 +25,7 @@ reactprops.type = <any>{};
 
 @inject(Element)
 @customElement('du-hover-card')
-export class DuHoverCard  extends DuReactWrapperBaseClass implements IHoverCardProps
+export class DuHoverCard  extends AuReactStateWrapper implements IHoverCardProps
 {
   constructor(element) {
     super(element);
@@ -44,4 +42,4 @@ export class DuHoverCard  extends DuReactWrapperBaseClass implements IHoverCardP
 }
 
 
-addProperties(DuHoverCard, reactprops);
+addPropertiesState(DuHoverCard, reactprops);

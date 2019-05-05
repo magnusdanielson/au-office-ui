@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../../wrapper/ReactWrapper", "react", "react-dom"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pivot", "@dunite/au-react-wrapper", "react", "react-dom"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../..
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Pivot_1, ReactWrapper_1, React, ReactDom, reactprops, DuPivot;
+    var aurelia_framework_1, Pivot_1, au_react_wrapper_1, React, ReactDom, reactprops, DuPivot;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,8 +26,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../..
             function (Pivot_1_1) {
                 Pivot_1 = Pivot_1_1;
             },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             },
             function (React_1) {
                 React = React_1;
@@ -91,9 +91,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pivot", "../..
                     aurelia_framework_1.customElement('du-pivot')
                 ], DuPivot);
                 return DuPivot;
-            }(ReactWrapper_1.ReactWrapper));
+            }(au_react_wrapper_1.AuReactNoStateWrapper));
             exports_1("DuPivot", DuPivot);
-            ReactWrapper_1.addProperties(DuPivot, reactprops);
+            au_react_wrapper_1.addPropertiesNoState(DuPivot, reactprops);
         }
     };
 });

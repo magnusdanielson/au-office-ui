@@ -14,11 +14,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/SpinButton", "../../wrapper/ReactWrapper", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (require, exports, aurelia_framework_1, SpinButton_1, ReactWrapper_1, DuReactWrapperBaseClass_1, Utilities_1) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/SpinButton", "@dunite/au-react-wrapper"], function (require, exports, aurelia_framework_1, SpinButton_1, au_react_wrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
-    reactprops.focus = ReactWrapper_1.onlyAureliaBound;
+    reactprops.focus = au_react_wrapper_1.onlyAureliaBound;
     reactprops.disabled = {};
     reactprops.className = {};
     reactprops.label = {};
@@ -30,7 +30,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/S
     reactprops.step = {};
     reactprops.iconProps = {};
     reactprops.labelPosition = {};
-    reactprops.onValidate = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onValidate = au_react_wrapper_1.onlyAureliaBound;
     reactprops.ariaLabel = {};
     reactprops.ariaPositionInSet = {};
     reactprops.ariaSetSize = {};
@@ -43,8 +43,8 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/S
     reactprops.incrementButtonAriaLabel = {};
     reactprops.incrementButtonIcon = {};
     reactprops.keytipProps = {};
-    reactprops.onBlur = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onFocus = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
     //@ts-ignore
     reactprops.onIncrement = function (_this, value) {
         var _value = parseFloat(_this['value']);
@@ -77,7 +77,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/S
             aurelia_framework_1.customElement('du-spin-button')
         ], DuSpinButton);
         return DuSpinButton;
-    }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+    }(au_react_wrapper_1.AuReactStateWrapper));
     exports.DuSpinButton = DuSpinButton;
-    Utilities_1.addProperties(DuSpinButton, reactprops);
+    au_react_wrapper_1.addPropertiesState(DuSpinButton, reactprops);
 });

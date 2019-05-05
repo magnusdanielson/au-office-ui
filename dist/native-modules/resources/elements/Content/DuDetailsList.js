@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { DetailsList } from 'office-ui-fabric-react/lib/DetailsList';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.checkButtonAriaLabel = {};
 reactprops.checkboxCellClassName = {};
@@ -77,6 +75,6 @@ var DuDetailsList = /** @class */ (function (_super) {
         customElement('du-details-list')
     ], DuDetailsList);
     return DuDetailsList;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuDetailsList };
-addProperties(DuDetailsList, reactprops);
+addPropertiesState(DuDetailsList, reactprops);

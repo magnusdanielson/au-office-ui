@@ -16,15 +16,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Breadcrumb } from 'office-ui-fabric-react/lib/Breadcrumb';
-import { defaultActionEvent } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.items = {};
 reactprops.className = {};
 reactprops.dividerAs = {};
 reactprops.maxDisplayedItems = {};
-reactprops.onReduceData = defaultActionEvent;
+reactprops.onReduceData = onlyAureliaBound;
 reactprops.overflowIndex = {};
 var DuBreadcrumb = /** @class */ (function (_super) {
     __extends(DuBreadcrumb, _super);
@@ -43,6 +41,6 @@ var DuBreadcrumb = /** @class */ (function (_super) {
         customElement('du-breadcrumb')
     ], DuBreadcrumb);
     return DuBreadcrumb;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuBreadcrumb };
-addProperties(DuBreadcrumb, reactprops);
+addPropertiesState(DuBreadcrumb, reactprops);

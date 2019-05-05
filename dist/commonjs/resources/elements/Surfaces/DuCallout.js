@@ -18,9 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Callout_1 = require("office-ui-fabric-react/lib/Callout");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
 // following parameters are from the event
@@ -44,10 +42,10 @@ reactprops.hidden = {};
 reactprops.isBeakVisible = {};
 reactprops.layerProps = {};
 reactprops.minPagePadding = {};
-reactprops.onDismiss = ReactWrapper_1.onlyAureliaBound;
-reactprops.onLayerMounted = ReactWrapper_1.onlyAureliaBound;
-reactprops.onPositioned = ReactWrapper_1.onlyAureliaBound;
-reactprops.onScroll = ReactWrapper_1.onlyAureliaBound;
+reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onLayerMounted = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onPositioned = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onScroll = au_react_wrapper_1.onlyAureliaBound;
 reactprops.preventDismissOnLostFocus = {};
 reactprops.preventDismissOnScroll = {};
 reactprops.setInitialFocus = {};
@@ -69,6 +67,6 @@ var DuCallout = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-callout')
     ], DuCallout);
     return DuCallout;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuCallout = DuCallout;
-Utilities_1.addProperties(DuCallout, reactprops);
+au_react_wrapper_1.addPropertiesState(DuCallout, reactprops);

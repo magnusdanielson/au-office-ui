@@ -1,6 +1,6 @@
 import { ITooltipProps } from 'office-ui-fabric-react/lib/Tooltip';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-export declare class DuToolTip extends DuReactWrapperBaseClass implements ITooltipProps {
+import { AuReactStateWrapper } from '@dunite/au-react-wrapper';
+export declare class DuToolTip extends AuReactStateWrapper implements ITooltipProps {
     constructor(element: any);
     hidden: boolean;
     attached(): void;

@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/ChoiceGroup", "../../wrapper/ReactWrapper", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/ChoiceGroup", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ChoiceGroup", 
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, ChoiceGroup_1, ReactWrapper_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuChoiceGroup;
+    var aurelia_framework_1, ChoiceGroup_1, au_react_wrapper_1, reactprops, DuChoiceGroup;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,14 +26,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ChoiceGroup", 
             function (ChoiceGroup_1_1) {
                 ChoiceGroup_1 = ChoiceGroup_1_1;
             },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
-            },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
@@ -45,7 +39,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ChoiceGroup", 
             reactprops.label = {};
             reactprops.onChange = function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; };
             reactprops.options = {};
-            reactprops.onClick = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onClick = au_react_wrapper_1.onlyAureliaBound;
             reactprops.defaultSelectedKey = {};
             reactprops.selectedKey = {};
             reactprops.value = {};
@@ -66,9 +60,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ChoiceGroup", 
                     aurelia_framework_1.customElement('du-choice-group')
                 ], DuChoiceGroup);
                 return DuChoiceGroup;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuChoiceGroup", DuChoiceGroup);
-            Utilities_1.addProperties(DuChoiceGroup, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuChoiceGroup, reactprops);
         }
     };
 });

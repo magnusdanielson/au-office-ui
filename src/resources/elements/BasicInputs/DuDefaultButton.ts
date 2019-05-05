@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { DefaultButton, IButtonProps  } from 'office-ui-fabric-react/lib/Button';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IButtonProps = <IButtonProps>{};
 reactprops.allowDisabledFocus = <any>{};
@@ -38,7 +36,7 @@ reactprops.secondaryText = <any>{};
 
 @inject(Element)
 @customElement('du-default-button')
-export class DuDefaultButton extends DuReactWrapperBaseClass implements IButtonProps 
+export class DuDefaultButton extends AuReactStateWrapper implements IButtonProps 
 {
 
   constructor(element) {
@@ -54,4 +52,4 @@ export class DuDefaultButton extends DuReactWrapperBaseClass implements IButtonP
   }
 }
 
-addProperties(DuDefaultButton, reactprops);
+addPropertiesState(DuDefaultButton, reactprops);

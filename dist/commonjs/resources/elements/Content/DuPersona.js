@@ -18,9 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Persona_1 = require("office-ui-fabric-react/lib/Persona");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.allowPhoneInitials = {};
 reactprops.coinProps = {};
@@ -32,9 +30,9 @@ reactprops.imageShouldFadeIn = {};
 reactprops.imageShouldStartVisible = {};
 reactprops.imageUrl = {};
 reactprops.initialsColor = {};
-reactprops.onPhotoLoadingStateChange = ReactWrapper_1.onlyAureliaBound;
-reactprops.onRenderCoin = ReactWrapper_1.onlyAureliaBound;
-reactprops.onRenderInitials = ReactWrapper_1.onlyAureliaBound;
+reactprops.onPhotoLoadingStateChange = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onRenderCoin = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onRenderInitials = au_react_wrapper_1.onlyAureliaBound;
 reactprops.optionalText = {};
 reactprops.presence = {};
 reactprops.secondaryText = {};
@@ -45,10 +43,10 @@ reactprops.size = {};
 reactprops.tertiaryText = {};
 reactprops.text = {};
 reactprops.className = {};
-reactprops.onRenderOptionalText = ReactWrapper_1.onlyAureliaBound;
-reactprops.onRenderPrimaryText = ReactWrapper_1.onlyAureliaBound;
-reactprops.onRenderSecondaryText = ReactWrapper_1.onlyAureliaBound;
-reactprops.onRenderTertiaryText = ReactWrapper_1.onlyAureliaBound;
+reactprops.onRenderOptionalText = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onRenderPrimaryText = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onRenderSecondaryText = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onRenderTertiaryText = au_react_wrapper_1.onlyAureliaBound;
 var DuPersona = /** @class */ (function (_super) {
     __extends(DuPersona, _super);
     function DuPersona(element) {
@@ -65,6 +63,6 @@ var DuPersona = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-persona')
     ], DuPersona);
     return DuPersona;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuPersona = DuPersona;
-Utilities_1.addProperties(DuPersona, reactprops);
+au_react_wrapper_1.addPropertiesState(DuPersona, reactprops);

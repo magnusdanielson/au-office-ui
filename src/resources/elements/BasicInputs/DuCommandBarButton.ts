@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { CommandBarButton, IButtonProps  } from 'office-ui-fabric-react/lib/Button';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IButtonProps = <IButtonProps>{};
 reactprops.href = <any>{};
@@ -14,13 +13,13 @@ reactprops.text = <any>{};
 reactprops.iconProps = <any>{};
 reactprops.menuProps = <any>{};
 reactprops.split = <any>{};
-reactprops.onClick = () => {};
+reactprops.onClick = onlyAureliaBound;
 reactprops.secondaryText = <any>{};
 
 
 @inject(Element)
 @customElement('du-command-bar-button')
-export class DuCommandBarButton extends  DuReactWrapperBaseClass implements IButtonProps {
+export class DuCommandBarButton extends  AuReactStateWrapper implements IButtonProps {
 
   constructor(element) {
   super(element);
@@ -35,4 +34,4 @@ export class DuCommandBarButton extends  DuReactWrapperBaseClass implements IBut
   }
 }
 
-addProperties(DuCommandBarButton, reactprops);
+addPropertiesState(DuCommandBarButton, reactprops);

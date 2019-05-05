@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/GroupedList", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/GroupedList", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/GroupedList", 
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, GroupedList_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1, reactprops, DuGroupedList;
+    var aurelia_framework_1, GroupedList_1, au_react_wrapper_1, reactprops, DuGroupedList;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,28 +26,22 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/GroupedList", 
             function (GroupedList_1_1) {
                 GroupedList_1 = GroupedList_1_1;
             },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
-            },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
             reactprops = {};
             reactprops.items = {};
-            reactprops.onRenderCell = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onRenderCell = au_react_wrapper_1.onlyAureliaBound;
             reactprops.className = {};
             reactprops.compact = {};
             reactprops.getGroupHeight = {};
             reactprops.groupProps = {};
             reactprops.groups = {};
             reactprops.listProps = {};
-            reactprops.onGroupExpandStateChanged = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onShouldVirtualize = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onGroupExpandStateChanged = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onShouldVirtualize = au_react_wrapper_1.onlyAureliaBound;
             reactprops.selection = {};
             reactprops.selectionMode = {};
             reactprops.usePageCache = {};
@@ -75,9 +69,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/GroupedList", 
                     //@ts-ignore Due to onRenderCell
                 ], DuGroupedList);
                 return DuGroupedList;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuGroupedList", DuGroupedList);
-            Utilities_1.addProperties(DuGroupedList, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuGroupedList, reactprops);
         }
     };
 });

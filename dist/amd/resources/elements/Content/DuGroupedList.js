@@ -14,20 +14,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/GroupedList", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (require, exports, aurelia_framework_1, GroupedList_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/GroupedList", "@dunite/au-react-wrapper"], function (require, exports, aurelia_framework_1, GroupedList_1, au_react_wrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
     reactprops.items = {};
-    reactprops.onRenderCell = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onRenderCell = au_react_wrapper_1.onlyAureliaBound;
     reactprops.className = {};
     reactprops.compact = {};
     reactprops.getGroupHeight = {};
     reactprops.groupProps = {};
     reactprops.groups = {};
     reactprops.listProps = {};
-    reactprops.onGroupExpandStateChanged = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onShouldVirtualize = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onGroupExpandStateChanged = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onShouldVirtualize = au_react_wrapper_1.onlyAureliaBound;
     reactprops.selection = {};
     reactprops.selectionMode = {};
     reactprops.usePageCache = {};
@@ -55,7 +55,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/G
             //@ts-ignore Due to onRenderCell
         ], DuGroupedList);
         return DuGroupedList;
-    }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+    }(au_react_wrapper_1.AuReactStateWrapper));
     exports.DuGroupedList = DuGroupedList;
-    Utilities_1.addProperties(DuGroupedList, reactprops);
+    au_react_wrapper_1.addPropertiesState(DuGroupedList, reactprops);
 });

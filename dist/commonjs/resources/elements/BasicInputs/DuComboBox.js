@@ -18,29 +18,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var ComboBox_1 = require("office-ui-fabric-react/lib/ComboBox");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.buttonIconProps = {};
 reactprops.caretDownButtonStyles = {};
 reactprops.comboBoxOptionStyles = {};
 reactprops.dropdownMaxWidth = {};
 reactprops.keytipProps = {};
-reactprops.onItemClick = ReactWrapper_1.onlyAureliaBound;
+reactprops.onItemClick = au_react_wrapper_1.onlyAureliaBound;
 reactprops.isButtonAriaHidden = {};
-reactprops.onPendingValueChanged = ReactWrapper_1.onlyAureliaBound;
-reactprops.onScrollToItem = ReactWrapper_1.onlyAureliaBound;
+reactprops.onPendingValueChanged = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onScrollToItem = au_react_wrapper_1.onlyAureliaBound;
 reactprops.disabled = {};
 reactprops.className = {};
 reactprops.label = {};
 reactprops.options = {};
-reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
+reactprops.onChange = au_react_wrapper_1.onlyAureliaBound;
 reactprops.defaultSelectedKey = {};
 reactprops.selectedKey = {};
-reactprops.onMenuOpen = ReactWrapper_1.onlyAureliaBound;
-reactprops.onMenuDismissed = ReactWrapper_1.onlyAureliaBound;
-reactprops.onResolveOptions = ReactWrapper_1.onlyAureliaBound;
+reactprops.onMenuOpen = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onMenuDismissed = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onResolveOptions = au_react_wrapper_1.onlyAureliaBound;
 reactprops.allowFreeform = {};
 reactprops.autoComplete = {};
 reactprops.text = {};
@@ -48,8 +46,8 @@ reactprops.scrollSelectedToTop = {};
 reactprops.dropdownWidth = {};
 reactprops.useComboBoxAsMenuWidth = {};
 reactprops.multiSelect = {};
-reactprops.onFocus = ReactWrapper_1.onlyAureliaBound;
-reactprops.onBlur = ReactWrapper_1.onlyAureliaBound;
+reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
 var DuComboBox = /** @class */ (function (_super) {
     __extends(DuComboBox, _super);
     function DuComboBox(element) {
@@ -67,6 +65,6 @@ var DuComboBox = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-combo-box')
     ], DuComboBox);
     return DuComboBox;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuComboBox = DuComboBox;
-Utilities_1.addProperties(DuComboBox, reactprops);
+au_react_wrapper_1.addPropertiesState(DuComboBox, reactprops);

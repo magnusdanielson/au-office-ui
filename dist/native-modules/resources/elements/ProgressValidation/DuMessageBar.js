@@ -16,13 +16,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { MessageBar } from 'office-ui-fabric-react/lib/MessageBar';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.className = {};
 reactprops.isMultiline = {};
 reactprops.messageBarType = {};
-reactprops.onDismiss = function () { };
+reactprops.onDismiss = onlyAureliaBound;
 reactprops.dismissButtonAriaLabel = {};
 reactprops.truncated = {};
 reactprops.overflowButtonAriaLabel = {};
@@ -44,6 +43,6 @@ var DuMessageBar = /** @class */ (function (_super) {
         customElement('du-message-bar')
     ], DuMessageBar);
     return DuMessageBar;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuMessageBar };
-addProperties(DuMessageBar, reactprops);
+addPropertiesState(DuMessageBar, reactprops);

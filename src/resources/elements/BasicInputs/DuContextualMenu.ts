@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { ContextualMenu, IContextualMenuProps, IContextualMenuItem  } from 'office-ui-fabric-react/lib/ContextualMenu';
-import { defaultActionEvent } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IContextualMenuProps = <IContextualMenuProps>{};
 reactprops.beakWidth = <any>{};
@@ -15,10 +13,10 @@ reactprops.hidden = <any>{};
 reactprops.isBeakVisible = <any>{};
 reactprops.isSubMenu = <any>{};
 reactprops.items = <any>{};
-reactprops.onDismiss = <any>defaultActionEvent;
-reactprops.onItemClick = <any>defaultActionEvent;
-reactprops.onMenuDismissed = <any>defaultActionEvent;
-reactprops.onMenuOpened = <any>defaultActionEvent;
+reactprops.onDismiss = <any>onlyAureliaBound;
+reactprops.onItemClick = <any>onlyAureliaBound;
+reactprops.onMenuDismissed = <any>onlyAureliaBound;
+reactprops.onMenuOpened = <any>onlyAureliaBound;
 reactprops.alignTargetEdge = <any>{};
 reactprops.ariaLabel = <any>{};
 reactprops.delayUpdateFocusOnHover = <any>{};
@@ -39,7 +37,7 @@ reactprops.useTargetWidth = <any>{};
 
 @inject(Element)
 @customElement('du-contextual-menu')
-export class DuContextualMenu extends  DuReactWrapperBaseClass implements IContextualMenuProps {
+export class DuContextualMenu extends  AuReactStateWrapper implements IContextualMenuProps {
 
   constructor(element) {
   super(element);
@@ -55,4 +53,4 @@ export class DuContextualMenu extends  DuReactWrapperBaseClass implements IConte
   }
 }
 
-addProperties(DuContextualMenu, reactprops);
+addPropertiesState(DuContextualMenu, reactprops);

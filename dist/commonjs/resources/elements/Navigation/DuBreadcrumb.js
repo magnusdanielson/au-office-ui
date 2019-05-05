@@ -18,15 +18,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Breadcrumb_1 = require("office-ui-fabric-react/lib/Breadcrumb");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.items = {};
 reactprops.className = {};
 reactprops.dividerAs = {};
 reactprops.maxDisplayedItems = {};
-reactprops.onReduceData = ReactWrapper_1.defaultActionEvent;
+reactprops.onReduceData = au_react_wrapper_1.onlyAureliaBound;
 reactprops.overflowIndex = {};
 var DuBreadcrumb = /** @class */ (function (_super) {
     __extends(DuBreadcrumb, _super);
@@ -45,6 +43,6 @@ var DuBreadcrumb = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-breadcrumb')
     ], DuBreadcrumb);
     return DuBreadcrumb;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuBreadcrumb = DuBreadcrumb;
-Utilities_1.addProperties(DuBreadcrumb, reactprops);
+au_react_wrapper_1.addPropertiesState(DuBreadcrumb, reactprops);

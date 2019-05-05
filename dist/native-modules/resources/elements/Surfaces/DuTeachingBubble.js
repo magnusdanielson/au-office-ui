@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject, bindable } from 'aurelia-framework';
 import { TeachingBubble } from 'office-ui-fabric-react/lib/TeachingBubble';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.calloutProps = {};
 reactprops.hasCloseIcon = {};
@@ -50,6 +48,6 @@ var DuTeachingBubble = /** @class */ (function (_super) {
         customElement('du-teaching-bubble')
     ], DuTeachingBubble);
     return DuTeachingBubble;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuTeachingBubble };
-addProperties(DuTeachingBubble, reactprops);
+addPropertiesState(DuTeachingBubble, reactprops);

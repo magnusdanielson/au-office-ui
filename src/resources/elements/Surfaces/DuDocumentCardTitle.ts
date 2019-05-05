@@ -1,7 +1,6 @@
 import {  customElement, inject } from 'aurelia-framework';
 import { DocumentCardTitle, IDocumentCardTitleProps } from 'office-ui-fabric-react/lib/DocumentCard';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
@@ -15,7 +14,7 @@ reactprops.title = <any>{};
 
 @inject(Element)
 @customElement('du-document-card-title')
-export class DuDocumentCardTitle extends  DuReactWrapperBaseClass implements IDocumentCardTitleProps {
+export class DuDocumentCardTitle extends  AuReactStateWrapper implements IDocumentCardTitleProps {
 
   constructor(element) {
   super(element);
@@ -31,4 +30,4 @@ export class DuDocumentCardTitle extends  DuReactWrapperBaseClass implements IDo
   }
 }
 
-addProperties(DuDocumentCardTitle, reactprops);
+addPropertiesState(DuDocumentCardTitle, reactprops);

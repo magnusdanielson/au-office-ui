@@ -18,8 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Dialog_1 = require("office-ui-fabric-react/lib/Dialog");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.dialogContentProps = {};
 reactprops.hidden = {};
@@ -42,6 +41,6 @@ var DuDialog = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-dialog')
     ], DuDialog);
     return DuDialog;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuDialog = DuDialog;
-Utilities_1.addProperties(DuDialog, reactprops);
+au_react_wrapper_1.addPropertiesState(DuDialog, reactprops);

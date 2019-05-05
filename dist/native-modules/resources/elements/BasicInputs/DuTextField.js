@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { TextField } from 'office-ui-fabric-react/lib/TextField';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { addProperties } from '../../wrapper/Utilities';
-import { DuReactWrapperNoChildren } from '../../wrapper/DuReactWrapperNoChildren';
+import { AuReactStateWrapperNoChildren, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.ariaLabel = {};
 reactprops.autoAdjustHeight = {};
@@ -102,6 +100,6 @@ var DuTextField = /** @class */ (function (_super) {
         customElement('du-text-field')
     ], DuTextField);
     return DuTextField;
-}(DuReactWrapperNoChildren));
+}(AuReactStateWrapperNoChildren));
 export { DuTextField };
-addProperties(DuTextField, reactprops);
+addPropertiesState(DuTextField, reactprops);

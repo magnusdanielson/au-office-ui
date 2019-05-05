@@ -1,4 +1,4 @@
-System.register(["office-ui-fabric-react/lib/Coachmark", "aurelia-framework", "../../wrapper/ReactWrapper", "office-ui-fabric-react/lib/TeachingBubble", "react", "react-dom", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactStateWrapper", "../../wrapper/ReactStateWrapperNoChildren"], function (exports_1, context_1) {
+System.register(["office-ui-fabric-react/lib/Coachmark", "aurelia-framework", "office-ui-fabric-react/lib/TeachingBubble", "react", "react-dom", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["office-ui-fabric-react/lib/Coachmark", "aurelia-framework", ".
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var Coachmark_1, aurelia_framework_1, ReactWrapper_1, TeachingBubble_1, React, ReactDom, DuReactWrapperBaseClass_1, Utilities_1, ReactStateWrapper_1, ReactStateWrapperNoChildren_1, reactprops, DuCoachmark;
+    var Coachmark_1, aurelia_framework_1, TeachingBubble_1, React, ReactDom, au_react_wrapper_1, reactprops, DuCoachmark;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -25,9 +25,6 @@ System.register(["office-ui-fabric-react/lib/Coachmark", "aurelia-framework", ".
             },
             function (aurelia_framework_1_1) {
                 aurelia_framework_1 = aurelia_framework_1_1;
-            },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
             },
             function (TeachingBubble_1_1) {
                 TeachingBubble_1 = TeachingBubble_1_1;
@@ -38,17 +35,8 @@ System.register(["office-ui-fabric-react/lib/Coachmark", "aurelia-framework", ".
             function (ReactDom_1) {
                 ReactDom = ReactDom_1;
             },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
-            },
-            function (ReactStateWrapper_1_1) {
-                ReactStateWrapper_1 = ReactStateWrapper_1_1;
-            },
-            function (ReactStateWrapperNoChildren_1_1) {
-                ReactStateWrapperNoChildren_1 = ReactStateWrapperNoChildren_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
@@ -63,10 +51,10 @@ System.register(["office-ui-fabric-react/lib/Coachmark", "aurelia-framework", ".
             reactprops.isPositionForced = {};
             reactprops.mouseProximityOffset = {};
             reactprops.target = {};
-            reactprops.onAnimationOpenEnd = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onAnimationOpenStart = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onDismiss = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onMouseMove = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onAnimationOpenEnd = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onAnimationOpenStart = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onMouseMove = au_react_wrapper_1.onlyAureliaBound;
             reactprops.positioningContainerProps = {};
             reactprops.preventDismissOnLostFocus = {};
             reactprops.preventFocusOnMount = {};
@@ -98,11 +86,11 @@ System.register(["office-ui-fabric-react/lib/Coachmark", "aurelia-framework", ".
                     //@ts-ignore
                     this.teachingBubbleContent.reactClass = TeachingBubble_1.TeachingBubbleContent;
                     //let reactTeachingBubbleElement = React.createElement(TeachingBubbleContent, this.teachingBubbleContent);
-                    var reactTeachingBubbleElement = React.createElement(ReactStateWrapper_1.ReactStateWrapper, this.teachingBubbleContent);
+                    var reactTeachingBubbleElement = React.createElement(au_react_wrapper_1.ReactStateWrapper, this.teachingBubbleContent);
                     var a = this.createState(reactprops);
                     a.aureliaHost = this;
                     a.reactClass = Coachmark_1.Coachmark;
-                    var reactElement = React.createElement(ReactStateWrapperNoChildren_1.ReactStateWrapperNoChildren, a, reactTeachingBubbleElement);
+                    var reactElement = React.createElement(au_react_wrapper_1.ReactStateWrapperNoChildren, a, reactTeachingBubbleElement);
                     this.reactComponent = ReactDom.render(reactElement, this.container);
                 };
                 __decorate([
@@ -116,9 +104,9 @@ System.register(["office-ui-fabric-react/lib/Coachmark", "aurelia-framework", ".
                     aurelia_framework_1.customElement('du-coachmark')
                 ], DuCoachmark);
                 return DuCoachmark;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapperNoChildren));
             exports_1("DuCoachmark", DuCoachmark);
-            Utilities_1.addProperties(DuCoachmark, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuCoachmark, reactprops);
         }
     };
 });

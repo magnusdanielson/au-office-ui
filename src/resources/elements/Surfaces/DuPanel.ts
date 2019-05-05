@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Panel, IPanelProps } from 'office-ui-fabric-react/lib/Panel';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 var reactprops: IPanelProps = {};
 reactprops.isOpen = <any>{};
@@ -11,7 +10,7 @@ reactprops.type = <any>{};
 
 @inject(Element)
 @customElement('du-panel')
-export class DuPanel extends DuReactWrapperBaseClass implements IPanelProps
+export class DuPanel extends AuReactStateWrapper implements IPanelProps
 {
   constructor(element) {
     super(element);
@@ -48,4 +47,4 @@ export class DuPanel extends DuReactWrapperBaseClass implements IPanelProps
 //   public headerText:string;
 }
 
-addProperties(DuPanel, reactprops);
+addPropertiesState(DuPanel, reactprops);

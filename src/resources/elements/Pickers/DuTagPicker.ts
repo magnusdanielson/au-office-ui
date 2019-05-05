@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { TagPicker, IBasePickerProps, ITag } from 'office-ui-fabric-react/lib/Pickers';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IBasePickerProps<ITag> = <IBasePickerProps<ITag>>{};
 reactprops.onResolveSuggestions = <any>(() => {});
@@ -35,7 +33,7 @@ reactprops.selectedItems = <any>{};
 
 @inject(Element)
 @customElement('du-tag-picker')
-export class DuTagPicker extends  DuReactWrapperBaseClass {
+export class DuTagPicker extends  AuReactStateWrapper {
 
   constructor(element) {
   super(element);
@@ -50,4 +48,4 @@ export class DuTagPicker extends  DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DuTagPicker, reactprops);
+addPropertiesState(DuTagPicker, reactprops);

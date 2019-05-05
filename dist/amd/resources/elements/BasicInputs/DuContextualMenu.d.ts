@@ -1,6 +1,6 @@
 import { IContextualMenuProps, IContextualMenuItem } from 'office-ui-fabric-react/lib/ContextualMenu';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-export declare class DuContextualMenu extends DuReactWrapperBaseClass implements IContextualMenuProps {
+import { AuReactStateWrapper } from '@dunite/au-react-wrapper';
+export declare class DuContextualMenu extends AuReactStateWrapper implements IContextualMenuProps {
     constructor(element: any);
     hidden: boolean;
     items: IContextualMenuItem[];

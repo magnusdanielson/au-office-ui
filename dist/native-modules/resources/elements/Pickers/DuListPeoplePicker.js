@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { ListPeoplePicker } from 'office-ui-fabric-react/lib/Pickers';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 //@ts-ignore
 reactprops.items = {}; // items: T[] | undefined;
@@ -65,6 +63,6 @@ var DuListPeoplePicker = /** @class */ (function (_super) {
         customElement('du-list-people-picker')
     ], DuListPeoplePicker);
     return DuListPeoplePicker;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuListPeoplePicker };
-addProperties(DuListPeoplePicker, reactprops);
+addPropertiesState(DuListPeoplePicker, reactprops);

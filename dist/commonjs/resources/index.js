@@ -50,8 +50,3 @@ __export(require("./elements/Surfaces/DuPanel"));
 __export(require("./elements/Surfaces/DuTeachingBubble"));
 __export(require("./elements/Surfaces/DuTeachingBubbleContent"));
 __export(require("./elements/Surfaces/DuToolTip"));
-__export(require("./wrapper/DuReactWrapperBaseClass"));
-__export(require("./wrapper/DuReactWrapperNoChildren"));
-__export(require("./wrapper/ReactStateWrapper"));
-__export(require("./wrapper/ReactStateWrapperNoChildren"));
-__export(require("./wrapper/ReactWrapper"));

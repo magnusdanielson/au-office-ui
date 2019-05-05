@@ -18,35 +18,34 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Pickers_1 = require("office-ui-fabric-react/lib/Pickers");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 //@ts-ignore
 reactprops.items = {}; // items: T[] | undefined;
-reactprops.onResolveSuggestions = (function () { });
+reactprops.onResolveSuggestions = au_react_wrapper_1.onlyAureliaBound;
 reactprops.resolveDelay = {};
-reactprops.onEmptyInputFocus = (function () { });
+reactprops.onEmptyInputFocus = au_react_wrapper_1.onlyAureliaBound;
 reactprops.defaultSelectedItems = {};
 reactprops.onChange = (function (_this, items) { _this['selectedItems'] = items; });
-reactprops.onFocus = (function () { });
-reactprops.onBlur = (function () { });
-reactprops.getTextFromItem = (function () { });
-reactprops.onGetMoreResults = (function () { });
+reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
+reactprops.getTextFromItem = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onGetMoreResults = au_react_wrapper_1.onlyAureliaBound;
 reactprops.className = {};
 reactprops.pickerSuggestionsProps = {};
 reactprops.pickerCalloutProps = {};
 reactprops.inputProps = {};
-reactprops.onRemoveSuggestion = (function () { });
-reactprops.onValidateInput = (function () { });
-reactprops.searchingText = (function () { });
+reactprops.onRemoveSuggestion = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onValidateInput = au_react_wrapper_1.onlyAureliaBound;
+reactprops.searchingText = au_react_wrapper_1.onlyAureliaBound;
 reactprops.disabled = {};
 reactprops.itemLimit = {};
-reactprops.createGenericItem = (function () { });
+reactprops.createGenericItem = au_react_wrapper_1.onlyAureliaBound;
 reactprops.removeButtonAriaLabel = {};
-reactprops.onItemSelected = (function () { });
+reactprops.onItemSelected = au_react_wrapper_1.onlyAureliaBound;
 reactprops.selectedItems = {};
-//reactprops.onInputChange = <any>(() => {});
-reactprops.onDismiss = (function () { });
+//reactprops.onInputChange = <any>onlyAureliaBound;
+reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
 reactprops.enableSelectedSuggestionAlert = {};
 var DuCompactPeoplePicker = /** @class */ (function (_super) {
     __extends(DuCompactPeoplePicker, _super);
@@ -65,6 +64,6 @@ var DuCompactPeoplePicker = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-compact-people-picker')
     ], DuCompactPeoplePicker);
     return DuCompactPeoplePicker;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuCompactPeoplePicker = DuCompactPeoplePicker;
-Utilities_1.addProperties(DuCompactPeoplePicker, reactprops);
+au_react_wrapper_1.addPropertiesState(DuCompactPeoplePicker, reactprops);

@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { TeachingBubbleContent, ITeachingBubbleProps } from 'office-ui-fabric-react/lib/TeachingBubble';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: ITeachingBubbleProps = <ITeachingBubbleProps>{};
 
@@ -21,7 +19,7 @@ reactprops.illustrationImage = <any>{};
 
 @inject(Element)
 @customElement('du-teaching-bubble-content')
-export class DuTeachingBubbleContent  extends DuReactWrapperBaseClass implements ITeachingBubbleProps
+export class DuTeachingBubbleContent  extends AuReactStateWrapper implements ITeachingBubbleProps
 {
   constructor(element) {
     super(element);
@@ -39,4 +37,4 @@ export class DuTeachingBubbleContent  extends DuReactWrapperBaseClass implements
 }
 
 
-addProperties(DuTeachingBubbleContent, reactprops);
+addPropertiesState(DuTeachingBubbleContent, reactprops);

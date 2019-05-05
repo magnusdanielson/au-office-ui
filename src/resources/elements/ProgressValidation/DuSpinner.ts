@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Spinner, ISpinnerProps } from 'office-ui-fabric-react/lib/Spinner';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 let reactprops: ISpinnerProps = <ISpinnerProps>{};
 reactprops.className = <any>{};
@@ -12,7 +11,7 @@ reactprops.labelPosition = <any>{};
 
 @inject(Element)
 @customElement('du-spinner')
-export class DuSpinner extends  DuReactWrapperBaseClass implements ISpinnerProps {
+export class DuSpinner extends  AuReactStateWrapper implements ISpinnerProps {
 
   constructor(element) {
   super(element);
@@ -28,4 +27,4 @@ export class DuSpinner extends  DuReactWrapperBaseClass implements ISpinnerProps
   }
 }
 
-addProperties(DuSpinner, reactprops);
+addPropertiesState(DuSpinner, reactprops);

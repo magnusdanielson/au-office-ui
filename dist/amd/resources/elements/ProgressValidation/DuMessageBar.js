@@ -14,14 +14,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/MessageBar", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (require, exports, aurelia_framework_1, MessageBar_1, DuReactWrapperBaseClass_1, Utilities_1) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/MessageBar", "@dunite/au-react-wrapper"], function (require, exports, aurelia_framework_1, MessageBar_1, au_react_wrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
     reactprops.className = {};
     reactprops.isMultiline = {};
     reactprops.messageBarType = {};
-    reactprops.onDismiss = function () { };
+    reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
     reactprops.dismissButtonAriaLabel = {};
     reactprops.truncated = {};
     reactprops.overflowButtonAriaLabel = {};
@@ -43,7 +43,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/M
             aurelia_framework_1.customElement('du-message-bar')
         ], DuMessageBar);
         return DuMessageBar;
-    }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+    }(au_react_wrapper_1.AuReactStateWrapper));
     exports.DuMessageBar = DuMessageBar;
-    Utilities_1.addProperties(DuMessageBar, reactprops);
+    au_react_wrapper_1.addPropertiesState(DuMessageBar, reactprops);
 });

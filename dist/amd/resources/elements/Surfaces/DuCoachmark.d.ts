@@ -1,6 +1,6 @@
 import { ITeachingBubbleProps } from 'office-ui-fabric-react/lib/TeachingBubble';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-export declare class DuCoachmark extends DuReactWrapperBaseClass {
+import { AuReactStateWrapperNoChildren } from '@dunite/au-react-wrapper';
+export declare class DuCoachmark extends AuReactStateWrapperNoChildren {
     container: HTMLElement | null;
     constructor(element: any);
     teachingBubbleElement: any;

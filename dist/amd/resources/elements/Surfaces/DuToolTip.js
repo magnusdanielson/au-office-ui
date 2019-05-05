@@ -14,7 +14,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Tooltip", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (require, exports, aurelia_framework_1, Tooltip_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/Tooltip", "@dunite/au-react-wrapper"], function (require, exports, aurelia_framework_1, Tooltip_1, au_react_wrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
@@ -23,7 +23,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/T
     reactprops.delay = {};
     reactprops.directionalHint = {};
     reactprops.maxWidth = {};
-    reactprops.onRenderContent = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onRenderContent = au_react_wrapper_1.onlyAureliaBound;
     reactprops.targetElement = {};
     reactprops.hidden = {};
     var DuToolTip = /** @class */ (function (_super) {
@@ -42,7 +42,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/T
             aurelia_framework_1.customElement('du-tool-tip')
         ], DuToolTip);
         return DuToolTip;
-    }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+    }(au_react_wrapper_1.AuReactStateWrapper));
     exports.DuToolTip = DuToolTip;
-    Utilities_1.addProperties(DuToolTip, reactprops);
+    au_react_wrapper_1.addPropertiesState(DuToolTip, reactprops);
 });

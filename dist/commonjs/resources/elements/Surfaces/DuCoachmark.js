@@ -18,14 +18,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var Coachmark_1 = require("office-ui-fabric-react/lib/Coachmark");
 var aurelia_framework_1 = require("aurelia-framework");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
 var TeachingBubble_1 = require("office-ui-fabric-react/lib/TeachingBubble");
 var React = require("react");
 var ReactDom = require("react-dom");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
-var ReactStateWrapper_1 = require("../../wrapper/ReactStateWrapper");
-var ReactStateWrapperNoChildren_1 = require("../../wrapper/ReactStateWrapperNoChildren");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.beaconColorOne = {};
 reactprops.beaconColorTwo = {};
@@ -37,10 +33,10 @@ reactprops.isCollapsed = {};
 reactprops.isPositionForced = {};
 reactprops.mouseProximityOffset = {};
 reactprops.target = {};
-reactprops.onAnimationOpenEnd = ReactWrapper_1.onlyAureliaBound;
-reactprops.onAnimationOpenStart = ReactWrapper_1.onlyAureliaBound;
-reactprops.onDismiss = ReactWrapper_1.onlyAureliaBound;
-reactprops.onMouseMove = ReactWrapper_1.onlyAureliaBound;
+reactprops.onAnimationOpenEnd = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onAnimationOpenStart = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onMouseMove = au_react_wrapper_1.onlyAureliaBound;
 reactprops.positioningContainerProps = {};
 reactprops.preventDismissOnLostFocus = {};
 reactprops.preventFocusOnMount = {};
@@ -72,11 +68,11 @@ var DuCoachmark = /** @class */ (function (_super) {
         //@ts-ignore
         this.teachingBubbleContent.reactClass = TeachingBubble_1.TeachingBubbleContent;
         //let reactTeachingBubbleElement = React.createElement(TeachingBubbleContent, this.teachingBubbleContent);
-        var reactTeachingBubbleElement = React.createElement(ReactStateWrapper_1.ReactStateWrapper, this.teachingBubbleContent);
+        var reactTeachingBubbleElement = React.createElement(au_react_wrapper_1.ReactStateWrapper, this.teachingBubbleContent);
         var a = this.createState(reactprops);
         a.aureliaHost = this;
         a.reactClass = Coachmark_1.Coachmark;
-        var reactElement = React.createElement(ReactStateWrapperNoChildren_1.ReactStateWrapperNoChildren, a, reactTeachingBubbleElement);
+        var reactElement = React.createElement(au_react_wrapper_1.ReactStateWrapperNoChildren, a, reactTeachingBubbleElement);
         this.reactComponent = ReactDom.render(reactElement, this.container);
     };
     __decorate([
@@ -90,6 +86,6 @@ var DuCoachmark = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-coachmark')
     ], DuCoachmark);
     return DuCoachmark;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapperNoChildren));
 exports.DuCoachmark = DuCoachmark;
-Utilities_1.addProperties(DuCoachmark, reactprops);
+au_react_wrapper_1.addPropertiesState(DuCoachmark, reactprops);

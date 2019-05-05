@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Nav, INavProps } from 'office-ui-fabric-react/lib/Nav';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 let reactprops: INavProps = <INavProps>{};
 reactprops.groups = <any>{};
@@ -15,7 +14,7 @@ reactprops.selectedKey = <any>{};
 
 @inject(Element)
 @customElement('du-nav')
-export class DuNav extends  DuReactWrapperBaseClass {
+export class DuNav extends  AuReactStateWrapper {
 
   constructor(element) {
   super(element);
@@ -30,4 +29,4 @@ export class DuNav extends  DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DuNav, reactprops);
+addPropertiesState(DuNav, reactprops);

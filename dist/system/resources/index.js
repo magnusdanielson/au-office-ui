@@ -1,4 +1,4 @@
-System.register(["./elements/BasicInputs/DuActionButton", "./elements/BasicInputs/DuCheckbox", "./elements/BasicInputs/DuChoiceGroup", "./elements/BasicInputs/DuComboBox", "./elements/BasicInputs/DuCommandBarButton", "./elements/BasicInputs/DuCompoundButton", "./elements/BasicInputs/DuContextualMenu", "./elements/BasicInputs/DuDefaultButton", "./elements/BasicInputs/DuDropdown", "./elements/BasicInputs/DuIconButton", "./elements/BasicInputs/DuLabel", "./elements/BasicInputs/DuSlider", "./elements/BasicInputs/DuSpinButton", "./elements/BasicInputs/DuTextField", "./elements/BasicInputs/DuToggle", "./elements/Content/DuDetailsList", "./elements/Content/DuFacepile", "./elements/Content/DuGroupedList", "./elements/Content/DuPersona", "./elements/Navigation/DuBreadcrumb", "./elements/Navigation/DuCommandBar", "./elements/Navigation/DuNav", "./elements/Navigation/DuPivot", "./elements/Navigation/DuSearchBox", "./elements/Pickers/DuColorPicker", "./elements/Pickers/DuCompactPeoplePicker", "./elements/Pickers/DuDatePicker", "./elements/Pickers/DuListPeoplePicker", "./elements/Pickers/DuNormalPeoplePicker", "./elements/Pickers/DuTagPicker", "./elements/ProgressValidation/DuMessageBar", "./elements/ProgressValidation/DuProgressIndicator", "./elements/ProgressValidation/DuSpinner", "./elements/Surfaces/DuCallout", "./elements/Surfaces/DuCoachmark", "./elements/Surfaces/DuDialog", "./elements/Surfaces/DuDialogFooter", "./elements/Surfaces/DuDocumentCard", "./elements/Surfaces/DuDocumentCardActions", "./elements/Surfaces/DuDocumentCardActivity", "./elements/Surfaces/DuDocumentCardLocation", "./elements/Surfaces/DuDocumentCardPreview", "./elements/Surfaces/DuDocumentCardTitle", "./elements/Surfaces/DuPanel", "./elements/Surfaces/DuTeachingBubble", "./elements/Surfaces/DuTeachingBubbleContent", "./elements/Surfaces/DuToolTip", "./wrapper/DuReactWrapperBaseClass", "./wrapper/DuReactWrapperNoChildren", "./wrapper/ReactStateWrapper", "./wrapper/ReactStateWrapperNoChildren", "./wrapper/ReactWrapper"], function (exports_1, context_1) {
+System.register(["./elements/BasicInputs/DuActionButton", "./elements/BasicInputs/DuCheckbox", "./elements/BasicInputs/DuChoiceGroup", "./elements/BasicInputs/DuComboBox", "./elements/BasicInputs/DuCommandBarButton", "./elements/BasicInputs/DuCompoundButton", "./elements/BasicInputs/DuContextualMenu", "./elements/BasicInputs/DuDefaultButton", "./elements/BasicInputs/DuDropdown", "./elements/BasicInputs/DuIconButton", "./elements/BasicInputs/DuLabel", "./elements/BasicInputs/DuSlider", "./elements/BasicInputs/DuSpinButton", "./elements/BasicInputs/DuTextField", "./elements/BasicInputs/DuToggle", "./elements/Content/DuDetailsList", "./elements/Content/DuFacepile", "./elements/Content/DuGroupedList", "./elements/Content/DuPersona", "./elements/Navigation/DuBreadcrumb", "./elements/Navigation/DuCommandBar", "./elements/Navigation/DuNav", "./elements/Navigation/DuPivot", "./elements/Navigation/DuSearchBox", "./elements/Pickers/DuColorPicker", "./elements/Pickers/DuCompactPeoplePicker", "./elements/Pickers/DuDatePicker", "./elements/Pickers/DuListPeoplePicker", "./elements/Pickers/DuNormalPeoplePicker", "./elements/Pickers/DuTagPicker", "./elements/ProgressValidation/DuMessageBar", "./elements/ProgressValidation/DuProgressIndicator", "./elements/ProgressValidation/DuSpinner", "./elements/Surfaces/DuCallout", "./elements/Surfaces/DuCoachmark", "./elements/Surfaces/DuDialog", "./elements/Surfaces/DuDialogFooter", "./elements/Surfaces/DuDocumentCard", "./elements/Surfaces/DuDocumentCardActions", "./elements/Surfaces/DuDocumentCardActivity", "./elements/Surfaces/DuDocumentCardLocation", "./elements/Surfaces/DuDocumentCardPreview", "./elements/Surfaces/DuDocumentCardTitle", "./elements/Surfaces/DuPanel", "./elements/Surfaces/DuTeachingBubble", "./elements/Surfaces/DuTeachingBubbleContent", "./elements/Surfaces/DuToolTip"], function (exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     function exportStar_1(m) {
@@ -150,21 +150,6 @@ System.register(["./elements/BasicInputs/DuActionButton", "./elements/BasicInput
             },
             function (DuToolTip_1_1) {
                 exportStar_1(DuToolTip_1_1);
-            },
-            function (DuReactWrapperBaseClass_1_1) {
-                exportStar_1(DuReactWrapperBaseClass_1_1);
-            },
-            function (DuReactWrapperNoChildren_1_1) {
-                exportStar_1(DuReactWrapperNoChildren_1_1);
-            },
-            function (ReactStateWrapper_1_1) {
-                exportStar_1(ReactStateWrapper_1_1);
-            },
-            function (ReactStateWrapperNoChildren_1_1) {
-                exportStar_1(ReactStateWrapperNoChildren_1_1);
-            },
-            function (ReactWrapper_1_1) {
-                exportStar_1(ReactWrapper_1_1);
             }
         ],
         execute: function () {

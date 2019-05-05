@@ -18,8 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var SearchBox_1 = require("office-ui-fabric-react/lib/SearchBox");
-var Utilities_1 = require("../../wrapper/Utilities");
-var DuReactWrapperNoChildren_1 = require("../../wrapper/DuReactWrapperNoChildren");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.disabled = {};
 reactprops.className = {};
@@ -54,6 +53,6 @@ var DuSearchBox = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-search-box')
     ], DuSearchBox);
     return DuSearchBox;
-}(DuReactWrapperNoChildren_1.DuReactWrapperNoChildren));
+}(au_react_wrapper_1.AuReactStateWrapperNoChildren));
 exports.DuSearchBox = DuSearchBox;
-Utilities_1.addProperties(DuSearchBox, reactprops);
+au_react_wrapper_1.addPropertiesState(DuSearchBox, reactprops);

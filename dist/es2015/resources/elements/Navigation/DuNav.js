@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Nav } from 'office-ui-fabric-react/lib/Nav';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.groups = {};
 reactprops.initialSelectedKey = {};
@@ -42,6 +41,6 @@ var DuNav = /** @class */ (function (_super) {
         customElement('du-nav')
     ], DuNav);
     return DuNav;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuNav };
-addProperties(DuNav, reactprops);
+addPropertiesState(DuNav, reactprops);

@@ -16,7 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject, noView, bindable } from 'aurelia-framework';
 import { Pivot, PivotItem } from 'office-ui-fabric-react/lib/Pivot';
-import { addProperties, ReactWrapper } from '../../wrapper/ReactWrapper';
+import { AuReactNoStateWrapper, addPropertiesNoState } from '@dunite/au-react-wrapper';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 var reactprops = {};
@@ -73,6 +73,6 @@ var DuPivot = /** @class */ (function (_super) {
         customElement('du-pivot')
     ], DuPivot);
     return DuPivot;
-}(ReactWrapper));
+}(AuReactNoStateWrapper));
 export { DuPivot };
-addProperties(DuPivot, reactprops);
+addPropertiesNoState(DuPivot, reactprops);

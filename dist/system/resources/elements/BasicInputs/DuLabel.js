@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/Label", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/Label", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Label", "../..
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Label_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuLabel;
+    var aurelia_framework_1, Label_1, au_react_wrapper_1, reactprops, DuLabel;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,11 +26,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Label", "../..
             function (Label_1_1) {
                 Label_1 = Label_1_1;
             },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
@@ -56,9 +53,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Label", "../..
                     aurelia_framework_1.customElement('du-label')
                 ], DuLabel);
                 return DuLabel;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuLabel", DuLabel);
-            Utilities_1.addProperties(DuLabel, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuLabel, reactprops);
         }
     };
 });

@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { GroupedList, IGroupedListProps } from 'office-ui-fabric-react/lib/GroupedList';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IGroupedListProps = <IGroupedListProps>{};
 reactprops.items = <any>{};
@@ -24,7 +22,7 @@ reactprops.key = <any>{};
 @inject(Element)
 @customElement('du-grouped-list')
 //@ts-ignore Due to onRenderCell
-export class DuGroupedList  extends DuReactWrapperBaseClass implements IGroupedListProps
+export class DuGroupedList  extends AuReactStateWrapper implements IGroupedListProps
 {
   constructor(element) {
     super(element);
@@ -52,4 +50,4 @@ export class DuGroupedList  extends DuReactWrapperBaseClass implements IGroupedL
 }
 
 
-addProperties(DuGroupedList, reactprops);
+addPropertiesState(DuGroupedList, reactprops);

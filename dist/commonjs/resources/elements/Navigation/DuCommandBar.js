@@ -18,8 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var CommandBar_1 = require("office-ui-fabric-react/lib/CommandBar");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.items = {};
 reactprops.overflowItems = {};
@@ -43,6 +42,6 @@ var DuCommandBar = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-command-bar')
     ], DuCommandBar);
     return DuCommandBar;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuCommandBar = DuCommandBar;
-Utilities_1.addProperties(DuCommandBar, reactprops);
+au_react_wrapper_1.addPropertiesState(DuCommandBar, reactprops);

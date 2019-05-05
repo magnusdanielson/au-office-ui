@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Dropdown, IDropdownProps, IDropdownOption  } from 'office-ui-fabric-react/lib/Dropdown';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IDropdownProps = <IDropdownProps>{};
 reactprops.placeholder = <any>{};
@@ -27,7 +25,7 @@ reactprops.selectedKey = <any>{};
 
 @inject(Element)
 @customElement('du-dropdown')
-export class DuDropdown extends  DuReactWrapperBaseClass implements IDropdownProps {
+export class DuDropdown extends  AuReactStateWrapper implements IDropdownProps {
 
   constructor(element) {
   super(element);
@@ -43,4 +41,4 @@ export class DuDropdown extends  DuReactWrapperBaseClass implements IDropdownPro
   }
 }
 
-addProperties(DuDropdown, reactprops);
+addPropertiesState(DuDropdown, reactprops);

@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Facepile, IFacepileProps, IFacepilePersona } from 'office-ui-fabric-react/lib/Facepile';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 let reactprops: IFacepileProps = <IFacepileProps>{};
 
@@ -17,7 +16,7 @@ reactprops.showAddButton = <any>{};
 
 @inject(Element)
 @customElement('du-facepile')
-export class DuFacepile  extends DuReactWrapperBaseClass implements IFacepileProps
+export class DuFacepile  extends AuReactStateWrapper implements IFacepileProps
 {
   constructor(element) {
     super(element);
@@ -40,4 +39,4 @@ export class DuFacepile  extends DuReactWrapperBaseClass implements IFacepilePro
 }
 
 
-addProperties(DuFacepile, reactprops);
+addPropertiesState(DuFacepile, reactprops);

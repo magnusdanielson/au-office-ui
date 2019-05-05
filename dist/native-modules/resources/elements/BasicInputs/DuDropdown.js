@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Dropdown } from 'office-ui-fabric-react/lib/Dropdown';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.placeholder = {};
 reactprops.options = {};
@@ -55,6 +53,6 @@ var DuDropdown = /** @class */ (function (_super) {
         customElement('du-dropdown')
     ], DuDropdown);
     return DuDropdown;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuDropdown };
-addProperties(DuDropdown, reactprops);
+addPropertiesState(DuDropdown, reactprops);

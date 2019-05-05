@@ -16,14 +16,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { Coachmark } from 'office-ui-fabric-react/lib/Coachmark';
 import { customElement, inject, bindable } from 'aurelia-framework';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
 import { TeachingBubbleContent } from 'office-ui-fabric-react/lib/TeachingBubble';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { ReactStateWrapper } from '../../wrapper/ReactStateWrapper';
-import { ReactStateWrapperNoChildren } from '../../wrapper/ReactStateWrapperNoChildren';
+import { AuReactStateWrapperNoChildren, addPropertiesState, onlyAureliaBound, ReactStateWrapper, ReactStateWrapperNoChildren } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.beaconColorOne = {};
 reactprops.beaconColorTwo = {};
@@ -88,6 +84,6 @@ var DuCoachmark = /** @class */ (function (_super) {
         customElement('du-coachmark')
     ], DuCoachmark);
     return DuCoachmark;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapperNoChildren));
 export { DuCoachmark };
-addProperties(DuCoachmark, reactprops);
+addPropertiesState(DuCoachmark, reactprops);

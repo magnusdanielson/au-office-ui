@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Callout } from 'office-ui-fabric-react/lib/Callout';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
 // following parameters are from the event
@@ -67,6 +65,6 @@ var DuCallout = /** @class */ (function (_super) {
         customElement('du-callout')
     ], DuCallout);
     return DuCallout;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuCallout };
-addProperties(DuCallout, reactprops);
+addPropertiesState(DuCallout, reactprops);

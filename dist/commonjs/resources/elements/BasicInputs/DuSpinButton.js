@@ -18,11 +18,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var SpinButton_1 = require("office-ui-fabric-react/lib/SpinButton");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
-reactprops.focus = ReactWrapper_1.onlyAureliaBound;
+reactprops.focus = au_react_wrapper_1.onlyAureliaBound;
 reactprops.disabled = {};
 reactprops.className = {};
 reactprops.label = {};
@@ -34,7 +32,7 @@ reactprops.title = {};
 reactprops.step = {};
 reactprops.iconProps = {};
 reactprops.labelPosition = {};
-reactprops.onValidate = ReactWrapper_1.onlyAureliaBound;
+reactprops.onValidate = au_react_wrapper_1.onlyAureliaBound;
 reactprops.ariaLabel = {};
 reactprops.ariaPositionInSet = {};
 reactprops.ariaSetSize = {};
@@ -47,8 +45,8 @@ reactprops.iconProps = {};
 reactprops.incrementButtonAriaLabel = {};
 reactprops.incrementButtonIcon = {};
 reactprops.keytipProps = {};
-reactprops.onBlur = ReactWrapper_1.onlyAureliaBound;
-reactprops.onFocus = ReactWrapper_1.onlyAureliaBound;
+reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
 //@ts-ignore
 reactprops.onIncrement = function (_this, value) {
     var _value = parseFloat(_this['value']);
@@ -81,6 +79,6 @@ var DuSpinButton = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-spin-button')
     ], DuSpinButton);
     return DuSpinButton;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuSpinButton = DuSpinButton;
-Utilities_1.addProperties(DuSpinButton, reactprops);
+au_react_wrapper_1.addPropertiesState(DuSpinButton, reactprops);

@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Tooltip } from 'office-ui-fabric-react/lib/Tooltip';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.calloutProps = {};
 reactprops.content = {};
@@ -44,6 +42,6 @@ var DuToolTip = /** @class */ (function (_super) {
         customElement('du-tool-tip')
     ], DuToolTip);
     return DuToolTip;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuToolTip };
-addProperties(DuToolTip, reactprops);
+addPropertiesState(DuToolTip, reactprops);

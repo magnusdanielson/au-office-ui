@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { CommandBar } from 'office-ui-fabric-react/lib/CommandBar';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.items = {};
 reactprops.overflowItems = {};
@@ -41,6 +40,6 @@ var DuCommandBar = /** @class */ (function (_super) {
         customElement('du-command-bar')
     ], DuCommandBar);
     return DuCommandBar;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuCommandBar };
-addProperties(DuCommandBar, reactprops);
+addPropertiesState(DuCommandBar, reactprops);

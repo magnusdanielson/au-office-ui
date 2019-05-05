@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Pickers_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1, reactprops, DuTagPicker;
+    var aurelia_framework_1, Pickers_1, au_react_wrapper_1, reactprops, DuTagPicker;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,14 +26,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../
             function (Pickers_1_1) {
                 Pickers_1 = Pickers_1_1;
             },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
-            },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
@@ -42,7 +36,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../
             reactprops.resolveDelay = {};
             reactprops.onEmptyInputFocus = (function () { });
             reactprops.defaultSelectedItems = {};
-            reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onChange = au_react_wrapper_1.onlyAureliaBound;
             reactprops.onFocus = function () { };
             reactprops.onBlur = function () { };
             reactprops.getTextFromItem = (function () { });
@@ -82,9 +76,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "../
                     aurelia_framework_1.customElement('du-tag-picker')
                 ], DuTagPicker);
                 return DuTagPicker;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuTagPicker", DuTagPicker);
-            Utilities_1.addProperties(DuTagPicker, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuTagPicker, reactprops);
         }
     };
 });

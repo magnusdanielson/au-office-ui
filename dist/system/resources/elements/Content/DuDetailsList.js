@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/DetailsList", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/DetailsList", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/DetailsList", 
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, DetailsList_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1, reactprops, DuDetailsList;
+    var aurelia_framework_1, DetailsList_1, au_react_wrapper_1, reactprops, DuDetailsList;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,14 +26,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/DetailsList", 
             function (DetailsList_1_1) {
                 DetailsList_1 = DetailsList_1_1;
             },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
-            },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
@@ -56,13 +50,13 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/DetailsList", 
             reactprops.layoutMode = {};
             reactprops.listProps = {};
             reactprops.minimumPixelsForDrag = {};
-            reactprops.onActiveItemChanged = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onColumnHeaderClick = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onColumnHeaderContextMenu = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onColumnResize = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onDidUpdate = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onItemContextMenu = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onItemInvoked = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onActiveItemChanged = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onColumnHeaderClick = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onColumnHeaderContextMenu = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onColumnResize = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onDidUpdate = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onItemContextMenu = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onItemInvoked = au_react_wrapper_1.onlyAureliaBound;
             reactprops.selection = {};
             reactprops.selectionMode = {};
             reactprops.selectionPreservedOnEmptyClick = {};
@@ -95,9 +89,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/DetailsList", 
                     aurelia_framework_1.customElement('du-details-list')
                 ], DuDetailsList);
                 return DuDetailsList;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuDetailsList", DuDetailsList);
-            Utilities_1.addProperties(DuDetailsList, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuDetailsList, reactprops);
         }
     };
 });

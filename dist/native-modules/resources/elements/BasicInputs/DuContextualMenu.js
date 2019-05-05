@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { ContextualMenu } from 'office-ui-fabric-react/lib/ContextualMenu';
-import { defaultActionEvent } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.beakWidth = {};
 reactprops.bounds = {};
@@ -30,10 +28,10 @@ reactprops.hidden = {};
 reactprops.isBeakVisible = {};
 reactprops.isSubMenu = {};
 reactprops.items = {};
-reactprops.onDismiss = defaultActionEvent;
-reactprops.onItemClick = defaultActionEvent;
-reactprops.onMenuDismissed = defaultActionEvent;
-reactprops.onMenuOpened = defaultActionEvent;
+reactprops.onDismiss = onlyAureliaBound;
+reactprops.onItemClick = onlyAureliaBound;
+reactprops.onMenuDismissed = onlyAureliaBound;
+reactprops.onMenuOpened = onlyAureliaBound;
 reactprops.alignTargetEdge = {};
 reactprops.ariaLabel = {};
 reactprops.delayUpdateFocusOnHover = {};
@@ -67,6 +65,6 @@ var DuContextualMenu = /** @class */ (function (_super) {
         customElement('du-contextual-menu')
     ], DuContextualMenu);
     return DuContextualMenu;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuContextualMenu };
-addProperties(DuContextualMenu, reactprops);
+addPropertiesState(DuContextualMenu, reactprops);

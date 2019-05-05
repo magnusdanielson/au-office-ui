@@ -18,9 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var TextField_1 = require("office-ui-fabric-react/lib/TextField");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var Utilities_1 = require("../../wrapper/Utilities");
-var DuReactWrapperNoChildren_1 = require("../../wrapper/DuReactWrapperNoChildren");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.ariaLabel = {};
 reactprops.autoAdjustHeight = {};
@@ -39,10 +37,10 @@ reactprops.mask = {};
 reactprops.maskChar = {};
 reactprops.maskFormat = {};
 reactprops.multiline = {};
-reactprops.onBeforeChange = ReactWrapper_1.onlyAureliaBound;
+reactprops.onBeforeChange = au_react_wrapper_1.onlyAureliaBound;
 reactprops.onChange = function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; };
-reactprops.onNotifyValidationResult = ReactWrapper_1.onlyAureliaBound;
-reactprops.onGetErrorMessage = ReactWrapper_1.onlyAureliaBound;
+reactprops.onNotifyValidationResult = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onGetErrorMessage = au_react_wrapper_1.onlyAureliaBound;
 reactprops.prefix = {};
 reactprops.readOnly = {};
 reactprops.resizable = {};
@@ -104,6 +102,6 @@ var DuTextField = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-text-field')
     ], DuTextField);
     return DuTextField;
-}(DuReactWrapperNoChildren_1.DuReactWrapperNoChildren));
+}(au_react_wrapper_1.AuReactStateWrapperNoChildren));
 exports.DuTextField = DuTextField;
-Utilities_1.addProperties(DuTextField, reactprops);
+au_react_wrapper_1.addPropertiesState(DuTextField, reactprops);

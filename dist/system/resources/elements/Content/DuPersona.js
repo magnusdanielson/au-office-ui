@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/Persona", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities", "../../wrapper/ReactWrapper"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/Persona", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Persona", "../
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Persona_1, DuReactWrapperBaseClass_1, Utilities_1, ReactWrapper_1, reactprops, DuPersona;
+    var aurelia_framework_1, Persona_1, au_react_wrapper_1, reactprops, DuPersona;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,14 +26,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Persona", "../
             function (Persona_1_1) {
                 Persona_1 = Persona_1_1;
             },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
-            },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
@@ -48,9 +42,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Persona", "../
             reactprops.imageShouldStartVisible = {};
             reactprops.imageUrl = {};
             reactprops.initialsColor = {};
-            reactprops.onPhotoLoadingStateChange = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onRenderCoin = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onRenderInitials = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onPhotoLoadingStateChange = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onRenderCoin = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onRenderInitials = au_react_wrapper_1.onlyAureliaBound;
             reactprops.optionalText = {};
             reactprops.presence = {};
             reactprops.secondaryText = {};
@@ -61,10 +55,10 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Persona", "../
             reactprops.tertiaryText = {};
             reactprops.text = {};
             reactprops.className = {};
-            reactprops.onRenderOptionalText = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onRenderPrimaryText = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onRenderSecondaryText = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onRenderTertiaryText = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onRenderOptionalText = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onRenderPrimaryText = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onRenderSecondaryText = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onRenderTertiaryText = au_react_wrapper_1.onlyAureliaBound;
             DuPersona = /** @class */ (function (_super) {
                 __extends(DuPersona, _super);
                 function DuPersona(element) {
@@ -81,9 +75,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Persona", "../
                     aurelia_framework_1.customElement('du-persona')
                 ], DuPersona);
                 return DuPersona;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuPersona", DuPersona);
-            Utilities_1.addProperties(DuPersona, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuPersona, reactprops);
         }
     };
 });

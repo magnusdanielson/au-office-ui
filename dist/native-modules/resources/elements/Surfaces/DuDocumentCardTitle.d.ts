@@ -1,6 +1,6 @@
 import { IDocumentCardTitleProps } from 'office-ui-fabric-react/lib/DocumentCard';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-export declare class DuDocumentCardTitle extends DuReactWrapperBaseClass implements IDocumentCardTitleProps {
+import { AuReactStateWrapper } from '@dunite/au-react-wrapper';
+export declare class DuDocumentCardTitle extends AuReactStateWrapper implements IDocumentCardTitleProps {
     constructor(element: any);
     hidden: boolean;
     title: string;

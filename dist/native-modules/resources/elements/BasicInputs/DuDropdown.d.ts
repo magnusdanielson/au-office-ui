@@ -1,6 +1,6 @@
 import { IDropdownProps, IDropdownOption } from 'office-ui-fabric-react/lib/Dropdown';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-export declare class DuDropdown extends DuReactWrapperBaseClass implements IDropdownProps {
+import { AuReactStateWrapper } from '@dunite/au-react-wrapper';
+export declare class DuDropdown extends AuReactStateWrapper implements IDropdownProps {
     constructor(element: any);
     hidden: boolean;
     options: IDropdownOption[];

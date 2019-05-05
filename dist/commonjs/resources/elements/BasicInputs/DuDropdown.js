@@ -18,16 +18,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Dropdown_1 = require("office-ui-fabric-react/lib/Dropdown");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.placeholder = {};
 reactprops.options = {};
-reactprops.onDismiss = ReactWrapper_1.onlyAureliaBound;
-reactprops.onFocus = ReactWrapper_1.onlyAureliaBound;
-reactprops.onBlur = ReactWrapper_1.onlyAureliaBound;
-reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
+reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onChange = au_react_wrapper_1.onlyAureliaBound;
 reactprops.dropdownWidth = {};
 reactprops.responsiveMode = {};
 reactprops.multiSelect = {};
@@ -57,6 +55,6 @@ var DuDropdown = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-dropdown')
     ], DuDropdown);
     return DuDropdown;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuDropdown = DuDropdown;
-Utilities_1.addProperties(DuDropdown, reactprops);
+au_react_wrapper_1.addPropertiesState(DuDropdown, reactprops);

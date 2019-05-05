@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
-import { addProperties } from '../../wrapper/Utilities';
-import { DuReactWrapperNoChildren } from '../../wrapper/DuReactWrapperNoChildren';
+import { AuReactStateWrapperNoChildren, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.disabled = {};
 reactprops.className = {};
@@ -52,6 +51,6 @@ var DuSearchBox = /** @class */ (function (_super) {
         customElement('du-search-box')
     ], DuSearchBox);
     return DuSearchBox;
-}(DuReactWrapperNoChildren));
+}(AuReactStateWrapperNoChildren));
 export { DuSearchBox };
-addProperties(DuSearchBox, reactprops);
+addPropertiesState(DuSearchBox, reactprops);

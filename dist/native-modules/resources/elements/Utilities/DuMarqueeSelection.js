@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { MarqueeSelection } from 'office-ui-fabric-react/lib/MarqueeSelection';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.hidden = {};
 var DuMarqueeSelection = /** @class */ (function (_super) {
@@ -36,6 +35,6 @@ var DuMarqueeSelection = /** @class */ (function (_super) {
         customElement('du-marquee-selection')
     ], DuMarqueeSelection);
     return DuMarqueeSelection;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuMarqueeSelection };
-addProperties(DuMarqueeSelection, reactprops);
+addPropertiesState(DuMarqueeSelection, reactprops);

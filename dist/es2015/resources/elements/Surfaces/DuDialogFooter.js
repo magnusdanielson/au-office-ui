@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { DialogFooter } from 'office-ui-fabric-react/lib/Dialog';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
 // following parameters are from the event
@@ -41,6 +40,6 @@ var DuDialogFooter = /** @class */ (function (_super) {
         customElement('du-dialog-footer')
     ], DuDialogFooter);
     return DuDialogFooter;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuDialogFooter };
-addProperties(DuDialogFooter, reactprops);
+addPropertiesState(DuDialogFooter, reactprops);

@@ -18,16 +18,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var DocumentCard_1 = require("office-ui-fabric-react/lib/DocumentCard");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
 // following parameters are from the event
 // _this refers to the Aurelia class with all properties added
 var reactprops = {};
 reactprops.className = {};
-reactprops.onClick = ReactWrapper_1.onlyAureliaBound;
+reactprops.onClick = au_react_wrapper_1.onlyAureliaBound;
 reactprops.onClickHref = {};
 reactprops.type = {};
 reactprops.role = {};
@@ -48,6 +46,6 @@ var DuDocumentCard = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-document-card')
     ], DuDocumentCard);
     return DuDocumentCard;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuDocumentCard = DuDocumentCard;
-Utilities_1.addProperties(DuDocumentCard, reactprops);
+au_react_wrapper_1.addPropertiesState(DuDocumentCard, reactprops);

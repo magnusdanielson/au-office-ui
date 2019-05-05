@@ -1,6 +1,6 @@
 import { IDialogProps } from 'office-ui-fabric-react/lib/Dialog';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-export declare class DuDialog extends DuReactWrapperBaseClass implements IDialogProps {
+import { AuReactStateWrapper } from '@dunite/au-react-wrapper';
+export declare class DuDialog extends AuReactStateWrapper implements IDialogProps {
     constructor(element: any);
     hidden: boolean;
     attached(): void;

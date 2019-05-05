@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Slider } from 'office-ui-fabric-react/lib/Slider';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.value = {};
 reactprops.ariaLabel = {};
@@ -29,7 +27,7 @@ reactprops.disabled = {};
 reactprops.label = {};
 reactprops.max = {};
 reactprops.min = {};
-reactprops.onChange = onlyAureliaBound; //( (_this: any, value: any) => { _this['value'] = value; });
+reactprops.onChange = onlyAureliaBound;
 reactprops.onChanged = onlyAureliaBound;
 reactprops.showValue = {};
 reactprops.step = {};
@@ -54,6 +52,6 @@ var DuSlider = /** @class */ (function (_super) {
         customElement('du-slider')
     ], DuSlider);
     return DuSlider;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuSlider };
-addProperties(DuSlider, reactprops);
+addPropertiesState(DuSlider, reactprops);

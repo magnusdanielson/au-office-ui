@@ -1,42 +1,41 @@
 import { customElement, inject } from 'aurelia-framework';
 import { IPeoplePickerProps, CompactPeoplePicker } from 'office-ui-fabric-react/lib/Pickers';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IPeoplePickerProps   = <IPeoplePickerProps>{};
 
 //@ts-ignore
 reactprops.items = <any>{}; // items: T[] | undefined;
-reactprops.onResolveSuggestions = <any>(() => {});
+reactprops.onResolveSuggestions = <any>onlyAureliaBound;
 reactprops.resolveDelay = <any>{}; 
-reactprops.onEmptyInputFocus = <any>(() => {});
+reactprops.onEmptyInputFocus = <any>onlyAureliaBound;
 reactprops.defaultSelectedItems = <any>{};
 reactprops.onChange = <any>((_this: any, items: any) => { _this['selectedItems'] = items; });
-reactprops.onFocus = <any>(() => {});
-reactprops.onBlur = <any>(() => {});
-reactprops.getTextFromItem = <any>(() => {});
-reactprops.onGetMoreResults = <any>(() => {});
+reactprops.onFocus = <any>onlyAureliaBound;
+reactprops.onBlur = <any>onlyAureliaBound;
+reactprops.getTextFromItem = <any>onlyAureliaBound;
+reactprops.onGetMoreResults = <any>onlyAureliaBound;
 reactprops.className = <any>{};
 reactprops.pickerSuggestionsProps = <any>{};
 reactprops.pickerCalloutProps = <any>{};
 reactprops.inputProps = <any>{};
-reactprops.onRemoveSuggestion = <any>(() => {});
-reactprops.onValidateInput = <any>(() => {});
-reactprops.searchingText = <any>(() => {});
+reactprops.onRemoveSuggestion = <any>onlyAureliaBound;
+reactprops.onValidateInput = <any>onlyAureliaBound;
+reactprops.searchingText = <any>onlyAureliaBound;
 reactprops.disabled = <any>{};
 reactprops.itemLimit = <any>{};
-reactprops.createGenericItem = <any>(() => {});
+reactprops.createGenericItem = <any>onlyAureliaBound;
 reactprops.removeButtonAriaLabel = <any>{};
-reactprops.onItemSelected = <any>(() => {});
+reactprops.onItemSelected = <any>onlyAureliaBound;
 reactprops.selectedItems = <any>{};
-//reactprops.onInputChange = <any>(() => {});
-reactprops.onDismiss = <any>(() => {});
+//reactprops.onInputChange = <any>onlyAureliaBound;
+reactprops.onDismiss = <any>onlyAureliaBound;
 reactprops.enableSelectedSuggestionAlert = <any>{};
 
 
 @inject(Element)
 @customElement('du-compact-people-picker')
-export class DuCompactPeoplePicker extends  DuReactWrapperBaseClass {
+export class DuCompactPeoplePicker extends  AuReactStateWrapper {
 
   constructor(element) {
   super(element);
@@ -51,4 +50,4 @@ export class DuCompactPeoplePicker extends  DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DuCompactPeoplePicker, reactprops);
+addPropertiesState(DuCompactPeoplePicker, reactprops);

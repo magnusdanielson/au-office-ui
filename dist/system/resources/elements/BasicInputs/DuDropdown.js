@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/Dropdown", "../../wrapper/ReactWrapper", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/Dropdown", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Dropdown", "..
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, Dropdown_1, ReactWrapper_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuDropdown;
+    var aurelia_framework_1, Dropdown_1, au_react_wrapper_1, reactprops, DuDropdown;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,24 +26,18 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Dropdown", "..
             function (Dropdown_1_1) {
                 Dropdown_1 = Dropdown_1_1;
             },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
-            },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
             reactprops = {};
             reactprops.placeholder = {};
             reactprops.options = {};
-            reactprops.onDismiss = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onFocus = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onBlur = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onChange = au_react_wrapper_1.onlyAureliaBound;
             reactprops.dropdownWidth = {};
             reactprops.responsiveMode = {};
             reactprops.multiSelect = {};
@@ -73,9 +67,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Dropdown", "..
                     aurelia_framework_1.customElement('du-dropdown')
                 ], DuDropdown);
                 return DuDropdown;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuDropdown", DuDropdown);
-            Utilities_1.addProperties(DuDropdown, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuDropdown, reactprops);
         }
     };
 });

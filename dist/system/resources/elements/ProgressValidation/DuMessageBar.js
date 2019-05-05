@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/MessageBar", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/MessageBar", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/MessageBar", "
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, MessageBar_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuMessageBar;
+    var aurelia_framework_1, MessageBar_1, au_react_wrapper_1, reactprops, DuMessageBar;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,11 +26,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/MessageBar", "
             function (MessageBar_1_1) {
                 MessageBar_1 = MessageBar_1_1;
             },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
@@ -38,7 +35,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/MessageBar", "
             reactprops.className = {};
             reactprops.isMultiline = {};
             reactprops.messageBarType = {};
-            reactprops.onDismiss = function () { };
+            reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
             reactprops.dismissButtonAriaLabel = {};
             reactprops.truncated = {};
             reactprops.overflowButtonAriaLabel = {};
@@ -60,9 +57,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/MessageBar", "
                     aurelia_framework_1.customElement('du-message-bar')
                 ], DuMessageBar);
                 return DuMessageBar;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuMessageBar", DuMessageBar);
-            Utilities_1.addProperties(DuMessageBar, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuMessageBar, reactprops);
         }
     };
 });

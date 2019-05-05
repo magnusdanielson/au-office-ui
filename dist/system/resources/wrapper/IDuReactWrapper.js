@@ -1,9 +1,8 @@
-System.register([], function (exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
-    return {
-        setters: [],
-        execute: function () {
-        }
-    };
-});
+// import { ReactStateWrapper } from './ReactStateWrapper';
+// // tslint:disable-next-line:interface-name
+// export interface IDuReactWrapper
+// {
+//     element: HTMLElement;
+//     reactComponent: ReactStateWrapper;
+//     parent: any;
+// }

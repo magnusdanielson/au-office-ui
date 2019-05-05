@@ -18,8 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var Nav_1 = require("office-ui-fabric-react/lib/Nav");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.groups = {};
 reactprops.initialSelectedKey = {};
@@ -44,6 +43,6 @@ var DuNav = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-nav')
     ], DuNav);
     return DuNav;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuNav = DuNav;
-Utilities_1.addProperties(DuNav, reactprops);
+au_react_wrapper_1.addPropertiesState(DuNav, reactprops);

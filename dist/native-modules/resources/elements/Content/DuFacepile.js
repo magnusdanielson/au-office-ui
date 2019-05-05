@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Facepile } from 'office-ui-fabric-react/lib/Facepile';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.personas = {};
 reactprops.addButtonProps = {};
@@ -47,6 +46,6 @@ var DuFacepile = /** @class */ (function (_super) {
         customElement('du-facepile')
     ], DuFacepile);
     return DuFacepile;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuFacepile };
-addProperties(DuFacepile, reactprops);
+addPropertiesState(DuFacepile, reactprops);

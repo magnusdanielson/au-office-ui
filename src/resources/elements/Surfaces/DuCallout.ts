@@ -1,8 +1,6 @@
 import {   customElement, inject } from 'aurelia-framework';
 import { Callout, ICalloutProps } from 'office-ui-fabric-react/lib/Callout';
-import {  onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 // IMPORTANT
 // any function defined here will be called with _this as first parameter
@@ -38,7 +36,7 @@ reactprops.target = <any>{};
 
 @inject(Element)
 @customElement('du-callout')
-export class DuCallout extends  DuReactWrapperBaseClass implements ICalloutProps {
+export class DuCallout extends  AuReactStateWrapper implements ICalloutProps {
 
   constructor(element) {
   super(element);
@@ -53,4 +51,4 @@ export class DuCallout extends  DuReactWrapperBaseClass implements ICalloutProps
   }
 }
 
-addProperties(DuCallout, reactprops);
+addPropertiesState(DuCallout, reactprops);

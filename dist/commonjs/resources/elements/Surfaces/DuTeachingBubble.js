@@ -18,9 +18,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var aurelia_framework_1 = require("aurelia-framework");
 var TeachingBubble_1 = require("office-ui-fabric-react/lib/TeachingBubble");
-var DuReactWrapperBaseClass_1 = require("../../wrapper/DuReactWrapperBaseClass");
-var Utilities_1 = require("../../wrapper/Utilities");
-var ReactWrapper_1 = require("../../wrapper/ReactWrapper");
+var au_react_wrapper_1 = require("@dunite/au-react-wrapper");
 var reactprops = {};
 reactprops.calloutProps = {};
 reactprops.hasCloseIcon = {};
@@ -28,7 +26,7 @@ reactprops.hasCondensedHeadline = {};
 reactprops.hasSmallHeadline = {};
 reactprops.headline = {};
 reactprops.isWide = {};
-reactprops.onDismiss = ReactWrapper_1.onlyAureliaBound;
+reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
 reactprops.primaryButtonProps = {};
 reactprops.secondaryButtonProps = {};
 reactprops.targetElement = {};
@@ -52,6 +50,6 @@ var DuTeachingBubble = /** @class */ (function (_super) {
         aurelia_framework_1.customElement('du-teaching-bubble')
     ], DuTeachingBubble);
     return DuTeachingBubble;
-}(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+}(au_react_wrapper_1.AuReactStateWrapper));
 exports.DuTeachingBubble = DuTeachingBubble;
-Utilities_1.addProperties(DuTeachingBubble, reactprops);
+au_react_wrapper_1.addPropertiesState(DuTeachingBubble, reactprops);

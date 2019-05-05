@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { CommandBar, ICommandBarProps  } from 'office-ui-fabric-react/lib/CommandBar';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 let reactprops: ICommandBarProps = <ICommandBarProps>{};
 reactprops.items = <any>{};
@@ -13,7 +12,7 @@ reactprops.className = <any>{};
 
 @inject(Element)
 @customElement('du-command-bar')
-export class DuCommandBar extends  DuReactWrapperBaseClass {
+export class DuCommandBar extends  AuReactStateWrapper {
 
   constructor(element) {
   super(element);
@@ -28,4 +27,4 @@ export class DuCommandBar extends  DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DuCommandBar, reactprops);
+addPropertiesState(DuCommandBar, reactprops);

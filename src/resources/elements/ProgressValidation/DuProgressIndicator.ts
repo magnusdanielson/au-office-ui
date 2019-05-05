@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { ProgressIndicator, IProgressIndicatorProps } from 'office-ui-fabric-react/lib/ProgressIndicator';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 let reactprops: IProgressIndicatorProps = <IProgressIndicatorProps>{};
 reactprops.className = <any>{};
@@ -14,7 +13,7 @@ reactprops.progressHidden = <any>{};
 
 @inject(Element)
 @customElement('du-progress-indicator')
-export class DuProgressIndicator extends  DuReactWrapperBaseClass {
+export class DuProgressIndicator extends  AuReactStateWrapper {
 
   constructor(element) {
   super(element);
@@ -30,4 +29,4 @@ export class DuProgressIndicator extends  DuReactWrapperBaseClass {
   }
 }
 
-addProperties(DuProgressIndicator, reactprops);
+addPropertiesState(DuProgressIndicator, reactprops);

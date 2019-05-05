@@ -45,8 +45,3 @@ export * from './elements/Surfaces/DuPanel';
 export * from './elements/Surfaces/DuTeachingBubble';
 export * from './elements/Surfaces/DuTeachingBubbleContent';
 export * from './elements/Surfaces/DuToolTip';
-export * from './wrapper/DuReactWrapperBaseClass';
-export * from './wrapper/DuReactWrapperNoChildren';
-export * from './wrapper/ReactStateWrapper';
-export * from './wrapper/ReactStateWrapperNoChildren';
-export * from './wrapper/ReactWrapper';

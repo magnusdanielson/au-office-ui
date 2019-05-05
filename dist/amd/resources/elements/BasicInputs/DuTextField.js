@@ -14,7 +14,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/TextField", "../../wrapper/ReactWrapper", "../../wrapper/Utilities", "../../wrapper/DuReactWrapperNoChildren"], function (require, exports, aurelia_framework_1, TextField_1, ReactWrapper_1, Utilities_1, DuReactWrapperNoChildren_1) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/TextField", "@dunite/au-react-wrapper"], function (require, exports, aurelia_framework_1, TextField_1, au_react_wrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var reactprops = {};
@@ -35,10 +35,10 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/T
     reactprops.maskChar = {};
     reactprops.maskFormat = {};
     reactprops.multiline = {};
-    reactprops.onBeforeChange = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onBeforeChange = au_react_wrapper_1.onlyAureliaBound;
     reactprops.onChange = function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; };
-    reactprops.onNotifyValidationResult = ReactWrapper_1.onlyAureliaBound;
-    reactprops.onGetErrorMessage = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onNotifyValidationResult = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onGetErrorMessage = au_react_wrapper_1.onlyAureliaBound;
     reactprops.prefix = {};
     reactprops.readOnly = {};
     reactprops.resizable = {};
@@ -100,7 +100,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/T
             aurelia_framework_1.customElement('du-text-field')
         ], DuTextField);
         return DuTextField;
-    }(DuReactWrapperNoChildren_1.DuReactWrapperNoChildren));
+    }(au_react_wrapper_1.AuReactStateWrapperNoChildren));
     exports.DuTextField = DuTextField;
-    Utilities_1.addProperties(DuTextField, reactprops);
+    au_react_wrapper_1.addPropertiesState(DuTextField, reactprops);
 });

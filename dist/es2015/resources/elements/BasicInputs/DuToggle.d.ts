@@ -1,6 +1,6 @@
 import { IToggleProps } from 'office-ui-fabric-react/lib/Toggle';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-export declare class DuToggle extends DuReactWrapperBaseClass implements IToggleProps {
+import { AuReactStateWrapper } from '@dunite/au-react-wrapper';
+export declare class DuToggle extends AuReactStateWrapper implements IToggleProps {
     constructor(element: any);
     hidden: boolean;
     attached(): void;

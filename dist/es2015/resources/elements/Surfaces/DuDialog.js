@@ -16,8 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Dialog } from 'office-ui-fabric-react/lib/Dialog';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.dialogContentProps = {};
 reactprops.hidden = {};
@@ -40,6 +39,6 @@ var DuDialog = /** @class */ (function (_super) {
         customElement('du-dialog')
     ], DuDialog);
     return DuDialog;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuDialog };
-addProperties(DuDialog, reactprops);
+addPropertiesState(DuDialog, reactprops);

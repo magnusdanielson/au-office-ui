@@ -1,7 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Label, ILabelProps } from 'office-ui-fabric-react/lib/Label';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
 
 let reactprops: ILabelProps = <ILabelProps>{};
 reactprops.disabled = <any>{};
@@ -12,7 +11,7 @@ reactprops.htmlFor = <any>{};
 
 @inject(Element)
 @customElement('du-label')
-export class DuLabel extends  DuReactWrapperBaseClass implements ILabelProps {
+export class DuLabel extends  AuReactStateWrapper implements ILabelProps {
 
   constructor(element) {
   super(element);
@@ -27,4 +26,4 @@ export class DuLabel extends  DuReactWrapperBaseClass implements ILabelProps {
   }
 }
 
-addProperties(DuLabel, reactprops);
+addPropertiesState(DuLabel, reactprops);

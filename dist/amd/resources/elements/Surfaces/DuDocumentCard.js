@@ -14,7 +14,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/DocumentCard", "../../wrapper/ReactWrapper", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (require, exports, aurelia_framework_1, DocumentCard_1, ReactWrapper_1, DuReactWrapperBaseClass_1, Utilities_1) {
+define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/DocumentCard", "@dunite/au-react-wrapper"], function (require, exports, aurelia_framework_1, DocumentCard_1, au_react_wrapper_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     // IMPORTANT
@@ -23,7 +23,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/D
     // _this refers to the Aurelia class with all properties added
     var reactprops = {};
     reactprops.className = {};
-    reactprops.onClick = ReactWrapper_1.onlyAureliaBound;
+    reactprops.onClick = au_react_wrapper_1.onlyAureliaBound;
     reactprops.onClickHref = {};
     reactprops.type = {};
     reactprops.role = {};
@@ -44,7 +44,7 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/D
             aurelia_framework_1.customElement('du-document-card')
         ], DuDocumentCard);
         return DuDocumentCard;
-    }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+    }(au_react_wrapper_1.AuReactStateWrapper));
     exports.DuDocumentCard = DuDocumentCard;
-    Utilities_1.addProperties(DuDocumentCard, reactprops);
+    au_react_wrapper_1.addPropertiesState(DuDocumentCard, reactprops);
 });

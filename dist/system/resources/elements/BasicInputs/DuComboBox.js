@@ -1,4 +1,4 @@
-System.register(["aurelia-framework", "office-ui-fabric-react/lib/ComboBox", "../../wrapper/ReactWrapper", "../../wrapper/DuReactWrapperBaseClass", "../../wrapper/Utilities"], function (exports_1, context_1) {
+System.register(["aurelia-framework", "office-ui-fabric-react/lib/ComboBox", "@dunite/au-react-wrapper"], function (exports_1, context_1) {
     "use strict";
     var __extends = (this && this.__extends) || (function () {
         var extendStatics = Object.setPrototypeOf ||
@@ -16,7 +16,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ComboBox", "..
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var aurelia_framework_1, ComboBox_1, ReactWrapper_1, DuReactWrapperBaseClass_1, Utilities_1, reactprops, DuComboBox;
+    var aurelia_framework_1, ComboBox_1, au_react_wrapper_1, reactprops, DuComboBox;
     var __moduleName = context_1 && context_1.id;
     return {
         setters: [
@@ -26,14 +26,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ComboBox", "..
             function (ComboBox_1_1) {
                 ComboBox_1 = ComboBox_1_1;
             },
-            function (ReactWrapper_1_1) {
-                ReactWrapper_1 = ReactWrapper_1_1;
-            },
-            function (DuReactWrapperBaseClass_1_1) {
-                DuReactWrapperBaseClass_1 = DuReactWrapperBaseClass_1_1;
-            },
-            function (Utilities_1_1) {
-                Utilities_1 = Utilities_1_1;
+            function (au_react_wrapper_1_1) {
+                au_react_wrapper_1 = au_react_wrapper_1_1;
             }
         ],
         execute: function () {
@@ -43,20 +37,20 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ComboBox", "..
             reactprops.comboBoxOptionStyles = {};
             reactprops.dropdownMaxWidth = {};
             reactprops.keytipProps = {};
-            reactprops.onItemClick = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onItemClick = au_react_wrapper_1.onlyAureliaBound;
             reactprops.isButtonAriaHidden = {};
-            reactprops.onPendingValueChanged = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onScrollToItem = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onPendingValueChanged = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onScrollToItem = au_react_wrapper_1.onlyAureliaBound;
             reactprops.disabled = {};
             reactprops.className = {};
             reactprops.label = {};
             reactprops.options = {};
-            reactprops.onChange = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onChange = au_react_wrapper_1.onlyAureliaBound;
             reactprops.defaultSelectedKey = {};
             reactprops.selectedKey = {};
-            reactprops.onMenuOpen = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onMenuDismissed = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onResolveOptions = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onMenuOpen = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onMenuDismissed = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onResolveOptions = au_react_wrapper_1.onlyAureliaBound;
             reactprops.allowFreeform = {};
             reactprops.autoComplete = {};
             reactprops.text = {};
@@ -64,8 +58,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ComboBox", "..
             reactprops.dropdownWidth = {};
             reactprops.useComboBoxAsMenuWidth = {};
             reactprops.multiSelect = {};
-            reactprops.onFocus = ReactWrapper_1.onlyAureliaBound;
-            reactprops.onBlur = ReactWrapper_1.onlyAureliaBound;
+            reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
             DuComboBox = /** @class */ (function (_super) {
                 __extends(DuComboBox, _super);
                 function DuComboBox(element) {
@@ -83,9 +77,9 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/ComboBox", "..
                     aurelia_framework_1.customElement('du-combo-box')
                 ], DuComboBox);
                 return DuComboBox;
-            }(DuReactWrapperBaseClass_1.DuReactWrapperBaseClass));
+            }(au_react_wrapper_1.AuReactStateWrapper));
             exports_1("DuComboBox", DuComboBox);
-            Utilities_1.addProperties(DuComboBox, reactprops);
+            au_react_wrapper_1.addPropertiesState(DuComboBox, reactprops);
         }
     };
 });

@@ -16,9 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { ChoiceGroup } from 'office-ui-fabric-react/lib/ChoiceGroup';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.ariaLabelledBy = {};
 reactprops.disabled = {};
@@ -48,6 +46,6 @@ var DuChoiceGroup = /** @class */ (function (_super) {
         customElement('du-choice-group')
     ], DuChoiceGroup);
     return DuChoiceGroup;
-}(DuReactWrapperBaseClass));
+}(AuReactStateWrapper));
 export { DuChoiceGroup };
-addProperties(DuChoiceGroup, reactprops);
+addPropertiesState(DuChoiceGroup, reactprops);

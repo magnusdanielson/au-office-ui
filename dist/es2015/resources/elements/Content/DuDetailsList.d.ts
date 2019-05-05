@@ -1,7 +1,7 @@
 import { IDetailsListProps } from 'office-ui-fabric-react/lib/DetailsList';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
+import { AuReactStateWrapper } from '@dunite/au-react-wrapper';
 import { ScrollToMode } from 'office-ui-fabric-react/lib/List';
-export declare class DuDetailsList extends DuReactWrapperBaseClass implements IDetailsListProps {
+export declare class DuDetailsList extends AuReactStateWrapper implements IDetailsListProps {
     constructor(element: any);
     hidden: boolean;
     items: any[];

@@ -1,8 +1,6 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Slider, ISliderProps } from 'office-ui-fabric-react/lib/Slider';
-import { onlyAureliaBound } from '../../wrapper/ReactWrapper';
-import { DuReactWrapperBaseClass } from '../../wrapper/DuReactWrapperBaseClass';
-import { addProperties } from '../../wrapper/Utilities';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: ISliderProps = {} as ISliderProps;
 reactprops.value = <any>{};
@@ -14,7 +12,7 @@ reactprops.disabled = <any>{};
 reactprops.label = <any>{};
 reactprops.max = <any>{};
 reactprops.min = <any>{};
-reactprops.onChange = <any>onlyAureliaBound; //( (_this: any, value: any) => { _this['value'] = value; });
+reactprops.onChange = <any>onlyAureliaBound;
 reactprops.onChanged = <any>onlyAureliaBound;
 reactprops.showValue = <any>{};
 reactprops.step = <any>{};
@@ -25,7 +23,7 @@ reactprops.vertical  = <any>{};
 
 @inject(Element)
 @customElement('du-slider')
-export class DuSlider extends  DuReactWrapperBaseClass implements ISliderProps {
+export class DuSlider extends  AuReactStateWrapper implements ISliderProps {
 
   constructor(element) {
   super(element);
@@ -41,4 +39,4 @@ export class DuSlider extends  DuReactWrapperBaseClass implements ISliderProps {
   }
 }
 
-addProperties(DuSlider, reactprops);
+addPropertiesState(DuSlider, reactprops);
