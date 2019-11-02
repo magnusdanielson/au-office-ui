@@ -24,13 +24,15 @@ reactprops.disabled = {};
 reactprops.className = {};
 reactprops.required = {};
 reactprops.placeholder = {};
-reactprops.onSearch = function () { };
-reactprops.onFocus = function () { };
-reactprops.onBlur = function () { };
-reactprops.onChange = (function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; });
+reactprops.onSearch = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onChange = function (that, _event, newValue) {
+    that['value'] = newValue;
+};
 reactprops.disableAnimation = {};
-reactprops.onClear = function () { };
-reactprops.onEscape = function () { };
+reactprops.onClear = au_react_wrapper_1.onlyAureliaBound;
+reactprops.onEscape = au_react_wrapper_1.onlyAureliaBound;
 reactprops.value = {};
 reactprops.defaultValue = {};
 reactprops.clearButtonProps = {};
@@ -39,11 +41,11 @@ reactprops.iconProps = {};
 var DuSearchBox = /** @class */ (function (_super) {
     __extends(DuSearchBox, _super);
     function DuSearchBox(element) {
-        var _this_1 = _super.call(this, element) || this;
-        _this_1.hidden = false;
-        _this_1.hiddenIsHidden = true;
-        _this_1.hiddenName = 'hidden';
-        return _this_1;
+        var _this = _super.call(this, element) || this;
+        _this.hidden = false;
+        _this.hiddenIsHidden = true;
+        _this.hiddenName = 'hidden';
+        return _this;
     }
     DuSearchBox.prototype.attached = function () {
         this.renderReact(SearchBox_1.SearchBox, this.createState(reactprops));

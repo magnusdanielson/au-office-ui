@@ -37,15 +37,15 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "@du
             reactprops.onEmptyInputFocus = (function () { });
             reactprops.defaultSelectedItems = {};
             reactprops.onChange = au_react_wrapper_1.onlyAureliaBound;
-            reactprops.onFocus = function () { };
-            reactprops.onBlur = function () { };
+            reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
             reactprops.getTextFromItem = (function () { });
             reactprops.onGetMoreResults = (function () { });
             reactprops.className = {};
             reactprops.pickerSuggestionsProps = {};
             reactprops.pickerCalloutProps = {};
             reactprops.inputProps = {};
-            reactprops.onRemoveSuggestion = function () { };
+            reactprops.onRemoveSuggestion = au_react_wrapper_1.onlyAureliaBound;
             reactprops.onValidateInput = (function () { });
             reactprops.searchingText = {};
             reactprops.disabled = {};
@@ -54,7 +54,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Pickers", "@du
             reactprops.onItemSelected = (function () { });
             reactprops.selectedItems = {};
             //reactprops.onInputChange = <any>(() => {});
-            reactprops.onDismiss = function () { };
+            reactprops.onDismiss = au_react_wrapper_1.onlyAureliaBound;
             reactprops.enableSelectedSuggestionAlert = {};
             //@ts-ignore
             reactprops.items = {};

@@ -16,19 +16,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
-import { AuReactStateWrapperNoChildren, addPropertiesState } from '@dunite/au-react-wrapper';
+import { AuReactStateWrapperNoChildren, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.disabled = {};
 reactprops.className = {};
 reactprops.required = {};
 reactprops.placeholder = {};
-reactprops.onSearch = function () { };
-reactprops.onFocus = function () { };
-reactprops.onBlur = function () { };
-reactprops.onChange = (function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; });
+reactprops.onSearch = onlyAureliaBound;
+reactprops.onFocus = onlyAureliaBound;
+reactprops.onBlur = onlyAureliaBound;
+reactprops.onChange = function (that, _event, newValue) {
+    that['value'] = newValue;
+};
 reactprops.disableAnimation = {};
-reactprops.onClear = function () { };
-reactprops.onEscape = function () { };
+reactprops.onClear = onlyAureliaBound;
+reactprops.onEscape = onlyAureliaBound;
 reactprops.value = {};
 reactprops.defaultValue = {};
 reactprops.clearButtonProps = {};
@@ -37,11 +39,11 @@ reactprops.iconProps = {};
 var DuSearchBox = /** @class */ (function (_super) {
     __extends(DuSearchBox, _super);
     function DuSearchBox(element) {
-        var _this_1 = _super.call(this, element) || this;
-        _this_1.hidden = false;
-        _this_1.hiddenIsHidden = true;
-        _this_1.hiddenName = 'hidden';
-        return _this_1;
+        var _this = _super.call(this, element) || this;
+        _this.hidden = false;
+        _this.hiddenIsHidden = true;
+        _this.hiddenName = 'hidden';
+        return _this;
     }
     DuSearchBox.prototype.attached = function () {
         this.renderReact(SearchBox, this.createState(reactprops));

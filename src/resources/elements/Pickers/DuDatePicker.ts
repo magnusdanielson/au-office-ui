@@ -28,7 +28,7 @@ reactprops.dateTimeFormatter = <any>{};
 reactprops.minDate = <any>{};
 reactprops.maxDate = <any>{};
 reactprops.initialPickerDate = <any>{};
-reactprops.onAfterMenuDismiss = () => {};
+reactprops.onAfterMenuDismiss = onlyAureliaBound;
 
 
 @inject(Element)

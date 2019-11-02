@@ -26,7 +26,7 @@ reactprops.onResolveSuggestions = au_react_wrapper_1.onlyAureliaBound;
 reactprops.resolveDelay = {};
 reactprops.onEmptyInputFocus = au_react_wrapper_1.onlyAureliaBound;
 reactprops.defaultSelectedItems = {};
-reactprops.onChange = (function (_this, items) { _this['selectedItems'] = items; });
+reactprops.onChange = function (_this, items) { _this['selectedItems'] = items; };
 reactprops.onFocus = au_react_wrapper_1.onlyAureliaBound;
 reactprops.onBlur = au_react_wrapper_1.onlyAureliaBound;
 reactprops.getTextFromItem = au_react_wrapper_1.onlyAureliaBound;

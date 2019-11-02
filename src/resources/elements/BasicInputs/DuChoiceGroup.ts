@@ -8,7 +8,10 @@ reactprops.disabled = <any>{};
 reactprops.checked = <any>{};
 reactprops.className = <any>{};
 reactprops.label = <any>{};
-reactprops.onChange = (_this: any, onChangeTuple: any) => { _this['value'] = onChangeTuple[1]; };
+reactprops.onChange = function (that: any, _event: any, newValue?: string)
+{
+  that['value'] = newValue; 
+};
 reactprops.options = <any>{};
 reactprops.onClick = onlyAureliaBound;
 reactprops.defaultSelectedKey = <any>{};

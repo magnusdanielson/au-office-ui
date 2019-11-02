@@ -1,19 +1,23 @@
 import { customElement, inject } from 'aurelia-framework';
 import { SearchBox, ISearchBox, ISearchBoxProps } from 'office-ui-fabric-react/lib/SearchBox';
-import { AuReactStateWrapperNoChildren, addPropertiesState } from '@dunite/au-react-wrapper';
+import { AuReactStateWrapperNoChildren, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: ISearchBoxProps = <ISearchBoxProps & ISearchBox>{};
 reactprops.disabled = <any>{};
 reactprops.className = <any>{};
 reactprops.required = <any>{};
 reactprops.placeholder = <any>{};
-reactprops.onSearch = () => {};
-reactprops.onFocus = () => {};
-reactprops.onBlur = () => {};
-reactprops.onChange = <any>( (_this: any, onChangeTuple: any) => { _this['value'] = onChangeTuple[1]; });
+reactprops.onSearch = onlyAureliaBound;
+reactprops.onFocus = onlyAureliaBound;
+reactprops.onBlur = onlyAureliaBound;
+reactprops.onChange = <any>
+function (that: any, _event: any, newValue?: string)
+{
+  that['value'] = newValue; 
+};
 reactprops.disableAnimation = <any>{};
-reactprops.onClear = () => {};
-reactprops.onEscape =  () => {};
+reactprops.onClear = onlyAureliaBound;
+reactprops.onEscape =  onlyAureliaBound;
 reactprops.value =  <any>{};
 reactprops.defaultValue =  <any>{};
 reactprops.clearButtonProps =  <any>{};

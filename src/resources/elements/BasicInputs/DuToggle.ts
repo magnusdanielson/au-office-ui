@@ -10,7 +10,10 @@ reactprops.offText = <any>{};
 reactprops.checked = <any>{};
 reactprops.defaultChecked = <any>{};
 reactprops.disabled  = <any>{};
-reactprops.onChange = (_this, onChangeTuple: any) => { _this['checked'] = onChangeTuple[1]; };
+reactprops.onChange = function (that: any, _event: any, newValue?: string)
+{
+  that['checked'] = newValue; 
+};
 reactprops.className = <any>{};
 reactprops.keytipProps  = <any>{};
 

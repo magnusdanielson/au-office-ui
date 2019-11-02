@@ -10,7 +10,10 @@ reactprops.blueLabel = <any>{};
 reactprops.color = <any>{};
 reactprops.greenLabel = <any>{};
 reactprops.hexLabel = <any>{};
-reactprops.onChange =  (_this, onChangeTuple: any) => { _this['color'] = onChangeTuple[1].str; };
+reactprops.onChange = <any> function (that: any, _event: any, newValue: IColor)
+{
+  that['color'] = newValue.str; 
+};
 reactprops.redLabel = <any>{};
 
 

@@ -16,7 +16,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject, noView, bindable } from 'aurelia-framework';
 import { Pivot, PivotItem } from 'office-ui-fabric-react/lib/Pivot';
-import { AuReactNoStateWrapper, addPropertiesNoState } from '@dunite/au-react-wrapper';
+import { AuReactNoStateWrapper, addPropertiesNoState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 var reactprops = {};
@@ -24,11 +24,11 @@ reactprops.className = {};
 reactprops.defaultSelectedIndex = {};
 reactprops.defaultSelectedKey = {};
 //@ts-ignore
-reactprops.getTabId = function (itemKey, index) { return ''; };
+reactprops.getTabId = onlyAureliaBound;
 reactprops.headersOnly = {};
 reactprops.linkFormat = {};
 reactprops.linkSize = {};
-reactprops.onLinkClick = function () { };
+reactprops.onLinkClick = onlyAureliaBound;
 reactprops.selectedKey = {};
 var DuPivot = /** @class */ (function (_super) {
     __extends(DuPivot, _super);

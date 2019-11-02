@@ -43,7 +43,7 @@ reactprops.dateTimeFormatter = {};
 reactprops.minDate = {};
 reactprops.maxDate = {};
 reactprops.initialPickerDate = {};
-reactprops.onAfterMenuDismiss = function () { };
+reactprops.onAfterMenuDismiss = onlyAureliaBound;
 var DuDatePicker = /** @class */ (function (_super) {
     __extends(DuDatePicker, _super);
     function DuDatePicker(element) {

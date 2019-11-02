@@ -38,7 +38,9 @@ reactprops.maskChar = {};
 reactprops.maskFormat = {};
 reactprops.multiline = {};
 reactprops.onBeforeChange = au_react_wrapper_1.onlyAureliaBound;
-reactprops.onChange = function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; };
+reactprops.onChange = function (that, _event, newValue) {
+    that['value'] = newValue;
+};
 reactprops.onNotifyValidationResult = au_react_wrapper_1.onlyAureliaBound;
 reactprops.onGetErrorMessage = au_react_wrapper_1.onlyAureliaBound;
 reactprops.prefix = {};
@@ -55,11 +57,11 @@ reactprops.placeholder = {};
 var DuTextField = /** @class */ (function (_super) {
     __extends(DuTextField, _super);
     function DuTextField(element) {
-        var _this_1 = _super.call(this, element) || this;
-        _this_1.hidden = false;
-        _this_1.hiddenIsHidden = true;
-        _this_1.hiddenName = 'hidden';
-        return _this_1;
+        var _this = _super.call(this, element) || this;
+        _this.hidden = false;
+        _this.hiddenIsHidden = true;
+        _this.hiddenName = 'hidden';
+        return _this;
     }
     DuTextField.prototype.attached = function () {
         this.renderReact(TextField_1.TextField, this.createState(reactprops));

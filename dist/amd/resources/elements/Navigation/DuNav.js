@@ -21,8 +21,8 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/N
     reactprops.groups = {};
     reactprops.initialSelectedKey = {};
     reactprops.isOnTop = {};
-    reactprops.onLinkClick = function () { };
-    reactprops.onLinkExpandClick = function () { };
+    reactprops.onLinkClick = au_react_wrapper_1.onlyAureliaBound;
+    reactprops.onLinkExpandClick = au_react_wrapper_1.onlyAureliaBound;
     reactprops.selectedKey = {};
     var DuNav = /** @class */ (function (_super) {
         __extends(DuNav, _super);

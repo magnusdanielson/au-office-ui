@@ -16,13 +16,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 import { customElement, inject } from 'aurelia-framework';
 import { Nav } from 'office-ui-fabric-react/lib/Nav';
-import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 var reactprops = {};
 reactprops.groups = {};
 reactprops.initialSelectedKey = {};
 reactprops.isOnTop = {};
-reactprops.onLinkClick = function () { };
-reactprops.onLinkExpandClick = function () { };
+reactprops.onLinkClick = onlyAureliaBound;
+reactprops.onLinkExpandClick = onlyAureliaBound;
 reactprops.selectedKey = {};
 var DuNav = /** @class */ (function (_super) {
     __extends(DuNav, _super);

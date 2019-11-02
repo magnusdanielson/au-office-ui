@@ -23,7 +23,9 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/C
     reactprops.checked = {};
     reactprops.className = {};
     reactprops.label = {};
-    reactprops.onChange = function (_this, onChangeTuple) { _this['value'] = onChangeTuple[1]; };
+    reactprops.onChange = function (that, _event, newValue) {
+        that['value'] = newValue;
+    };
     reactprops.options = {};
     reactprops.onClick = au_react_wrapper_1.onlyAureliaBound;
     reactprops.defaultSelectedKey = {};
@@ -32,11 +34,11 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/C
     var DuChoiceGroup = /** @class */ (function (_super) {
         __extends(DuChoiceGroup, _super);
         function DuChoiceGroup(element) {
-            var _this_1 = _super.call(this, element) || this;
-            _this_1.hidden = false;
-            _this_1.hiddenIsHidden = true;
-            _this_1.hiddenName = 'hidden';
-            return _this_1;
+            var _this = _super.call(this, element) || this;
+            _this.hidden = false;
+            _this.hiddenIsHidden = true;
+            _this.hiddenName = 'hidden';
+            return _this;
         }
         DuChoiceGroup.prototype.attached = function () {
             this.renderReact(ChoiceGroup_1.ChoiceGroup, this.createState(reactprops));

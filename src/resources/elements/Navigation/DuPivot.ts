@@ -1,6 +1,6 @@
 import {  customElement, inject, noView, bindable } from 'aurelia-framework';
 import { Pivot, PivotItem, IPivotProps, IPivotItemProps } from 'office-ui-fabric-react/lib/Pivot';
-import { AuReactNoStateWrapper, addPropertiesNoState } from '@dunite/au-react-wrapper';
+import { AuReactNoStateWrapper, addPropertiesNoState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
 
@@ -9,11 +9,11 @@ reactprops.className = <any>{};
 reactprops.defaultSelectedIndex = <any>{};
 reactprops.defaultSelectedKey = <any>{};
 //@ts-ignore
-reactprops.getTabId = (itemKey: string, index: number): string => { return ''; };
+reactprops.getTabId = onlyAureliaBound;
 reactprops.headersOnly = <any>{};
 reactprops.linkFormat = <any>{};
 reactprops.linkSize = <any>{};
-reactprops.onLinkClick = () => {};
+reactprops.onLinkClick = onlyAureliaBound;
 reactprops.selectedKey = <any>{};
 
 @noView()

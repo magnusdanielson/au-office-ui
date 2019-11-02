@@ -10,7 +10,7 @@ reactprops.onResolveSuggestions = <any>onlyAureliaBound;
 reactprops.resolveDelay = <any>{}; 
 reactprops.onEmptyInputFocus = <any>onlyAureliaBound;
 reactprops.defaultSelectedItems = <any>{};
-reactprops.onChange = <any>((_this: any, items: any) => { _this['selectedItems'] = items; });
+reactprops.onChange = <any> function(_this: any, items: any) { _this['selectedItems'] = items; };
 reactprops.onFocus = <any>onlyAureliaBound;
 reactprops.onBlur = <any>onlyAureliaBound;
 reactprops.getTextFromItem = <any>onlyAureliaBound;

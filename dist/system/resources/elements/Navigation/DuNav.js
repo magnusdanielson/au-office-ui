@@ -35,8 +35,8 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/Nav", "@dunite
             reactprops.groups = {};
             reactprops.initialSelectedKey = {};
             reactprops.isOnTop = {};
-            reactprops.onLinkClick = function () { };
-            reactprops.onLinkExpandClick = function () { };
+            reactprops.onLinkClick = au_react_wrapper_1.onlyAureliaBound;
+            reactprops.onLinkExpandClick = au_react_wrapper_1.onlyAureliaBound;
             reactprops.selectedKey = {};
             DuNav = /** @class */ (function (_super) {
                 __extends(DuNav, _super);

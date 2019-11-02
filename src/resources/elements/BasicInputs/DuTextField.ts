@@ -22,7 +22,10 @@ reactprops.maskChar = <any>{};
 reactprops.maskFormat = <any>{};
 reactprops.multiline = <any>{};
 reactprops.onBeforeChange = onlyAureliaBound;
-reactprops.onChange = (_this, onChangeTuple: any) => { _this['value'] = onChangeTuple[1]; };
+reactprops.onChange = function (that: any, _event: any, newValue?: string)
+{
+  that['value'] = newValue; 
+};
 reactprops.onNotifyValidationResult = onlyAureliaBound;
 reactprops.onGetErrorMessage = <any>onlyAureliaBound;
 reactprops.prefix = <any>{};

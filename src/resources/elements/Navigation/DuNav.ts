@@ -1,13 +1,13 @@
 import { customElement, inject } from 'aurelia-framework';
 import { Nav, INavProps } from 'office-ui-fabric-react/lib/Nav';
-import { AuReactStateWrapper, addPropertiesState } from '@dunite/au-react-wrapper';
+import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: INavProps = <INavProps>{};
 reactprops.groups = <any>{};
 reactprops.initialSelectedKey = <any>{};
 reactprops.isOnTop = <any>{};
-reactprops.onLinkClick = () => {};
-reactprops.onLinkExpandClick = () => {};
+reactprops.onLinkClick = onlyAureliaBound;
+reactprops.onLinkExpandClick = onlyAureliaBound;
 reactprops.selectedKey = <any>{};
 
 

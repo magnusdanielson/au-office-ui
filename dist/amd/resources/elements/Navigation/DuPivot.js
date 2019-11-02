@@ -22,11 +22,11 @@ define(["require", "exports", "aurelia-framework", "office-ui-fabric-react/lib/P
     reactprops.defaultSelectedIndex = {};
     reactprops.defaultSelectedKey = {};
     //@ts-ignore
-    reactprops.getTabId = function (itemKey, index) { return ''; };
+    reactprops.getTabId = au_react_wrapper_1.onlyAureliaBound;
     reactprops.headersOnly = {};
     reactprops.linkFormat = {};
     reactprops.linkSize = {};
-    reactprops.onLinkClick = function () { };
+    reactprops.onLinkClick = au_react_wrapper_1.onlyAureliaBound;
     reactprops.selectedKey = {};
     var DuPivot = /** @class */ (function (_super) {
         __extends(DuPivot, _super);

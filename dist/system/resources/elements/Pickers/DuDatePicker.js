@@ -57,7 +57,7 @@ System.register(["aurelia-framework", "office-ui-fabric-react/lib/DatePicker", "
             reactprops.minDate = {};
             reactprops.maxDate = {};
             reactprops.initialPickerDate = {};
-            reactprops.onAfterMenuDismiss = function () { };
+            reactprops.onAfterMenuDismiss = au_react_wrapper_1.onlyAureliaBound;
             DuDatePicker = /** @class */ (function (_super) {
                 __extends(DuDatePicker, _super);
                 function DuDatePicker(element) {

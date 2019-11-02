@@ -25,17 +25,19 @@ reactprops.offText = {};
 reactprops.checked = {};
 reactprops.defaultChecked = {};
 reactprops.disabled = {};
-reactprops.onChange = function (_this, onChangeTuple) { _this['checked'] = onChangeTuple[1]; };
+reactprops.onChange = function (that, _event, newValue) {
+    that['checked'] = newValue;
+};
 reactprops.className = {};
 reactprops.keytipProps = {};
 var DuToggle = /** @class */ (function (_super) {
     __extends(DuToggle, _super);
     function DuToggle(element) {
-        var _this_1 = _super.call(this, element) || this;
-        _this_1.hidden = false;
-        _this_1.hiddenIsHidden = true;
-        _this_1.hiddenName = 'hidden';
-        return _this_1;
+        var _this = _super.call(this, element) || this;
+        _this.hidden = false;
+        _this.hiddenIsHidden = true;
+        _this.hiddenName = 'hidden';
+        return _this;
     }
     DuToggle.prototype.attached = function () {
         this.renderReact(Toggle, this.createState(reactprops));
