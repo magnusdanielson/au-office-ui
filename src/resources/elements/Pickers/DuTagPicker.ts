@@ -3,28 +3,28 @@ import { TagPicker, IBasePickerProps, ITag } from 'office-ui-fabric-react/lib/Pi
 import { AuReactStateWrapper, addPropertiesState, onlyAureliaBound } from '@dunite/au-react-wrapper';
 
 let reactprops: IBasePickerProps<ITag> = <IBasePickerProps<ITag>>{};
-reactprops.onResolveSuggestions = <any>(() => {});
+reactprops.onResolveSuggestions = <any>onlyAureliaBound;
 reactprops.resolveDelay = <any>{};
-reactprops.onEmptyInputFocus = <any>(() => {});
+reactprops.onEmptyInputFocus = <any>onlyAureliaBound;
 reactprops.defaultSelectedItems = <any>{};
 reactprops.onChange = onlyAureliaBound;
 reactprops.onFocus = onlyAureliaBound;
 reactprops.onBlur = onlyAureliaBound;
-reactprops.getTextFromItem = <any>(() => {});
-reactprops.onGetMoreResults = <any>(() => {});
+reactprops.getTextFromItem = <any>onlyAureliaBound;
+reactprops.onGetMoreResults = <any>onlyAureliaBound;
 reactprops.className = <any>{};
 reactprops.pickerSuggestionsProps = <any>{};
 reactprops.pickerCalloutProps = <any>{};
 reactprops.inputProps = <any>{};
 reactprops.onRemoveSuggestion = onlyAureliaBound;
-reactprops.onValidateInput = <any>(() => {});
+reactprops.onValidateInput = <any>onlyAureliaBound;
 reactprops.searchingText = <any>{};
 reactprops.disabled = <any>{};
 reactprops.itemLimit = <any>{};
-reactprops.createGenericItem = <any>(() => {});
-reactprops.onItemSelected = <any>(() => {});
+reactprops.createGenericItem = <any>onlyAureliaBound;
+reactprops.onItemSelected = <any>onlyAureliaBound;
 reactprops.selectedItems = <any>{};
-//reactprops.onInputChange = <any>(() => {});
+//reactprops.onInputChange = <any>onlyAureliaBound;
 reactprops.onDismiss = onlyAureliaBound;
 reactprops.enableSelectedSuggestionAlert = <any>{};
 //@ts-ignore

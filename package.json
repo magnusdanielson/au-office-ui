@@ -1,6 +1,6 @@
 {
   "name": "@dunite/au-office-ui",
-  "version": "1.2.4",
+  "version": "2.0.0",
   "description": "Microsoft Office-UI-Fabric wrapper for Aurelia",
   "keywords": [
     "office",
